@@ -58,7 +58,7 @@ public class OrderController {
         Page<Order> page = new Page<Order>(request);
         orderService.findOrders(page, user.getId());
         model.addAttribute("page", page);
-        return "order/orderList";
+        return "Project/Project";
     }
 
     /**

@@ -115,7 +115,7 @@ $(function () {
     {
     "name": "Sharepoint Upgrade<br><small class='text-muted'><i>Budget: 5,000<i></small>",
 	"est": "<td><div class='progress progress-sm'><div class='progress-bar progress-bar-info progress-bar-striped' role='progressbar' aria-valuenow='60' aria-valuemin='0' aria-valuemax='100' style='width: 60%'></div></div></td>",
-	"contacts": "<div class='project-members'><a href='javascript:void(0)'><img src='../../../images/avatar/1.jpg' class='offline' alt='user'></a> </div> ",
+	"contacts": "<div class='project-members'><a href='javascript:void(0)'></a> </div> ",
 	"status": "<span class='badge badge-success'>Active</span>",	
 	"tracker": "<button type='button' class='btn btn-sm btn-toggle btn-primary active' data-toggle='button' aria-pressed='true'><span class='handle'></span></button>",
 	"starts": "01-21-2017",
@@ -126,7 +126,7 @@ $(function () {
     {
 	"name": "IT Room Renovation<br><small class='text-muted'><i>Budget: 25,000<i></small>",
 	"est": "<td><div class='progress progress-sm'><div class='progress-bar progress-bar-success progress-bar-striped' role='progressbar' aria-valuenow='30' aria-valuemin='0' aria-valuemax='100' style='width: 30%'></div></div></td>",
-	"contacts": "<div class='project-members'><a href='javascript:void(0)'><img src='../../../images/avatar/2.jpg' class='online'></a> <a href='javascript:void(0)'><img src='../../../images/avatar/4.jpg' class='busy'></a><a href='javascript:void(0)'><img src='../../../images/avatar/3.jpg' class='away'></a> </div> ",
+	"contacts": "<div class='project-members'><a href='javascript:void(0)'></a> </div> ",
 	"status": "<span class='badge badge-success'>Active</span>",
 	"tracker": "<button type='button' class='btn btn-sm btn-toggle btn-primary' data-toggle='button' aria-pressed='true'><span class='handle'></span></button>",
 	"starts": "01-17-2017",
@@ -137,7 +137,7 @@ $(function () {
 	{
 	"name": "Car Industry Studies<br><small class='text-muted'><i>Budget: 1,000<i></small>",
 	"est": "<td><div class='progress progress-sm'><div class='progress-bar progress-bar-primary progress-bar-striped' role='progressbar' aria-valuenow='55' aria-valuemin='0' aria-valuemax='100' style='width: 55%'></div></div></td>",
-	"contacts": "<div class='project-members'><a href='javascript:void(0)'><img src='../../../images/avatar/1.jpg' class='online' alt='user'></a><a href='javascript:void(0)'><img src='../../../images/avatar/2.jpg' class='online'></a> <a href='javascript:void(0)'><img src='../../../images/avatar/3.jpg' class='busy'></a><a href='javascript:void(0)'><img src='../../../images/avatar/4.jpg' class='away'></a> </div> ",
+	"contacts": "<div class='project-members'><a href='javascript:void(0)'></a> </div> ",
 	"status": "<span class='badge badge-success'>Active</span>",
 	"tracker": "<button type='button' class='btn btn-sm btn-toggle btn-primary active' data-toggle='button' aria-pressed='true'><span class='handle'></span></button>",
 	"starts": "01-8-2017",
@@ -148,7 +148,7 @@ $(function () {
 	{
 	"name": "Update all forms <br><small class='text-muted'><i>Budget: 2,000<i></small>",
 	"est": "<td><div class='progress progress-sm'><div class='progress-bar progress-bar-warning progress-bar-striped' role='progressbar' aria-valuenow='68' aria-valuemin='0' aria-valuemax='100' style='width: 68%'></div></div></td>",
-	"contacts": "<div class='project-members'><a href='javascript:void(0)'><img src='../../../images/avatar/5.jpg' class='busy'></a> </div> ",
+	"contacts": "<div class='project-members'><a href='javascript:void(0)'></a> </div> ",
 	"status": "<span class='badge badge-success'>Active</span>",
 	"tracker": "<button type='button' class='btn btn-sm btn-toggle btn-primary' data-toggle='button' aria-pressed='true'><span class='handle'></span></button>",
 	"starts": "01-12-2017",
@@ -159,7 +159,7 @@ $(function () {
 	{
 	"name": "Preliminary studies of client intel<br><small class='text-muted'><i>Budget: 3,500<i></small>",
 	"est": "<td><div class='progress progress-sm'><div class='progress-bar progress-bar-danger progress-bar-striped' role='progressbar' aria-valuenow='10' aria-valuemin='0' aria-valuemax='100' style='width: 10%'></div></div></td>",
-	"contacts": "<div class='project-members'><a href='javascript:void(0)'><img src='../../../images/avatar/6.jpg' class='online'></a> <a href='javascript:void(0)'><img src='../../../images/avatar/3.jpg' class='busy'></a></div> ",
+	"contacts": "<div class='project-members'><a href='javascript:void(0)'></a> <a href='javascript:void(0)'></a></div> ",
 	"status": "<span class='badge badge-success'>Active</span>",
 	"tracker": "<button type='button' class='btn btn-sm btn-toggle btn-primary' data-toggle='button' aria-pressed='true'><span class='handle'></span></button>",
 	"starts": "01-13-2017",
@@ -170,7 +170,7 @@ $(function () {
 	{
 	"name": "AngularJS UI design and development<br><small class='text-muted'><i>Budget: 5,000<i></small>",
 	"est": "<td><div class='progress progress-sm'><div class='progress-bar progress-bar-info progress-bar-striped' role='progressbar' aria-valuenow='15' aria-valuemin='0' aria-valuemax='100' style='width: 15%'></div></div></td>",
-	"contacts": "<div class='project-members'><a href='javascript:void(0)'><a href='javascript:void(0)'><img src='../../../images/avatar/1.jpg' class='away'></a><a href='javascript:void(0)'><img src='../../../images/avatar/5.jpg' class='away'></a> </div> ",
+	"contacts": "<div class='project-members'><a href='javascript:void(0)'><a href='javascript:void(0)'></a><a href='javascript:void(0)'></a> </div> ",
 	"status": "<span class='badge badge-success'>Active</span>",
 	"tracker": "<button type='button' class='btn btn-sm btn-toggle btn-primary active' data-toggle='button' aria-pressed='true'><span class='handle'></span></button>",
 	"starts": "01-9-2017",
@@ -181,7 +181,7 @@ $(function () {
 	{
 	"name": "<strong>Phase 1</strong>: Modual implimentations<br><small class='text-muted'><i>Budget: 7,000<i></small>",
 	"est": "<td><div class='progress progress-sm'><div class='progress-bar progress-bar-primary progress-bar-striped' role='progressbar' aria-valuenow='100' aria-valuemin='0' aria-valuemax='100' style='width: 100%'></div></div></td>",
-	"contacts": "<div class='project-members'><a href='javascript:void(0)'><img src='../../../images/avatar/4.jpg' class='online' alt='user'></a></div> ",
+	"contacts": "<div class='project-members'><a href='javascript:void(0)'></a></div> ",
 	"status": "<span class='badge badge-default'>Inactive</span>",
 	"tracker": "<button type='button' class='btn btn-sm btn-toggle btn-primary' data-toggle='button' aria-pressed='true'><span class='handle'></span></button>",
 	"starts": "01-4-2017",
@@ -192,7 +192,7 @@ $(function () {
 	{
 	"name": "<strong>Phase 2</strong>: Beta testing<br><small class='text-muted'><i>No budget was locked in<i></small>",
 	"est": "<td><div class='progress progress-sm'><div class='progress-bar progress-bar-success progress-bar-striped' role='progressbar' aria-valuenow='15' aria-valuemin='0' aria-valuemax='100' style='width: 15%'></div></div></td>",
-	"contacts": "<div class='project-members'><a href='javascript:void(0)'><img src='../../../images/avatar/2.jpg' class='offline'></a> </div> ",
+	"contacts": "<div class='project-members'><a href='javascript:void(0)'></a> </div> ",
 	"status": "<span class='badge badge-success'>Active</span>",
 	"tracker": "<button type='button' class='btn btn-sm btn-toggle btn-primary' data-toggle='button' aria-pressed='true'><span class='handle'></span></button>",
 	"starts": "01-11-2017",
@@ -203,7 +203,7 @@ $(function () {
 	{
 	"name": "<strong>Phase 3</strong>: Deploy to management<br><small class='text-muted'><i>No budget was locked in<i></small>",
 	"est": "<td><div class='progress progress-sm'><div class='progress-bar progress-bar-warning progress-bar-striped' role='progressbar' aria-valuenow='10' aria-valuemin='0' aria-valuemax='100' style='width: 10%'></div></div></td>",
-	"contacts": "<div class='project-members'><a href='javascript:void(0)'><img src='../../../images/avatar/1.jpg' class='offline'></a> <a href='javascript:void(0)'><img src='../../../images/avatar/2.jpg' class='busy'></a><a href='javascript:void(0)'><img src='../../../images/avatar/3.jpg' class='away'></a><a href='javascript:void(0)'><img src='../../../images/avatar/4.jpg' class='online' alt='user'></a><a href='javascript:void(0)'><img src='../../../images/avatar/5.jpg' class='online' alt='user'></a> </div> ",
+	"contacts": "<div class='project-members'><a href='javascript:void(0)'></a> <a href='javascript:void(0)'></a><a href='javascript:void(0)'></a><a href='javascript:void(0)'></a><a href='javascript:void(0)'></a> </div> ",
 	"status": "<span class='badge badge-success'>Active</span>",
 	"tracker": "<button type='button' class='btn btn-sm btn-toggle btn-primary' data-toggle='button' aria-pressed='true'><span class='handle'></span></button>",
 	"starts": "01-19-2017",
@@ -214,7 +214,7 @@ $(function () {
 	{
 	"name": "Prepare property management contracts<br><small class='text-muted'><i>No budget was locked in<i></small>",
 	"est": "<td><div class='progress progress-sm'><div class='progress-bar progress-bar-primary progress-bar-striped' role='progressbar' aria-valuenow='55' aria-valuemin='0' aria-valuemax='100' style='width: 55%'></div></div></td>",
-	"contacts": "<div class='project-members'><a href='javascript:void(0)'><img src='../../../images/avatar/8.jpg' class='online'></a></div> ",
+	"contacts": "<div class='project-members'><a href='javascript:void(0)'></a></div> ",
 	"status": "<span class='badge badge-success'>Active</span>",
 	"tracker": "<button type='button' class='btn btn-sm btn-toggle btn-primary' data-toggle='button' aria-pressed='true'><span class='handle'></span></button>",
 	"starts": "01-20-2017",
@@ -225,7 +225,7 @@ $(function () {
 	{
 	"name": "Brick factory<br><small class='text-muted'><i>Budget: 1,000<i></small>",
 	"est": "<td><div class='progress progress-sm'><div class='progress-bar progress-bar-info progress-bar-striped' role='progressbar' aria-valuenow='775' aria-valuemin='0' aria-valuemax='100' style='width: 75%'></div></div></td>",
-	"contacts": "<div class='project-members'><a href='javascript:void(0)'><img src='../../../images/avatar/7.jpg' class='online'></a> <a href='javascript:void(0)'><img src='../../../images/avatar/3.jpg' class='busy'></a><a href='javascript:void(0)'><img src='../../../images/avatar/2.jpg' class='away'></a> </div> ",
+	"contacts": "<div class='project-members'><a href='javascript:void(0)'></a> <a href='javascript:void(0)'></a><a href='javascript:void(0)'></a> </div> ",
 	"status": "<span class='badge badge-success'>Active</span>",
 	"tracker": "<button type='button' class='btn btn-sm btn-toggle btn-primary' data-toggle='button' aria-pressed='true'><span class='handle'></span></button>",
 	"starts": "01-25-2017",
@@ -236,7 +236,7 @@ $(function () {
 	{
 	"name": "Upgrade to windows 8.1<br><small class='text-muted'><i>Budget: 2,000<i></small>",
 	"est": "<td><div class='progress progress-sm'><div class='progress-bar progress-bar-success progress-bar-striped' role='progressbar' aria-valuenow='48' aria-valuemin='0' aria-valuemax='100' style='width: 48%'></div></div></td>",
-	"contacts": "<div class='project-members'><a href='javascript:void(0)'><img src='../../../images/avatar/7.jpg' class='online' alt='user'></a><a href='javascript:void(0)'><img src='../../../images/avatar/3.jpg' class='online'></a> <a href='javascript:void(0)'><img src='../../../images/avatar/4.jpg' class='busy'></a><a href='javascript:void(0)'><img src='../../../images/avatar/5.jpg' class='away'></a> </div> ",
+	"contacts": "<div class='project-members'><a href='javascript:void(0)'></a><a href='javascript:void(0)'></a> <a href='javascript:void(0)'></a><a href='javascript:void(0)'></a> </div> ",
 	"status": "<span class='badge badge-success'>Active</span>",
 	"tracker": "<button type='button' class='btn btn-sm btn-toggle btn-primary' data-toggle='button' aria-pressed='true'><span class='handle'></span></button>",
 	"starts": "01-27-2017",
@@ -247,7 +247,7 @@ $(function () {
 	{
 	"name": "Refurbish Architecture<br><small class='text-muted'><i>Budget: 1,200<i></small>",
 	"est": "<td><div class='progress progress-sm'><div class='progress-bar progress-bar-danger progress-bar-striped' role='progressbar' aria-valuenow='37' aria-valuemin='0' aria-valuemax='100' style='width: 37%'></div></div></td>",
-	"contacts": "<div class='project-members'><a href='javascript:void(0)'><img src='../../../images/avatar/7.jpg' class='away' alt='user'></a><a href='javascript:void(0)'><img src='../../../images/avatar/5.jpg' class='online'></a> </div> ",
+	"contacts": "<div class='project-members'><a href='javascript:void(0)'></a><a href='javascript:void(0)'></a> </div> ",
 	"status": "<span class='badge badge-success'>Active</span>",
 	"tracker": "<button type='button' class='btn btn-sm btn-toggle btn-primary' data-toggle='button' aria-pressed='true'><span class='handle'></span></button>",
 	"starts": "01-29-2017",
@@ -258,7 +258,7 @@ $(function () {
 	{
 	"name": "Create filters and directives<br><small class='text-muted'><i>Budget: 15,000<i></small>",
 	"est": "<td><div class='progress progress-sm'><div class='progress-bar progress-bar-warning progress-bar-striped' role='progressbar' aria-valuenow='100' aria-valuemin='0' aria-valuemax='100' style='width: 100%'></div></div></td>",
-	"contacts": "<div class='project-members'><a href='javascript:void(0)'><img src='../../../images/avatar/3.jpg' class='online' alt='user'></a><a href='javascript:void(0)'><img src='../../../images/avatar/2.jpg' class='online'></a> <a href='javascript:void(0)'><img src='../../../images/avatar/1.jpg' class='busy'></a><a href='javascript:void(0)'><img src='../../../images/avatar/7.jpg' class='away'></a> </div> ",
+	"contacts": "<div class='project-members'><a href='javascript:void(0)'><!--<img src='../../../images/avatar/3.jpg' class='online' alt='user'></a><a href='javascript:void(0)'><img src='../../../images/avatar/2.jpg' class='online'></a> <a href='javascript:void(0)'><img src='../../../images/avatar/1.jpg' class='busy'></a><a href='javascript:void(0)'><img src='../../../images/avatar/7.jpg' class='away'>   --> </a></div> ",
 	"status": "<span class='badge badge-success'>Active</span>",
 	"tracker": "<button type='button' class='btn btn-sm btn-toggle btn-primary' data-toggle='button' aria-pressed='true'><span class='handle'></span></button>",
 	"starts": "01-6-2017",
