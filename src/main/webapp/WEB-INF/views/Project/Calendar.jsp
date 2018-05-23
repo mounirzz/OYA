@@ -9,8 +9,8 @@
     <link type="text/css" rel="stylesheet" media="screen" href="${ctx }/common/css/bootstrap.css">
     
     <%@ include file="/common/include-base-style-man.jsp" %>
-    <link rel="stylesheet" href="${ctx}/common/css/plugins/fullcalendar/dist/fullcalendar.min.css">
-    <link rel="stylesheet" href="${ctx}/common/css/plugins/fullcalendar/dist/fullcalendar.print.min.css">
+    <link rel="stylesheet" href="${ctx}/common/scripts/fullcalendar/dist/fullcalendar.min.css">
+    <link rel="stylesheet" href="${ctx}/common/scripts/fullcalendar/dist/fullcalendar.print.min.css">
 </head>
 
 <body class="hold-transition skin-yellow sidebar-mini">
@@ -173,7 +173,7 @@
 	<!-- demo purposes -->
 	<script src="${ctx}/common/js/demo.js"></script>
 	
-  	<script type="text/javascript" src="${ctx}/common/css/plugins/fullcalendar/dist/fullcalendar.min.js"></script>
+  	<script type="text/javascript" src="${ctx}/common/scripts/fullcalendar/dist/fullcalendar.min.js"></script>
 	<script type="text/javascript" src="${ctx}/common/css/plugins/moment/moment.js"></script>
 	<script type="text/javascript" src="${ctx}/common/js/calendar.js"></script>
 	
