@@ -1,20 +1,21 @@
-购物系统
+Management of architect
 =====================
 [![Build Status](https://travis-ci.org/vito16/shop.svg?branch=master)](https://travis-ci.org/vito16/shop) [![Coverage Status](https://coveralls.io/repos/github/vito16/shop/badge.svg?branch=master)](https://coveralls.io/github/vito16/shop?branch=master)  
 
-在线商城项目，持续完善中...
+Online Architecture Management Project, Continuous Improvement ...
 
-## 启动服务
+## Start the service
 
     com.muas.oya.Application.main()
     
-主页：[http://localhost:8081/](localhost:8081/)  
-后台：[http://localhost:8081/admin/login](localhost:8081/admin/login)  
+HomePage：[http://localhost:8031/](localhost:8031/)  
+Backstage：[http://localhost:8031/admin/login](localhost:8031/admin/login)  
 
-## 配置修改
-可以在application.properties中修改相关配置（http服务端口、数据库配置...）
+## Configuration modification
+allowableapplication.propertiesModify the relevant configuration（Http service port, database configuration...）
 
-- 访问端口：server.port
-- 数据库相关配置：jdbc.***
+- Access to the port：server.port
+- Database related configuration：jdbc.***
 
 
+ 	
