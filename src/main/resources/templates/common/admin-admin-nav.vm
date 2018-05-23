@@ -1,0 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<div class="row br">
+    <ul class="nav nav-tabs">
+        <li id="sub-nav-admin"><a href="${ctx}/user/profile">Informations personnelles</a></li>
+        <li id="sub-nav-product"><a href="${ctx}/product/admin">Gestion des produits</a></li>
+        <li id="sub-nav-order"><a href="${ctx}/order/admin">Gestion des commandes</a></li>
+        <li id="sub-nav-news"><a href="${ctx}/news/admin">Gestion de l'annonce</a></li>
+    </ul>
+</div>
