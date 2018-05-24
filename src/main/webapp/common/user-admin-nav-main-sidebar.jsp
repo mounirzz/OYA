@@ -35,7 +35,7 @@
           </a>
         </li>
         <li class="treeview">
-          <a href="${ctx}/user/">
+          <a href="${ctx}/order/">
             <i class="icon-list"></i>
             <span>Alimentation</span>
             <span class="pull-right-container">
@@ -79,7 +79,7 @@
           </a>
         </li>
         <li class="treeview">
-          <a href="#">
+          <a href="${ctx}/user/Documents">
              <i class="icon-folder-alt"></i> 
             <span>Documents</span>
             <span class="pull-right-container">
@@ -88,7 +88,7 @@
           </a>
         </li>
         <li class="treeview">
-          <a href="#">
+          <a href="${ctx}/user/userAdress">
             <i class="icon-calendar"></i>
             <span>Calendrier</span>
             <span class="pull-right-container">
