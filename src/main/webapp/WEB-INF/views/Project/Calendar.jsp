@@ -16,6 +16,7 @@
 <body class="hold-transition skin-yellow sidebar-mini">
 <%@ include file="/common/user-admin-nav-man.jsp" %>
  <%@ include file="/common/user-admin-nav-main-sidebar.jsp" %>
+
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -108,7 +109,7 @@
 			</div>
 		</div>
 		<!-- Modal Add Category -->
-		<div class="modal fade none-border " id="add-new-events">
+		<div class="modal fade none-border" id="add-new-events">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -150,6 +151,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+ 
   
 <script type="text/javascript" src="${ctx}/common/scripts/jquery/dist/jquery.min.js"></script>
 	
