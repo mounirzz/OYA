@@ -40,11 +40,10 @@ public class ProjectController {
 		model.setViewName("Project/ListProject");
 		return model ;
 	}
-	@RequestMapping(value="/add" ,method = RequestMethod.POST)
+	@RequestMapping(value="/add" ,method = RequestMethod.GET)
 	public ModelAndView newForm(ModelAndView model,HttpSession sessino) {
 		model.setViewName("Project/addProject");
 		return model ;
-		
 	}
 	@RequestMapping(value="/add",method =RequestMethod.POST)
 	public String doNew(@Valid @ModelAttribute Project project,BindingResult result , HttpSession session, Integer id) throws Exception{

@@ -19,7 +19,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(name = "t_user")
-public  class User implements Serializable {
+public abstract class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -83,6 +83,8 @@ public  class User implements Serializable {
 	 * Remarques
 	 */
 	private String remark;
+	
+	private Collaborateur IncludeColl ;
 
 	/**
 	 * Informations sur le mot de passe (cryptage)
@@ -287,5 +289,13 @@ public  class User implements Serializable {
 
 	public void setMail(String mail) {
 		this.mail = mail;
+	}
+
+	public Collaborateur getIncludeColl() {
+		return IncludeColl;
+	}
+
+	public void setIncludeColl(Collaborateur includeColl) {
+		IncludeColl = includeColl;
 	}
 }

@@ -8,9 +8,6 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.DynamicUpdate;
 
-@Entity
-@DynamicUpdate
-@Table(name="t_collaborateur")
 public class Collaborateur extends User {
 
 	/**
