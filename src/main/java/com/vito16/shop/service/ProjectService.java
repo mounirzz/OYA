@@ -15,7 +15,7 @@ import com.vito16.shop.repository.ProjectRepository;
 @Transactional
 public class ProjectService {
 
-	/*@Autowired
+	@Autowired
 	ProjectRepository projectDao ;
 	
 	public void save(Project project) {
@@ -30,7 +30,7 @@ public class ProjectService {
 	/*public List<Project> findOld(){
 		return projectDao.findByDateCreateTimeAsc();
 	}*/
-	/*public List<Project> findPop(){
+	public List<Project> findPop(){
 		return projectDao.findPopProject();
 	}
 	public List<Project> findProjects(Page<Project> page){
@@ -43,5 +43,5 @@ public class ProjectService {
 	}
 	public Project finOne(long id) {
 		return projectDao.findOne(id);
-	}*/
+	}
 }

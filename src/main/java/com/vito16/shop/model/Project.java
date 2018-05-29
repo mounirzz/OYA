@@ -3,12 +3,25 @@ package com.vito16.shop.model;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.DynamicUpdate;
+import org.springframework.format.annotation.DateTimeFormat;
+@Entity
+@DynamicUpdate
+@Table(name="t_project")
 public class Project implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id ;
 	private String num_title_foncier ;
 	private String intitule ;
@@ -16,11 +29,17 @@ public class Project implements Serializable {
 	//private String plan_cadastral ;
 	//private long plan ; 
 	private long  certificat_propriete ;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date date_debut ;
+	@DateTimeFormat(pattern ="yyyy-MM-dd")
 	private Date date_realisation ;
 	private String description ;
 	private String etat ;
+	private Collaborateur inputColl ;
 	private String categorie ;
+	@OneToOne
+	@JoinColumn
+	private Chantier chantier ; 
 	public Integer getId() {
 		return id;
 	}
@@ -78,7 +97,7 @@ public class Project implements Serializable {
 		this.categorie = categorie;
 	}
 	public Project(Integer id, String num_title_foncier, String intitule, long certificat_propriete, Date date_debut,
-			Date date_realisation, String description, String etat, String categorie) {
+			Date date_realisation, String description, String etat, String categorie ,Chantier chantier, Collaborateur InputColl) {
 		super();
 		this.id = id;
 		this.num_title_foncier = num_title_foncier;
@@ -89,5 +108,19 @@ public class Project implements Serializable {
 		this.description = description;
 		this.etat = etat;
 		this.categorie = categorie;
+		this.inputColl = InputColl ;
+		this.chantier = chantier ;
+	}
+	public Collaborateur getInputColl() {
+		return inputColl;
+	}
+	public void setInputColl(Collaborateur inputColl) {
+		this.inputColl = inputColl;
+	}
+	public Chantier getChantier() {
+		return chantier;
+	}
+	public void setChantier(Chantier chantier) {
+		this.chantier = chantier;
 	}
 }

@@ -1,11 +1,24 @@
 package com.vito16.shop.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.DynamicUpdate;
+
+@Entity
+@DynamicUpdate
+@Table(name="t_collaborateur")
 public class Collaborateur extends User {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long idCollab ;
 	private String Agence ;
 	public long getIdCollab() {
