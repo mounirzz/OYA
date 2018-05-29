@@ -19,6 +19,7 @@ import com.vito16.shop.common.Page;
 import com.vito16.shop.model.Project;
 import com.vito16.shop.service.ChantierService;
 import com.vito16.shop.service.ProjectService;
+import com.vito16.shop.util.AdminUtil;
 import com.vito16.shop.util.CollaUtil;
 
 @Controller
@@ -41,8 +42,11 @@ public class ProjectController {
 		return model ;
 	}
 	@RequestMapping(value="/add" ,method = RequestMethod.GET)
-	public ModelAndView newForm(ModelAndView model,HttpSession sessino) {
+	public ModelAndView newForm(ModelAndView model,HttpSession session) {
 		model.setViewName("Project/addProject");
+		if (AdminUtil.getAdminFromSession(session) != null) {
+			model.setViewName("redirect:/");
+		}
 		return model ;
 	}
 	@RequestMapping(value="/add",method =RequestMethod.POST)

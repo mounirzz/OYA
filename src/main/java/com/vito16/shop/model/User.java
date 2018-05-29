@@ -19,7 +19,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(name = "t_user")
-public abstract class User implements Serializable {
+public  class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
