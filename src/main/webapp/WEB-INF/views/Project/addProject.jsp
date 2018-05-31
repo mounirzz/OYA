@@ -97,11 +97,11 @@
 						<div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
 					</div>
 					
-					<div class="form-group">
+				<!-- <div class="form-group">
 						<h5><span class="text-danger">*</span></h5>
 						<div class="controls">
 							<input type="file" name="" class="form-control" required> </div>
-					</div>
+					</div> -->	
 	
 					<div class="text-xs-right">
 						<button type="submit" class="btn btn-info">Enregister</button>
@@ -146,7 +146,7 @@
 	<!-- demo purposes -->
 	<script src="${ctx}/common/js/demo.js"></script>
 	
-    <script type="text/javascript" src="${ctx}/common/scripts/Validation.js"></script>
+    <script type="text/javascript" src="${ctx}/common/js/Validation.js"></script>
 	
 </body>
 </html>

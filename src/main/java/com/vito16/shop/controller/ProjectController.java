@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -54,7 +55,28 @@ public class ProjectController {
 		project.setInputColl(CollaUtil.getCollFromSession(session));
 		project.setDate_debut(new Date());
 		projectService.save(project);
-		return "redirect:/Project/ListProject";
+		return "redirect:/Projects/ListProject";
+	}
+	@RequestMapping(value="/edit" , method = RequestMethod.POST)
+	public ModelAndView doEdit(ModelAndView model , Project project , HttpSession session) {
+		project.setInputColl(CollaUtil.getCollFromSession(session));
+		projectService.save(project);
+		model.setViewName("redirect:/Projects/ListProject");
+		return model ;
+	}
+	@RequestMapping(value="/edit/{id}", method = RequestMethod.GET)
+	public ModelAndView editProject(ModelAndView model , @PathVariable Integer id, HttpSession session) {
+		Project project = projectService.findById(id);
+		model.addObject("projects", project);
+		model.setViewName("Projects/ListProject");
+		return model ;
+	}
+	@RequestMapping(value="/adds" ,method= RequestMethod.POST)
+	public String doNew(HttpSession session) {
+		if (CollaUtil.getCollFromSession(session)==null) {
+			return "redirect:/user/login?error=true";
+		}
+		return "/Projects";
 	}
 	
 }
