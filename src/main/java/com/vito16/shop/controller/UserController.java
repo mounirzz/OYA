@@ -236,7 +236,7 @@ public class UserController {
     	model.addAttribute("title","Calendrier du projet");
     	//List<Project> ListProject =
     	// Model.addAttribute() ;
-    	return "project/Calendar";
+    	return "Project/Calendar";
     }
     @RequestMapping(value = "/userAddress/add", method = RequestMethod.GET)
     public String addUserAddress(Model model) {

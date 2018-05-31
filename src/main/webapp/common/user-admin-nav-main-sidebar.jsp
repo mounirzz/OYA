@@ -34,7 +34,7 @@
             </span>
           </a>
         </li>
-        <li class="treeview">
+        <li class="">
           <a href="${ctx}/order/">
             <i class="icon-list"></i>
             <span>Alimentation</span>
@@ -43,7 +43,7 @@
             </span>
           </a>
         </li>
-        <li class="treeview">
+        <li class="">
           <a href="#">
             <i class="icon-directions"></i>
             <span>Les Tâches</span>
@@ -87,10 +87,10 @@
             </span>
           </a>
         </li>
-        <li class="treeview">
-          <a href="${ctx}/user/userAdress">
+        <li class="">
+          <a href="${ctx}/user/userAddress">
             <i class="icon-calendar"></i>
-            <span>Calendrier</span>
+            <span>Planning</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
