@@ -78,5 +78,4 @@ public class ProjectController {
 		}
 		return "/Projects";
 	}
-	
 }

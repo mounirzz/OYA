@@ -1,4 +1,4 @@
-package com.vito16.shop.model;
+/*package com.vito16.shop.model;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -10,7 +10,7 @@ import javax.persistence.*;
  * @email m.ezzahar@madrex.ma
  * @date 2017-10-20
  */
-@Entity
+/*@Entity
 @Table(name = "t_announcement")
 public class Announcement implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -54,4 +54,4 @@ public class Announcement implements Serializable {
     public void setCreateAdmin(Admin createAdmin) {
         this.createAdmin = createAdmin;
     }
-}
+}*/
