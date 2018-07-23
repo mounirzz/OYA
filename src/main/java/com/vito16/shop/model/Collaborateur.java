@@ -18,6 +18,7 @@ public class Collaborateur extends User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long idCollab ;
 	private String Agence ;
+	private String username ;
 	public long getIdCollab() {
 		return idCollab;
 	}
@@ -34,5 +35,25 @@ public class Collaborateur extends User {
 		super();
 		this.idCollab = idCollab;
 		Agence = agence;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public Collaborateur() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Collaborateur(Integer id, String username, String password, String nom, String prenom, String mail) {
+		super(id, username, password, nom, prenom, mail);
+		// TODO Auto-generated constructor stub
+	}
+	public Collaborateur(long idCollab, String agence, String username) {
+		super();
+		this.idCollab = idCollab;
+		Agence = agence;
+		this.username = username;
 	}
 }
