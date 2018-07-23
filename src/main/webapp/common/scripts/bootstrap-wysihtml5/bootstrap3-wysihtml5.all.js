@@ -2739,4 +2739,4 @@ var wysihtml5 = {
 
             api.WrappedTextRange = WrappedTextRange;
 
-            // IE 9 and 
+            // IE 9 and
