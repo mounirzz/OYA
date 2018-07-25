@@ -25,10 +25,10 @@ public class Collaborateur extends User {
 	public String getAgence() {
 		return Agence;
 	}
-	
 	public void setAgence(String agence) {
 		Agence = agence;
 	}
+	
 	public Collaborateur(long idCollab, String agence) {
 		super();
 		this.idCollab = idCollab;
