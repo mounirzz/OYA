@@ -53,6 +53,7 @@ public class CollaborController {
 		}
 		return "redirect:/user/login?errorPWD=true";
 	}
+	TEST TEST TEST TEST
 	@RequestMapping(value="/logout" ,method =RequestMethod.GET)
 	public String doLogout(HttpSession session) {
 		CollaUtil.getCollFromSession(session);
