@@ -41,7 +41,7 @@ public  class User implements Serializable {
 	/**
 	 * Solde du compte
 	 */
-	private Long balance;
+	//private Long balance;
 
 	/**
 	 * Valeur intégrale
@@ -243,13 +243,13 @@ public  class User implements Serializable {
 		this.orders = orders;
 	}
 
-	public Long getBalance() {
+	/*public Long getBalance() {
 		return balance;
 	}
 
 	public void setBalance(Long balance) {
 		this.balance = balance;
-	}
+	}*/
 
 	public String getSlat() {
         return slat;
