@@ -9,10 +9,6 @@ import javax.persistence.Table;
 import org.hibernate.annotations.DynamicUpdate;
 
 public class Collaborateur extends User {
-
-	/**
-	 * 
-	 */
 	
 	private static final long serialVersionUID = 1L;
 	@Id
