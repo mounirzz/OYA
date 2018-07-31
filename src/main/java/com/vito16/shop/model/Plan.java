@@ -1,6 +1,7 @@
 package com.vito16.shop.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -14,6 +15,7 @@ public class Plan implements Serializable {
 	private long idPlan ;
 	private String type_Plan ;
 	private long plan ;
+	private Date DatePlan;
 	@ManyToOne
 	@JoinColumn
 	private Project project ;
@@ -41,12 +43,20 @@ public class Plan implements Serializable {
 	public void setProject(Project project) {
 		this.project = project;
 	}
-	public Plan(long idPlan, String type_Plan, long plan, Project project) {
+	public Date getDatePlan() {
+		return DatePlan;
+	}
+	public void setDatePlan(Date datePlan) {
+		DatePlan = datePlan;
+	}
+	public Plan(long idPlan, String type_Plan, long plan, Date datePlan, Project project) {
 		super();
 		this.idPlan = idPlan;
 		this.type_Plan = type_Plan;
 		this.plan = plan;
+		DatePlan = datePlan;
 		this.project = project;
 	}
+
 	
 }

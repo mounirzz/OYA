@@ -58,13 +58,22 @@ public class Chantier implements Serializable {
 		public void setObservation(String observation) {
 			this.observation = observation;
 		}
-		public Chantier(long id, String intitule, long image, String cordonnes_lambairt, String observation) {
+		public Project getProject() {
+			return project;
+		}
+		public void setProject(Project project) {
+			this.project = project;
+		}
+		public Chantier(long id, String intitule, long image, String cordonnes_lambairt, String observation,
+				Project project) {
 			super();
 			this.id = id;
 			this.intitule = intitule;
 			this.image = image;
 			this.cordonnes_lambairt = cordonnes_lambairt;
 			this.observation = observation;
+			this.project = project;
 		}
+		
 		
 }

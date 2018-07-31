@@ -17,8 +17,8 @@ public class Phase implements Serializable {
 	private Date DateDebut ;
 	private Date DateFin ;
 	private String statut ;
-	private Date heures_prevues ;
-	private Date heures_realises ;
+	private int heures_prevues ;
+	private int heures_realises ;
 	@ManyToOne
 	@JoinColumn
 	private Project project ;
@@ -52,20 +52,20 @@ public class Phase implements Serializable {
 	public void setStatut(String statut) {
 		this.statut = statut;
 	}
-	public Date getHeures_prevues() {
+	public int getHeures_prevues() {
 		return heures_prevues;
 	}
-	public void setHeures_prevues(Date heures_prevues) {
+	public void setHeures_prevues(int heures_prevues) {
 		this.heures_prevues = heures_prevues;
 	}
-	public Date getHeures_realises() {
+	public int getHeures_realises() {
 		return heures_realises;
 	}
-	public void setHeures_realises(Date heures_realises) {
+	public void setHeures_realises(int heures_realises) {
 		this.heures_realises = heures_realises;
 	}
-	public Phase(Integer idPhase, String phase, Date dateDebut, Date dateFin, String statut, Date heures_prevues,
-			Date heures_realises) {
+	public Phase(Integer idPhase, String phase, Date dateDebut, Date dateFin, String statut, int heures_prevues,
+			int heures_realises, Project project) {
 		super();
 		this.idPhase = idPhase;
 		this.phase = phase;
@@ -74,6 +74,8 @@ public class Phase implements Serializable {
 		this.statut = statut;
 		this.heures_prevues = heures_prevues;
 		this.heures_realises = heures_realises;
+		this.project = project;
 	}
+	
 	
 }

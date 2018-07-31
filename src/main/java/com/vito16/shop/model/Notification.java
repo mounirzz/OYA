@@ -3,6 +3,9 @@ package com.vito16.shop.model;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
 public class Notification implements Serializable {
 
 	/**
@@ -13,7 +16,22 @@ public class Notification implements Serializable {
 	private String Notification ;
 	private Date dateNotif ;
 	private String Details ;  
+	
+	@ManyToOne
+	@JoinColumn
 	private Project Notif_project ;
+	@ManyToOne
+	@JoinColumn
+	private User UserPers;
+	
+	
+	
+	public User getUserPers() {
+		return UserPers;
+	}
+	public void setUserPers(User userPers) {
+		UserPers = userPers;
+	}
 	public long getIdNotif() {
 		return idNotif;
 	}
@@ -44,12 +62,15 @@ public class Notification implements Serializable {
 	public void setNotif_project(Project notif_project) {
 		Notif_project = notif_project;
 	}
-	public Notification(long idNotif, String notification, Date dateNotif, String details, Project notif_project) {
+	public Notification(long idNotif, String notification, Date dateNotif, String details, Project notif_project,
+			User userPers) {
 		super();
 		this.idNotif = idNotif;
 		Notification = notification;
 		this.dateNotif = dateNotif;
 		Details = details;
 		Notif_project = notif_project;
+		UserPers = userPers;
 	}
+
 }
