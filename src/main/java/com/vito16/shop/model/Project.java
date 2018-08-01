@@ -35,22 +35,22 @@ public class Project implements Serializable {
 	private Collaborateur inputColl ;
 	private Admin inputAssocie;
 	
-	@ManyToOne
+	/*@ManyToOne
 	@JoinColumn
 	private Client clt;
-	
+	*/
 	public Admin getInputAssocie() {
 		return inputAssocie;
 	}
 	public void setInputAssocie(Admin inputAssocie) {
 		this.inputAssocie = inputAssocie;
 	}
-	public Client getClt() {
+	/*public Client getClt() {
 		return clt;
 	}
 	public void setClt(Client clt) {
 		this.clt = clt;
-	}
+	}*/
 	private String categorie ;
 	@OneToOne
 	@JoinColumn
@@ -128,7 +128,7 @@ public class Project implements Serializable {
 		this.etat = etat;
 		this.inputColl = inputColl;
 		this.inputAssocie = inputAssocie;
-		this.clt = clt;
+		//this.clt = clt;
 		this.categorie = categorie;
 		this.chantier = chantier;
 	}
@@ -137,7 +137,7 @@ public class Project implements Serializable {
 		return "Project [id=" + id + ", num_title_foncier=" + num_title_foncier + ", intitule=" + intitule
 				+ ", certificat_propriete=" + certificat_propriete + ", date_debut=" + date_debut
 				+ ", date_realisation=" + date_realisation + ", description=" + description + ", etat=" + etat
-				+ ", inputColl=" + inputColl + ", inputAssocie=" + inputAssocie + ", clt=" + clt + ", categorie="
+				+ ", inputColl=" + inputColl + ", inputAssocie=" + inputAssocie + ", categorie="
 				+ categorie + ", chantier=" + chantier + "]";
 	}
 	public Collaborateur getInputColl() {

@@ -1,5 +1,8 @@
 package com.vito16.shop.model;
 
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+
 public class Client extends User {
 
 	/**
@@ -9,6 +12,10 @@ public class Client extends User {
 	private long id_client ;
 	private String Reference ;
 	private String username ;
+	//@OneToMany
+	//@JoinColumn
+	private Project projets ;
+	
 	public long getId_client() {
 		return id_client;
 	}
