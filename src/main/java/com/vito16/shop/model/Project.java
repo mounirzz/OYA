@@ -35,15 +35,23 @@ public class Project implements Serializable {
 	private Collaborateur inputColl ;
 	private Admin inputAssocie;
 	
-	/*@ManyToOne
-	@JoinColumn
+
 	private Client clt;
-	*/
+	@ManyToOne
+	@JoinColumn
 	public Admin getInputAssocie() {
 		return inputAssocie;
 	}
 	public void setInputAssocie(Admin inputAssocie) {
 		this.inputAssocie = inputAssocie;
+	}
+	@ManyToOne
+	@JoinColumn
+	public Client getClients() {
+		return clt;
+	}
+	public void setClients(Client clt) {
+		this.clt = clt;
 	}
 	/*public Client getClt() {
 		return clt;

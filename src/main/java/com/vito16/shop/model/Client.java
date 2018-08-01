@@ -14,7 +14,6 @@ public class Client extends User {
 	private String username ;
 	//@OneToMany
 	//@JoinColumn
-	private Project projets ;
 	
 	public long getId_client() {
 		return id_client;
