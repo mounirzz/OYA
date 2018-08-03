@@ -8,6 +8,6 @@ import com.vito16.shop.model.Chantier;
 
 public interface ChantierRepository /* extends JpaRepository<Chantier, Long>*/ {
 
-//	List<Chantier> findByProejct();
+		//	List<Chantier> findByProejct();
 
 }
