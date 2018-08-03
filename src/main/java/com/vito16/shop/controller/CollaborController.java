@@ -1,4 +1,4 @@
-package com.vito16.shop.controller;
+/*package com.vito16.shop.controller;
 
 import java.util.Date;
 
@@ -32,18 +32,8 @@ public class CollaborController {
 	CollaborService collaborService ;
 	
 	@Autowired
-	UserService userService ;
-	
-	@Autowired
 	ProjectService projectService ;
 	
-	@Autowired
-	ChantierService chantierService ;
-	
-	@RequestMapping(value ="/login" , method=RequestMethod.GET)
-	public String login() {
-		return "user/login";
-	}
 	@RequestMapping(value="/login" , method=RequestMethod.POST)
 	public String doLogin(Collaborateur collaborateur , HttpSession session) {
 		if (collaborService.checkLogin(collaborateur)) {
@@ -84,3 +74,4 @@ public class CollaborController {
 		return model ;
 	}
 }
+*/
