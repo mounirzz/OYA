@@ -16,6 +16,7 @@ public class Collaborateur extends User {
 	private long idCollab ;
 	private String Agence ;
 	private String username ;
+	private String password;
 	public long getIdCollab() {
 		return idCollab;
 	}
@@ -45,13 +46,20 @@ public class Collaborateur extends User {
 		// TODO Auto-generated constructor stub
 	}
 	public Collaborateur(Integer id, String username, String password, String nom, String prenom, String mail) {
-		super(id, username, password, nom, prenom, mail);
+		super(id, username, password, nom, prenom, mail, password);
 		// TODO Auto-generated constructor stub
 	}
-	public Collaborateur(long idCollab, String agence, String username) {
+	public Collaborateur(long idCollab, String agence, String username, String password) {
 		super();
 		this.idCollab = idCollab;
 		Agence = agence;
 		this.username = username;
+		this.password = password ;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }

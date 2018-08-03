@@ -1,4 +1,4 @@
-/*package com.vito16.shop.controller;
+package com.vito16.shop.controller;
 
 import java.util.Date;
 
@@ -59,7 +59,7 @@ public class CollaborController {
 		CollaUtil.getCollFromSession(session);
 		return "redirect:/";
 	}
-	/*@RequestMapping(value ="/addProject", method=RequestMethod.POST)
+	@RequestMapping(value ="/addProject", method=RequestMethod.POST)
 	public String DoProject(@Valid @ModelAttribute Project project , BindingResult result , HttpSession session , Integer id) {
 		project.setInputColl(CollaUtil.getCollFromSession(session));
 		project.setDate_debut(new Date());
@@ -75,7 +75,7 @@ public class CollaborController {
 		}
 		model.setViewName("collabor/Projects/addProjects");
 		return model ;
-	}*//*
+	}
 	@RequestMapping(value="/editProject/{id}" , method=RequestMethod.GET)
 	public ModelAndView edit(ModelAndView model , @PathVariable Integer id) {
 		Project project = projectService.findById(id);
@@ -83,4 +83,4 @@ public class CollaborController {
 		model.setViewName("Collor/Projects/editProjects");
 		return model ;
 	}
-}*/
+}

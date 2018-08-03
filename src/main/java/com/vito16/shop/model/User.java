@@ -107,7 +107,7 @@ public  class User implements Serializable {
 	private List<UserAddress> addresses; // adresse de livraison associée
 
 	/**
-	 * 订单
+	 * 
 	 */
 	private List<Order> orders;  //commande
 	/**
@@ -126,8 +126,9 @@ public  class User implements Serializable {
 	 * @param nom 
 	 * @param prenom 
 	 * @param mail
+	 * @param password2 
 	 */
-	public User(Integer id, String username, String password,String nom , String prenom,String mail) {
+	public User(Integer id, String username, String password,String nom , String prenom,String mail, String password2) {
 		super();
 		this.id = id;
 		this.username = username;

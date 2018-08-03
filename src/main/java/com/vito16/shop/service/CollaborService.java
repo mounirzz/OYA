@@ -1,4 +1,4 @@
-/*package com.vito16.shop.service;
+package com.vito16.shop.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,11 +14,11 @@ public class CollaborService {
 	private CollaborRepository collaborRepository ;
 	
 	public boolean checkLogin(Collaborateur collaborateur) {
-		collaborateur = collaborRepository.findByCollaborateurAndPassword(collaborateur.getUsername(),collaborateur.getPassword());
+		collaborateur = collaborRepository.findByUsernameAndPassword(collaborateur.getUsername(),collaborateur.getPassword());
 		return collaborateur != null ;
 	}
 	public Collaborateur findByCollaAndPassword(String username , String password) {
-		Collaborateur collaborateur = collaborRepository.findByCollaborateurAndPassword(username, password);
+		Collaborateur collaborateur = collaborRepository.findByUsernameAndPassword(username, password);
 		return collaborateur ;
 	}
 	public Collaborateur findByUsername(String username) {
@@ -37,4 +37,3 @@ public class CollaborService {
 		return collaborRepository.findOne(id);
 	}
 }
-*/

@@ -29,8 +29,8 @@ import com.vito16.shop.util.CartUtil;
 import com.vito16.shop.util.UserUtil;
 
 /**
- * @author Vito zhouwentao16@gmail.com
- * @date 2013-7-8
+ * @author 
+ * @date 
  */
 @Controller
 @RequestMapping("/order")
@@ -47,7 +47,7 @@ public class OrderController {
     UserAddressService userAddressService;
 
     /**
-     * Liste de commande
+     * Liste de dossier administratif ???
      *
      * @param session
      * @return
@@ -58,7 +58,7 @@ public class OrderController {
         Page<Order> page = new Page<Order>(request);
         orderService.findOrders(page, user.getId());
         model.addAttribute("page", page);
-        return "Project/Project";
+        return "/";
     }
 
     /**

@@ -45,7 +45,7 @@ public class Client extends User {
 		// TODO Auto-generated constructor stub
 	}
 	public Client(Integer id, String username, String password, String nom, String prenom, String mail) {
-		super(id, username, password, nom, prenom, mail);
+		super();
 		// TODO Auto-generated constructor stub
 	}
 
