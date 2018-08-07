@@ -8,9 +8,6 @@ import javax.persistence.ManyToOne;
 
 public class Planning implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private Integer id_planning ;
 	private Date HeureDeb ; 

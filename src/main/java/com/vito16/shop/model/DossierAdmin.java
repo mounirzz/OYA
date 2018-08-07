@@ -1,22 +1,23 @@
 package com.vito16.shop.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 public class DossierAdmin implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	private long idDossier ;
-	private long idContrat;
+	private Integer idDossier ;
+	private Integer idContrat;
 	private String Objet_contrat;
 	private double estimation_trav; 
 	private double honoraires ;
 	private double Devis_topographe;
-	@OneToOne
-	@JoinColumn
 	private Project project_doss ;
+	private User inputUser;
 	
 	public long getIdDossier() {
 		return idDossier;
@@ -24,7 +25,7 @@ public class DossierAdmin implements Serializable {
 	public long getIdContrat() {
 		return idContrat;
 	}
-	public void setIdContrat(long idContrat) {
+	public void setIdContrat(Integer idContrat) {
 		this.idContrat = idContrat;
 	}
 	public String getObjet_contrat() {
@@ -39,7 +40,7 @@ public class DossierAdmin implements Serializable {
 	public void setDevis_topographe(double devis_topographe) {
 		Devis_topographe = devis_topographe;
 	}
-	public void setIdDossier(long idDossier) {
+	public void setIdDossier(Integer idDossier) {
 		this.idDossier = idDossier;
 	}
 	public double getEstimation_trav() {
@@ -54,6 +55,8 @@ public class DossierAdmin implements Serializable {
 	public void setHonoraires(double honoraires) {
 		this.honoraires = honoraires;
 	}
+	@OneToOne
+	@JoinColumn
 	public Project getProject_doss() {
 		return project_doss;
 	}
@@ -63,7 +66,16 @@ public class DossierAdmin implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	public DossierAdmin(long idDossier, long idContrat, String objet_contrat, double estimation_trav, double honoraires,
+	   @ManyToOne
+	    @JoinColumn
+	    public User getInputUser() {
+	        return inputUser;
+	    }
+
+	    public void setInputUser(User inputUser) {
+	        this.inputUser = inputUser;
+	    }
+	public DossierAdmin(Integer idDossier, Integer idContrat, String objet_contrat, double estimation_trav, double honoraires,
 			double devis_topographe, Project project_doss) {
 		super();
 		this.idDossier = idDossier;
