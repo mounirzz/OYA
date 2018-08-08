@@ -46,17 +46,19 @@
             <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
           </div>
         </div>
+        
         <!-- /.box-header -->
-        <div class="box-body wizard-content">
-			<form action="#" class="validation-wizard wizard-circle">
+        <div class="box-body wizard-content"  >
+        <form action="/dossier/add" class="validation-wizard wizard-circle">
 				<!-- Step 1 -->
-				<h6>Step 1</h6>
+				<form:form>
+				<h6>Projet</h6>
 				<section class="bg-hexagons-dark">
 					<div class="row">
 						<div class="col-md-6">
 							<div class="form-group">
-								<label for="wfirstName2"> First Name : <span class="danger">*</span> </label>
-								<input type="text" class="form-control required" id="wfirstName2" name="firstName"> </div>
+								<label > Categorie du Projet : <span class="danger">*</span> </label>
+								<input type="text" name="categorie"  class="form-control required" > </div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
@@ -95,8 +97,9 @@
 						</div>
 					</div>
 				</section>
+				</form:form>
 				<!-- Step 2 -->
-				<h6>Step 2</h6>
+				<h6>Dossier Adminstratif </h6>
 				<section class="bg-hexagons-dark">
 					<div class="row">
 						<div class="col-md-6">
@@ -119,7 +122,7 @@
 					</div>
 				</section>
 				<!-- Step 3 -->
-				<h6>Step 3</h6>
+				<h6>Plan</h6>
 				<section class="bg-hexagons-dark">
 					<div class="row">
 						<div class="col-md-6">
@@ -160,7 +163,7 @@
 					</div>
 				</section>
 				<!-- Step 4 -->
-				<h6>Step 4</h6>
+				<h6>Planning</h6>
 				<section class="bg-hexagons-dark">
 					<div class="row">
 						<div class="col-md-6">
@@ -208,6 +211,7 @@
 			</form>
         </div>
         <!-- /.box-body -->
+        </div>
       </div>
       <!-- /.box -->
       

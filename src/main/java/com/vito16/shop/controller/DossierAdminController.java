@@ -50,7 +50,6 @@ public class DossierAdminController {
 	    	model.setViewName("Project/dossier/DossierDetail");
 	    	return model;
 	    }
-	    
 	    @RequestMapping(value="/dossier" , method = RequestMethod.GET)
 	    public String Dossier(Model model, HttpServletRequest request) {
 	    	Page<DossierAdmin> page = new Page<DossierAdmin>(request);
