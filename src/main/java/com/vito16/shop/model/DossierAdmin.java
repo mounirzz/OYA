@@ -3,13 +3,21 @@ package com.vito16.shop.model;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.CollectionTable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
-
+import javax.persistence.Table;
+@Entity
+@Table(name="t_DossierAdmin")
 public class DossierAdmin implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+
 	private Integer idDossier ;
 	private Integer idContrat;
 	private String Objet_contrat;
@@ -17,14 +25,17 @@ public class DossierAdmin implements Serializable {
 	private double honoraires ;
 	private double Devis_topographe;
 	private Project project_doss ;
-	private User inputUser;
+	private Admin InputAdmin ;
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public long getIdDossier() {
 		return idDossier;
 	}
 	public long getIdContrat() {
 		return idContrat;
 	}
+	@Id
 	public void setIdContrat(Integer idContrat) {
 		this.idContrat = idContrat;
 	}
@@ -63,18 +74,17 @@ public class DossierAdmin implements Serializable {
 	public void setProject_doss(Project project_doss) {
 		this.project_doss = project_doss;
 	}
+	@ManyToOne
+	@JoinColumn
+	public Admin getInputAdmin() {
+		return InputAdmin;
+	}
+	public void setInputAdmin(Admin inputAdmin) {
+		InputAdmin = inputAdmin;
+	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	   @ManyToOne
-	    @JoinColumn
-	    public User getInputUser() {
-	        return inputUser;
-	    }
-
-	    public void setInputUser(User inputUser) {
-	        this.inputUser = inputUser;
-	    }
 	public DossierAdmin(Integer idDossier, Integer idContrat, String objet_contrat, double estimation_trav, double honoraires,
 			double devis_topographe, Project project_doss) {
 		super();
@@ -86,6 +96,7 @@ public class DossierAdmin implements Serializable {
 		Devis_topographe = devis_topographe;
 		this.project_doss = project_doss;
 	}
+
 	
 
 }

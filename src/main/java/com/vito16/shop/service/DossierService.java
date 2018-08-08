@@ -12,7 +12,7 @@ import com.vito16.shop.repository.DossierRepository;
 
 @Service
 @Transactional
-public class DossierService extends BaseService {
+public class DossierService {
 
 	@Autowired
 	DossierRepository dossierRepository;

@@ -2402,6 +2402,10 @@ select.form-control:not([size]):not([multiple]) {
     font-size: 12px;
 }
 }
+
+.nav-tabs {
+    border-bottom: 1px solid rgb(222, 226, 230);
+}
 .box {
     position: relative;
     margin-bottom: 20px;

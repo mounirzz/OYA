@@ -172,70 +172,7 @@ public class UserController {
     public String doUpdateUser2() {
        return "user/profile/updateUser";
     }
-    @RequestMapping(method = RequestMethod.GET)
-    public ModelAndView index(ModelAndView model , HttpServletRequest request) {
-    	Page<DossierAdmin> page = new Page<DossierAdmin>(request);
-    	DossierService.findDossier(page);
-    	model.addObject("page", page);
-    	model.setViewName("DossierAdministratif");
-    	return model;
-    }
-    @RequestMapping(value = "/{id}", method=RequestMethod.GET)
-    public ModelAndView viewDossierAdministratif(@PathVariable Integer id, ModelAndView model, HttpServletRequest request) {
-    	DossierAdmin dossierAdmin = DossierService.findById(id);
-    	model.addObject("dossierAdmin", dossierAdmin);
-    	model.setViewName("Project/dossier/DossierDetail");
-    	return model;
-    }
-    
-    @RequestMapping(value="/dossier" , method = RequestMethod.GET)
-    public String Dossier(Model model, HttpServletRequest request) {
-    	Page<DossierAdmin> page = new Page<DossierAdmin>(request);
-    	DossierService.findDossier(page);
-    	model.addAttribute("page", page);
-    	return "Project/dossier/NewDossier";
-    }
-    @RequestMapping(value="/dossier/{id}")
-    public ModelAndView DossierView(@PathVariable("id") Integer id , HttpSession session,ModelAndView model) {
-    	DossierAdmin dossieradmin=DossierService.findById(id);
-    	model.addObject("dossieradmin", dossieradmin);
-    	model.setViewName("redirect:/Project/dossier/DossierDetail");
-    	return model ;
-    }
-    @RequestMapping(value = "/dossier/delete/{id}")
-    @ResponseBody
-    public String DossierDelete(@PathVariable("id") Integer idDossier) {
-    	DossierService.deleteDossier(idDossier);
-    	return "success";
-    }
-    @RequestMapping(value="/dossier/edit" , method = RequestMethod.POST)
-    public ModelAndView doEdit(ModelAndView model, DossierAdmin dossierAdmin,HttpSession session) {
-    	dossierAdmin.setInputUser(UserUtil.getUserFromSession(session));
-    	DossierService.addDossier(dossierAdmin);
-    	model.setViewName("redirect:/Project/dossier");
-    	return model ;
-    }
-    @RequestMapping(value="/dossier/edit/{id}", method = RequestMethod.GET)
-    public ModelAndView editdossier(ModelAndView model , @PathVariable Integer idDossier , HttpSession session) {
-    	DossierAdmin dossierAdmin = DossierService.findById(idDossier);
-    	model.addObject("dossierAdmin", dossierAdmin);
-    	model.setViewName("Project/dossier/dossierEdit");
-    	return model ;
-    }
-    @RequestMapping(value="/dossier/add" , method = RequestMethod.GET)
-    public String dossieradd(HttpSession session) {
-    	if (UserUtil.getUserFromSession(session)==null) {
-			return "redirect:/user/login?error=true";
-		}
-    	return "user/Project/dossier/NewDossier";
-    }
-    @RequestMapping(value= "/dossier/add", method = RequestMethod.POST)
-    public String dossieradd(DossierAdmin dossierAdmin, HttpSession session) {
-    	dossierAdmin.setInputUser(UserUtil.getUserFromSession(session));
-    	DossierService.addDossier(dossierAdmin);
-    	return "redirect:/user/Product/dossier";
-    }
-    
+  
     @RequestMapping(value = "/order", method = RequestMethod.GET)
     public String orderList(Model model, HttpSession session, HttpServletRequest request) {
         User user = UserUtil.getUserFromSession(session);
