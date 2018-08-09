@@ -7,11 +7,13 @@
     <%@ include file="/common/global.jsp" %>
     <title>Gestion des Projets  ${login_user.username}</title>
     <%@ include file="/common/meta.jsp" %>
-    <link type="text/css" rel="stylesheet" media="screen" href="${ctx }/common/css/bootstrap.css">
-    
+        <link type="text/css" rel="stylesheet" media="screen" href="${ctx}/common/css/smart_wizard.css"/>
+<link type="text/css" rel="stylesheet" media="screen" href="${ctx}/common/css/smart_wizard_theme_arrows.css"/>
     <%@ include file="/common/include-base-style-man.jsp" %>
-    
-<link type="text/css" rel="stylesheet" media="screen" href="${ctx}/common/css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
     
 </head>
 
@@ -47,11 +49,19 @@
           </div>
         </div>
         
-        <!-- /.box-header -->
-        <div class="box-body wizard-content"  >
-        <form action="/dossier/add" class="validation-wizard wizard-circle">
-				<!-- Step 1 -->
-				<form:form>
+ 
+        <!-- SmartWizard html -->
+        <div id="smartwizard">
+            <ul>
+                <li><a href="#step-1">Step 1<br /><small>This is tab's description</small></a></li>
+                <li><a href="#step-2">Step 2<br /><small>This is tab's description</small></a></li>
+                <li><a href="#step-3">Step 3<br /><small>This is tab's description</small></a></li>
+                <li><a href="#step-4">Step 4<br /><small>This is tab's description</small></a></li>
+            </ul>
+
+            <div>
+                <div id="step-1" class="">
+                    <form:form>
 				<h6>Projet</h6>
 				<section class="bg-hexagons-dark">
 					<div class="row">
@@ -98,8 +108,10 @@
 					</div>
 				</section>
 				</form:form>
-				<!-- Step 2 -->
-				<h6>Dossier Adminstratif </h6>
+				 </div>
+                <div id="step-2" class="">
+                    <form:form>
+				<h6>Projet</h6>
 				<section class="bg-hexagons-dark">
 					<div class="row">
 						<div class="col-md-6">
@@ -121,8 +133,10 @@
 						</div>
 					</div>
 				</section>
-				<!-- Step 3 -->
-				<h6>Plan</h6>
+				</form:form>
+                </div>
+                <div id="step-3" class="">
+                   <h6>Projet</h6>
 				<section class="bg-hexagons-dark">
 					<div class="row">
 						<div class="col-md-6">
@@ -162,10 +176,9 @@
 						</div>
 					</div>
 				</section>
-				<!-- Step 4 -->
-				<h6>Planning</h6>
-				<section class="bg-hexagons-dark">
-					<div class="row">
+				</div>
+				  <div id="step-4" class="">
+       				<div class="row">
 						<div class="col-md-6">
 							<div class="form-group">
 								<label for="behName3">Behaviour :</label>
@@ -207,10 +220,11 @@
 							</div>
 						</div>
 					</div>
-				</section>
-			</form>
+       				
+       				</div>
+            </div>
         </div>
-        <!-- /.box-body -->
+
         </div>
       </div>
       <!-- /.box -->
@@ -243,18 +257,15 @@
 	
 	<!-- Crypto_Admin for demo purposes -->
 	<script src="${ctx}/common/js/demo.js"></script>
-	
-	<!-- steps  -->
-	<script src="${ctx}/common/scripts/jquery/dist/jquery.steps.js"></script>
    
    <!-- validate  -->
     <script src="${ctx}/common/scripts/jquery/dist/jquery.validate.min.js"></script>
 	
-	<!-- Sweet-Alert  -->
-    <script src="${ctx}/common/scripts/sweetalert/sweetalert.min.js"></script>
+    
+    <script src="${ctx}/common/scripts/jquery/dist/jquery.smartWizard.js"></script>
     
     <!-- wizard  -->
-    <script src="${ctx}/common/js/steps.js"></script>
+    <script src="${ctx}/common/js/MySteps.js"></script>
 		
 </body>
 </html>

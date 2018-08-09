@@ -15793,4 +15793,3 @@ ul.timeline2 > li > .timeline-panel:after {
 @include media-breakpoint-up(lg) {
   .modal-lg { max-width: $modal-lg; }
 }
-  
