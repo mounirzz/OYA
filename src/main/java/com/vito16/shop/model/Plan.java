@@ -4,13 +4,15 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.DynamicUpdate;
 @Entity
-@DynamicUpdate
 @Table(name="t_plan")
 public class Plan implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -18,16 +20,19 @@ public class Plan implements Serializable {
 	private String type_Plan ;
 	private long plan ;
 	private Date DatePlan;
-	@ManyToOne
-	@JoinColumn
 	private Project project ;
 	private Admin InputAdmin ;
+	
+	@ManyToOne
+	@JoinColumn
 	public Admin getInputAdmin() {
 		return InputAdmin;
 	}
 	public void setInputAdmin(Admin inputAdmin) {
 		InputAdmin = inputAdmin;
 	}
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public long getIdPlan() {
 		return idPlan;
 	}
@@ -46,6 +51,8 @@ public class Plan implements Serializable {
 	public void setPlan(long plan) {
 		this.plan = plan;
 	}
+	@ManyToOne
+	@JoinColumn
 	public Project getProject() {
 		return project;
 	}
