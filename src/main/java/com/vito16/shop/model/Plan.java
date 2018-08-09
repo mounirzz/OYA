@@ -3,14 +3,16 @@ package com.vito16.shop.model;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
+import org.hibernate.annotations.DynamicUpdate;
+@Entity
+@DynamicUpdate
+@Table(name="t_plan")
 public class Plan implements Serializable {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private long idPlan ;
 	private String type_Plan ;
@@ -19,6 +21,13 @@ public class Plan implements Serializable {
 	@ManyToOne
 	@JoinColumn
 	private Project project ;
+	private Admin InputAdmin ;
+	public Admin getInputAdmin() {
+		return InputAdmin;
+	}
+	public void setInputAdmin(Admin inputAdmin) {
+		InputAdmin = inputAdmin;
+	}
 	public long getIdPlan() {
 		return idPlan;
 	}
