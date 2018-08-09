@@ -3,9 +3,12 @@ package com.vito16.shop.model;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-
+import javax.persistence.Table;
+@Entity
+@Table(name="t_planning")
 public class Planning implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -19,6 +22,17 @@ public class Planning implements Serializable {
 	@ManyToOne
 	@JoinColumn
 	private Project project ;
+	
+private Admin InputAdmin ;
+	
+	@ManyToOne
+	@JoinColumn
+	public Admin getInputAdmin() {
+	return InputAdmin;
+}
+public void setInputAdmin(Admin inputAdmin) {
+	InputAdmin = inputAdmin;
+}
 	
 	public Integer getId_planning() {
 		return id_planning;
