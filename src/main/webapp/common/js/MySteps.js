@@ -1,15 +1,7 @@
  $(document).ready(function(){
 
             // Smart Wizard events
-            $("#smartwizard").on("leaveStep", function(e, anchorObject, stepNumber, stepDirection) {
-                $("#message-box").append("<br /> > <strong>leaveStep</strong> called on " + stepNumber + ". Direction: " + stepDirection);
-                var res = confirm("Do you want to leave the step "+stepNumber+"?");
-                if(!res){
-                    $("#message-box").append(" <strong>leaveStep</strong> Cancelled");
-                }else{
-                    $("#message-box").append(" <strong>leaveStep</strong> Allowed");
-                }
-                return res;
+            $("#smartwizard").on("leaveStep", function(e, anchorObject, stepNumber, stepDirection) {  
             });
 
             // This event should initialize before initializing smartWizard

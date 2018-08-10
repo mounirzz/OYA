@@ -53,14 +53,14 @@
         <!-- SmartWizard html -->
         <div id="smartwizard">
             <ul>
-                <li><a href="#step-1">Step 1<br /><small>This is tab's description</small></a></li>
-                <li><a href="#step-2">Step 2<br /><small>This is tab's description</small></a></li>
-                <li><a href="#step-3">Step 3<br /><small>This is tab's description</small></a></li>
-                <li><a href="#step-4">Step 4<br /><small>This is tab's description</small></a></li>
+                <li><a href="#step-1">Projet<br /><small>Information sur le projet</small></a></li>
+                <li><a href="#step-2">Dossier Administratif<br /><small>Dossier Administratif du Projet</small></a></li>
+                <li><a href="#step-3">Plan<br /><small>Plan du projet</small></a></li>
+                <li><a href="#step-4">Planning<br /><small>Plannification du Projet</small></a></li>
             </ul>
 
             <div>
-                <div id="step-1" class="">
+                <div id="step-1">
                     <form:form>
 				<h6>Projet</h6>
 				<section class="bg-hexagons-dark">
@@ -68,114 +68,134 @@
 						<div class="col-md-6">
 							<div class="form-group">
 								<label > Categorie du Projet : <span class="danger">*</span> </label>
-								<input type="text" name="categorie"  class="form-control required" > </div>
+								<input type="text" name="categorie" class="form-control required" > </div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<label for="wlastName2"> Last Name : <span class="danger">*</span> </label>
-								<input type="text" class="form-control required" id="wlastName2" name="lastName"> </div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="wemailAddress2"> Email Address : <span class="danger">*</span> </label>
-								<input type="email" class="form-control required" id="wemailAddress2" name="emailAddress"> </div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="wphoneNumber2">Phone Number :</label>
-								<input type="tel" class="form-control" id="wphoneNumber2"> </div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="wlocation2"> Select City : <span class="danger">*</span> </label>
-								<select class="custom-select form-control required" id="wlocation2" name="location">
-									<option value="">Select City</option>
-									<option value="India">India</option>
-									<option value="USA">USA</option>
-									<option value="Dubai">Dubai</option>
-								</select>
+				                  <label for="exampleInputFile">Certificat Propriete</label>
+				                  <input type="file" name="certificat_propriete" id="exampleInputFile">
+
+				                  <p class="help-block text-red">La certife ne doit pas dépassser 100MB</p>
+                		</div>
 							</div>
+							</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label > Description : <span class="danger">*</span> </label>
+								<textarea rows="4" name="description" class="form-control required" > </textarea></div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<label for="wdate2">Date of Birth :</label>
-								<input type="date" class="form-control" id="wdate2"> </div>
+								<label for="wdate2">Date de début :</label>
+								<input type="date" name="date_debut" class="form-control" id="wdate2"> </div>
 						</div>
+					</div>
+					<div class="row">
+					<div class="col-md-6">
+							<div class="form-group">
+								<label for="wdate2">Date de realisation :</label>
+								<input type="date" name="date_debut" class="form-control" id="wdate2"> </div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="wdate2">Etat du projet :</label>
+								<input type="text" name="etat" class="form-control" id="wdate2"> </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="wdate2">Inititude :</label>
+								<input type="text" name="intitule" class="form-control" id="wdate2"> </div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="wdate2">Numéro Titre Financier :</label>
+								<input type="text" name="num_title_foncier" class="form-control" id="wdate2"> </div>
+						</div>
+                </div>
+                	<div class="text-xs-right">
+						<button type="submit" class="btn btn-info btn-wizard">Enregister</button>
 					</div>
 				</section>
 				</form:form>
 				 </div>
-                <div id="step-2" class="">
-                    <form:form>
-				<h6>Projet</h6>
+                <div id="step-2">
+                <form:form>
+				<h6>Dossier Administratif</h6>
 				<section class="bg-hexagons-dark">
 					<div class="row">
+							<div class="col-md-6">
+							<div class="form-group">
+								<label for="idContrat">Numéro de Contrat :</label>
+								<input type="text" name="idContrat" class="form-control" id="idContrat" > </div>
+						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<label for="jobTitle3">Company Name :</label>
-								<input type="text" class="form-control required" id="jobTitle3">
+								<label for="objetcontrat">Objet de contrat :</label>
+								<input type="text" name="Objet_contrat" class="form-control" id="objetcontrat" > </div>
+						</div>
+						</div>
+						<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="estimation_trav">Estimation travaux :</label>
+								<text name="estimation_trav" id="estimation_trav" type="text" class="form-control">
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<label for="webUrl3">Company URL :</label>
-								<input type="url" class="form-control required" id="webUrl3" name="webUrl3"> </div>
+								<label for="honoraires">Honoraires :</label>
+								<input name="honoraires" id="honoraires" type="text" class="form-control">			
+								</div>
 						</div>
-						<div class="col-md-12">
+						</div>
+							<div class="row">
+						<div class="col-md-6">
 							<div class="form-group">
-								<label for="shortDescription3">Short Description :</label>
-								<textarea name="shortDescription" id="shortDescription3" rows="6" class="form-control"></textarea>
+								<label for="Devis_topographe">Devis topographe :</label>
+								<input name="Devis_topographe" id="Devis_topographe" type="text" class="form-control">
 							</div>
 						</div>
-					</div>
+						</div>
+						<div class="text-xs-right">
+							<button type="submit" class="btn btn-info btn-wizard">Enregister</button>
+						</div>
 				</section>
 				</form:form>
                 </div>
                 <div id="step-3" class="">
-                   <h6>Projet</h6>
+                   <h6>Plan</h6>
+                       <form:form>
 				<section class="bg-hexagons-dark">
+						<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label > Type de Plan : <span class="danger">*</span> </label>
+								<input type="text" name="type_Plan" class="form-control required" > </div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+				                  <label for="plan">Fichier Plan :</label>
+				                  <input type="file" name="plan" id="plan">
+
+				                  <p class="help-block text-red">Le plan ne doit pas dépassser 100MB</p>
+                		</div>
+							</div>
+							</div>
 					<div class="row">
-						<div class="col-md-6">
+							<div class="col-md-6">
 							<div class="form-group">
-								<label for="wint1">Interview For :</label>
-								<input type="text" class="form-control required" id="wint1"> </div>
-							<div class="form-group">
-								<label for="wintType1">Interview Type :</label>
-								<select class="custom-select form-control required" id="wintType1" data-placeholder="Type to search cities" name="wintType1">
-									<option value="Banquet">Normal</option>
-									<option value="Fund Raiser">Difficult</option>
-									<option value="Dinner Party">Hard</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<label for="wLocation1">Location :</label>
-								<select class="custom-select form-control required" id="wLocation1" name="wlocation">
-									<option value="">Select City</option>
-									<option value="India">India</option>
-									<option value="USA">USA</option>
-									<option value="Dubai">Dubai</option>
-								</select>
-							</div>
+								<label for="DatePlan">Date du plan :</label>
+								<input type="date" name="DatePlan" class="form-control" id="DatePlan"> </div>
 						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="wjobTitle4">Interview Date :</label>
-								<input type="date" class="form-control required" id="wjobTitle4">
-							</div>
-							<div class="form-group">
-								<label>Requirements :</label>
-									<input name="group2" type="radio" id="radio_3" value="1">
-									<label for="radio_3" class="block">Employee</label>
-									<input name="group2" type="radio" id="radio_4" value="1">
-									<label for="radio_4">Contract</label>
-							</div>
 						</div>
-					</div>
+					<div class="text-xs-right">
+							<button type="submit" class="btn btn-info btn-wizard">Enregister</button>
+						</div>
 				</section>
+				</form:form>
 				</div>
 				  <div id="step-4" class="">
        				<div class="row">

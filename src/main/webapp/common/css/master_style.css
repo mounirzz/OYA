@@ -15760,6 +15760,14 @@ ul.timeline2 > li > .timeline-panel:after {
   padding: $modal-inner-padding;
   border-top: $modal-footer-border-width solid $modal-footer-border-color;
 }
+.btn-wizard{
+	    width: 230px;
+    height: 50px;
+    font-size: 20px;
+}
+.text-xs-right{
+	text-align: right;
+	}
 
 .modal-scrollbar-measure {
   position: absolute;
