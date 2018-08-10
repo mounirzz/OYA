@@ -15,7 +15,6 @@ import javax.persistence.Table;
 import org.hibernate.annotations.DynamicUpdate;
 import org.springframework.format.annotation.DateTimeFormat;
 @Entity
-@DynamicUpdate
 @Table(name="t_project")
 public class Project implements Serializable {
 
@@ -26,9 +25,9 @@ public class Project implements Serializable {
 	private String num_title_foncier ;
 	private String intitule ;
 	private long  certificat_propriete ;
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	//@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date date_debut ;
-	@DateTimeFormat(pattern ="yyyy-MM-dd")
+	//@DateTimeFormat(pattern ="yyyy-MM-dd")
 	private Date date_realisation ;
 	private String description ;
 	private String etat ;
@@ -59,6 +58,7 @@ public class Project implements Serializable {
 	public void setClt(Client clt) {
 		this.clt = clt;
 	}*/
+	public Project() {} 
 	private String categorie ;
 	@OneToOne
 	@JoinColumn

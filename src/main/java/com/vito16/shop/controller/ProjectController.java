@@ -55,7 +55,7 @@ public class ProjectController {
 		project.setInputColl(CollaUtil.getCollFromSession(session));
 		project.setDate_debut(new Date());
 		projectService.save(project);
-		return "redirect:/Projects/ListProject";
+		return "redirect:/DossierAdministratif/dossier#step-2";
 	}
 	@RequestMapping(value="/edit" , method = RequestMethod.POST)
 	public ModelAndView doEdit(ModelAndView model , Project project , HttpSession session) {

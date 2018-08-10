@@ -61,7 +61,8 @@
 
             <div>
                 <div id="step-1">
-                    <form:form>
+                    <form:form id="inputForm" role="form" action="${ctx}/Projects/add"
+                   method="post" class="form-horizontal" enctype="multipart/form-data">
 				<h6>Projet</h6>
 				<section class="bg-hexagons-dark">
 					<div class="row">
