@@ -19,7 +19,7 @@ public class DossierAdmin implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private Integer idDossier ;
-	private Integer idContrat;
+	private long idContrat;
 	private String Objet_contrat;
 	private double estimation_trav; 
 	private double honoraires ;
@@ -27,16 +27,20 @@ public class DossierAdmin implements Serializable {
 	private Project project_doss ;
 	private Admin InputAdmin ;
 	
+	public DossierAdmin() {}
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public long getIdDossier() {
+	public Integer getIdDossier() {
 		return idDossier;
+	}
+	public void setIdDossier(Integer idDossier) {
+		this.idDossier = idDossier;
 	}
 	public long getIdContrat() {
 		return idContrat;
 	}
-	@Id
-	public void setIdContrat(Integer idContrat) {
+	public void setIdContrat(long idContrat) {
 		this.idContrat = idContrat;
 	}
 	public String getObjet_contrat() {
@@ -51,9 +55,7 @@ public class DossierAdmin implements Serializable {
 	public void setDevis_topographe(double devis_topographe) {
 		Devis_topographe = devis_topographe;
 	}
-	public void setIdDossier(Integer idDossier) {
-		this.idDossier = idDossier;
-	}
+	
 	public double getEstimation_trav() {
 		return estimation_trav;
 	}
@@ -96,6 +98,14 @@ public class DossierAdmin implements Serializable {
 		Devis_topographe = devis_topographe;
 		this.project_doss = project_doss;
 	}
+
+	@Override
+	public String toString() {
+		return "DossierAdmin [idDossier=" + idDossier + ", idContrat=" + idContrat + ", Objet_contrat=" + Objet_contrat
+				+ ", estimation_trav=" + estimation_trav + ", honoraires=" + honoraires + ", Devis_topographe="
+				+ Devis_topographe + ", project_doss=" + project_doss + ", InputAdmin=" + InputAdmin + "]";
+	}
+	
 
 	
 

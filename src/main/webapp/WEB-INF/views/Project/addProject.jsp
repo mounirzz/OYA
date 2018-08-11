@@ -123,7 +123,8 @@
 				</form:form>
 				 </div>
                 <div id="step-2">
-                <form:form>
+                      <form:form id="inputForm" role="form" action="${ctx}/DossierAdministratif/dossier/add"
+                   method="post" class="form-horizontal" enctype="multipart/form-data">
 				<h6>Dossier Administratif</h6>
 				<section class="bg-hexagons-dark">
 					<div class="row">
@@ -142,7 +143,7 @@
 						<div class="col-md-6">
 							<div class="form-group">
 								<label for="estimation_trav">Estimation travaux :</label>
-								<text name="estimation_trav" id="estimation_trav" type="text" class="form-control">
+								<input type="text" name="estimation_trav" id="estimation_trav"  class="form-control">
 							</div>
 						</div>
 						<div class="col-md-6">

@@ -95,7 +95,7 @@ public class PlanController {
 	    public String planadd(Plan plan, HttpSession session) {
 	    	plan.setInputAdmin(AdminUtil.getAdminFromSession(session));
 	    	PlanService.addPlan(plan);
-	    	return "redirect:/user/Project/plan";
+	    	return "redirect:/Plan/plan#step-3";
 	    }
 	    
 }

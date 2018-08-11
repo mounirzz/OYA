@@ -22,6 +22,7 @@ public class Project implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id ;
+	private String titleProject ;
 	private String num_title_foncier ;
 	private String intitule ;
 	private long  certificat_propriete ;
@@ -34,7 +35,6 @@ public class Project implements Serializable {
 	private Collaborateur inputColl ;
 	private Admin inputAssocie;
 	
-
 	private Client clt;
 	@ManyToOne
 	@JoinColumn
@@ -122,11 +122,12 @@ public class Project implements Serializable {
 	
 	
 	
-	public Project(Integer id, String num_title_foncier, String intitule, long certificat_propriete, Date date_debut,
+	public Project(Integer id,String titleProject, String num_title_foncier, String intitule, long certificat_propriete, Date date_debut,
 			Date date_realisation, String description, String etat, Collaborateur inputColl, Admin inputAssocie,
 			Client clt, String categorie, Chantier chantier) {
 		super();
 		this.id = id;
+		this.titleProject=titleProject ;
 		this.num_title_foncier = num_title_foncier;
 		this.intitule = intitule;
 		this.certificat_propriete = certificat_propriete;
@@ -142,7 +143,7 @@ public class Project implements Serializable {
 	}
 	@Override
 	public String toString() {
-		return "Project [id=" + id + ", num_title_foncier=" + num_title_foncier + ", intitule=" + intitule
+		return "Project [id=" + id + ",  titleProject= " + titleProject +", num_title_foncier=" + num_title_foncier + ", intitule=" + intitule
 				+ ", certificat_propriete=" + certificat_propriete + ", date_debut=" + date_debut
 				+ ", date_realisation=" + date_realisation + ", description=" + description + ", etat=" + etat
 				+ ", inputColl=" + inputColl + ", inputAssocie=" + inputAssocie + ", categorie="
@@ -159,5 +160,11 @@ public class Project implements Serializable {
 	}
 	public void setChantier(Chantier chantier) {
 		this.chantier = chantier;
+	}
+	public String getTitleProject() {
+		return titleProject;
+	}
+	public void setTitleProject(String titleProject) {
+		this.titleProject = titleProject;
 	}
 }

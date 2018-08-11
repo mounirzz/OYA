@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import com.vito16.shop.model.DossierAdmin;
 @Repository
-public interface DossierRepository extends JpaRepository<DossierAdmin, Integer> {
+public interface DossierRepository extends JpaRepository<DossierAdmin, Long> {
 	
 }

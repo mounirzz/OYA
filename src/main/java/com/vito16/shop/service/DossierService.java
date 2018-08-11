@@ -31,8 +31,8 @@ public class DossierService {
 		return page.getResult();
 	}
 
-	public DossierAdmin findById(Integer id) {
-		return dossierRepository.findOne(id);
+	public DossierAdmin findById(Integer idDossier) {
+		return dossierRepository.findOne(idDossier);
 	}
 
 }
