@@ -65,6 +65,7 @@ public class Plan implements Serializable {
 	public void setDatePlan(Date datePlan) {
 		DatePlan = datePlan;
 	}
+	public Plan() {}
 	public Plan(long idPlan, String type_Plan, long plan, Date datePlan, Project project) {
 		super();
 		this.idPlan = idPlan;

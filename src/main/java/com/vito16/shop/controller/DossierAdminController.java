@@ -49,7 +49,7 @@ public class DossierAdminController {
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public ModelAndView viewDossierAdministratif(@PathVariable Integer id, ModelAndView model,
+	public ModelAndView viewDossierAdministratif(@PathVariable Long id, ModelAndView model,
 			HttpServletRequest request) {
 		DossierAdmin dossierAdmin = DossierService.findById(id);
 		model.addObject("dossierAdmin", dossierAdmin);
@@ -66,7 +66,7 @@ public class DossierAdminController {
 	}
 
 	@RequestMapping(value = "/dossier/{id}")
-	public ModelAndView DossierView(@PathVariable("id") Integer id, HttpSession session, ModelAndView model) {
+	public ModelAndView DossierView(@PathVariable("id") Long id, HttpSession session, ModelAndView model) {
 		DossierAdmin dossieradmin = DossierService.findById(id);
 		model.addObject("dossieradmin", dossieradmin);
 		model.setViewName("redirect:/Project/dossier/DossierDetail");
@@ -75,7 +75,7 @@ public class DossierAdminController {
 
 	@RequestMapping(value = "/dossier/delete/{id}")
 	@ResponseBody
-	public String DossierDelete(@PathVariable("id") Integer idDossier) {
+	public String DossierDelete(@PathVariable("id") Long idDossier) {
 		DossierService.deleteDossier(idDossier);
 		return "success";
 	}
@@ -89,7 +89,7 @@ public class DossierAdminController {
 	}
 
 	@RequestMapping(value = "/dossier/edit/{id}", method = RequestMethod.GET)
-	public ModelAndView editdossier(ModelAndView model, @PathVariable Integer idDossier, HttpSession session) {
+	public ModelAndView editdossier(ModelAndView model, @PathVariable Long idDossier, HttpSession session) {
 		DossierAdmin dossierAdmin = DossierService.findById(idDossier);
 		model.addObject("dossierAdmin", dossierAdmin);
 		model.setViewName("Project/dossier/dossierEdit");

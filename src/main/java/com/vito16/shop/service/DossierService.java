@@ -21,7 +21,7 @@ public class DossierService {
 		dossierRepository.save(dossierAdmin);
 	}
 
-	public void deleteDossier(Integer idDossier) {
+	public void deleteDossier(Long idDossier) {
 		dossierRepository.delete(idDossier);
 	}
 
@@ -31,7 +31,7 @@ public class DossierService {
 		return page.getResult();
 	}
 
-	public DossierAdmin findById(Integer idDossier) {
+	public DossierAdmin findById(Long idDossier) {
 		return dossierRepository.findOne(idDossier);
 	}
 

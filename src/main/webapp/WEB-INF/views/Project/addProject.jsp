@@ -169,7 +169,8 @@
                 </div>
                 <div id="step-3" class="">
                    <h6>Plan</h6>
-                       <form:form>
+                       <form:form id="inputForm" role="form" action="${ctx}/Plan/plan/add"
+                   method="post" class="form-horizontal" enctype="multipart/form-data">
 				<section class="bg-hexagons-dark">
 						<div class="row">
 						<div class="col-md-6">
