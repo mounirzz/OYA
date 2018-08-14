@@ -98,7 +98,7 @@ public class PlanController {
 	    public String planadd(@Valid @ModelAttribute Plan plan, BindingResult result, HttpSession session) throws Exception {
 	    	plan.setInputAdmin(AdminUtil.getAdminFromSession(session));
 	    	PlanService.addPlan(plan);
-	    	return "redirect:/Plan/plan#step-3";
+	    	return "redirect:/Planning/planning#step-4";
 	    }
 	    
 }

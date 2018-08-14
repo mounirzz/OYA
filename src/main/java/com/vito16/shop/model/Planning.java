@@ -103,7 +103,7 @@ public class Planning implements Serializable {
 	public void setProject(Project project) {
 		this.project = project;
 	}
-
+	public Planning() {}
 	public Planning(Integer id_planning, Date heureDeb, Date heureFin, Date jour, Date mois, Date annee, String motif,
 			Project project) {
 		super();

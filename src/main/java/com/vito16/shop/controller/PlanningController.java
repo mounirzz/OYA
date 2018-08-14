@@ -2,12 +2,14 @@ package com.vito16.shop.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -92,10 +94,10 @@ public class PlanningController {
 	    	return "user/Project/planning/NewPlanning";
 	    }
 	    @RequestMapping(value= "/planning/add", method = RequestMethod.POST)
-	    public String planningadd(Planning planning, HttpSession session) {
+	    public String planningadd(@Valid Planning planning,BindingResult result, HttpSession session) throws Exception {
 	    	planning.setInputAdmin(AdminUtil.getAdminFromSession(session));
 	    	PlanningService.addPlanning(planning);
-	    	return "redirect:/user/Project/planning";
+	    	return "redirect:/Projects/add#step-1";
 	    }
 	    
 }

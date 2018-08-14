@@ -7,12 +7,50 @@
     <%@ include file="/common/global.jsp" %>
     <title>Gestion des Projets  ${login_user.username}</title>
     <%@ include file="/common/meta.jsp" %>
+        <link rel="stylesheet" href="${ctx}/common/scripts/fullcalendar/dist/fullcalendar.min.css">
         <link type="text/css" rel="stylesheet" media="screen" href="${ctx}/common/css/smart_wizard.css"/>
 <link type="text/css" rel="stylesheet" media="screen" href="${ctx}/common/css/smart_wizard_theme_arrows.css"/>
     <%@ include file="/common/include-base-style-man.jsp" %>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+<style>/*modal*/
+.modal {
+    background: rgba(0, 0, 0, .3);
+}
+.modal-content {
+    border-radius: 0;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .125);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .125);
+    border: 0;
+	background-color: #252525;
+}
+@media (min-width:768px) {
+    .modal-content {
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .125);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .125);
+}
+}.modal-header {
+    border-bottom-color: #585858;
+}
+.modal-footer {
+    border-top-color: #585858;
+	display: inline-block;
+}
+.modal-primary .modal-footer, .modal-primary .modal-header {
+    border-color: #398bf7;
+}
+.modal-warning .modal-footer, .modal-warning .modal-header {
+    border-color: #fbae1c;
+}
+.modal-info .modal-footer, .modal-info .modal-header {
+    border-color: #398bf7;
+}
+.modal-success .modal-footer, .modal-success .modal-header {
+    border-color: #00c292;
+}
+.modal-danger .modal-footer, .modal-danger .modal-header {
+    border-color: #ef5350;
+}</style>
 
     
 </head>
@@ -191,7 +229,7 @@
 							<div class="col-md-6">
 							<div class="form-group">
 								<label for="DatePlan">Date du plan :</label>
-								<input type="date" name="DatePlan" class="form-control" id="DatePlan"> </div>
+								<input type="date" name="datePlan" class="form-control" id="DatePlan"> </div>
 						</div>
 						</div>
 					<div class="text-xs-right">
@@ -201,50 +239,124 @@
 				</form:form>
 				</div>
 				  <div id="step-4" class="">
-       				<div class="row">
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="behName3">Behaviour :</label>
-								<input type="text" class="form-control required" id="behName3">
-							</div>
-							<div class="form-group">
-								<label for="participants3">Confidance</label>
-								<input type="text" class="form-control required" id="participants3">
-							</div>
-							<div class="form-group">
-								<label for="participants4">Result</label>
-								<select class="custom-select form-control required" id="participants4" name="location">
-									<option value="">Select Result</option>
-									<option value="Selected">Selected</option>
-									<option value="Rejected">Rejected</option>
-									<option value="Call Second-time">Call Second-time</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="decisions2">Comments</label>
-								<textarea name="decisions" id="decisions2" rows="4" class="form-control"></textarea>
-							</div>
-							<div class="form-group">
-								<label>Rate Interviwer :</label>
-								<div class="c-inputs-stacked">
-									<input type="checkbox" id="checkbox_6">
-									<label for="checkbox_6" class="block">1 star</label>
-									<input type="checkbox" id="checkbox_7">
-									<label for="checkbox_7" class="block">2 star</label>
-									<input type="checkbox" id="checkbox_8">
-									<label for="checkbox_8" class="block">3 star</label>
-									<input type="checkbox" id="checkbox_9">
-									<label for="checkbox_9" class="block">4 star</label>
-									<input type="checkbox" id="checkbox_10">
-									<label for="checkbox_10" class="block">5 star</label>
+				<form:form id="inputForm" role="form" action="${ctx}/Planning/planning/add">
+       			  <section class="content">
+					      <div class="row">
+					        <div class="col-12">
+					          <div class="box bg-hexagons-dark">
+					            <div class="box-body">
+					              <!-- the events -->
+								  <div class="col-12">
+									  <div id="external-events" class="row">
+										<div class="col">
+											<div class="external-event bg-success" data-class="bg-success"><i class="fa fa-hand-o-right"></i>Lunch</div>
+										</div>
+										<div class="col">
+											<div class="external-event bg-warning" data-class="bg-warning"><i class="fa fa-hand-o-right"></i>Go home</div>
+										</div>
+										<div class="col">
+											<div class="external-event bg-info" data-class="bg-info"><i class="fa fa-hand-o-right"></i>Do homework</div>
+										</div>
+										<div class="col">
+											<div class="external-event bg-primary" data-class="bg-primary"><i class="fa fa-hand-o-right"></i>Work on UI design</div>
+										</div>
+										<div class="col">
+											<div class="external-event bg-danger" data-class="bg-danger"><i class="fa fa-hand-o-right"></i>Sleep tight</div>
+										</div>
+									  </div>
+									  <div class="event-fc-bt row">
+										<!-- checkbox -->
+										<div class="col checkbox margin-top-20">
+											<input id="drop-remove" type="checkbox">
+											<label for="drop-remove">
+												Remove after drop
+											</label>
+										</div>
+										<div class="col-md-2">
+											<a href="#" data-toggle="modal" data-target="#add-new-events" class="btn btn-lg btn-dark btn-block margin-top-10">
+												<i class="ti-plus"></i> Add New Event
+											</a>
+										</div>
+									  </div>			
+								  </div>
+					            </div>
+					            <!-- /.box-body -->
+					          </div>
+					          <!-- /. box -->
+					        </div>
+					        <!-- /.col -->
+					        <div class="col-12">
+					          <div class="box">
+					            <div class="box-body no-padding">
+					              <!-- THE CALENDAR -->
+					              <div id="calendar"></div>
+					            </div>
+					            <!-- /.box-body -->
+					          </div>
+					          <!-- /. box -->
+					        </div>
+					        <!-- /.col -->
+      </div>
+      <!-- BEGIN MODAL -->
+		<div class="modal none-border" id="my-event">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title"><strong>Add Event</strong></h4>
+					</div>
+					<div class="modal-body"></div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-white waves-effect" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-success save-event waves-effect waves-light">Create event</button>
+						<button type="button" class="btn btn-danger delete-event waves-effect waves-light" data-dismiss="modal">Delete</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal Add Category -->
+		<div class="modal fade none-border" id="add-new-events">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title"><strong>Add</strong> a category</h4>
+					</div>
+					<div class="modal-body">
+						<form role="form">
+							<div class="row">
+								<div class="col-md-6">
+									<label class="control-label">Category Name</label>
+									<input class="form-control form-white" placeholder="Enter name" type="text" name="category-name" />
+								</div>
+								<div class="col-md-6">
+									<label class="control-label">Choose Category Color</label>
+									<select class="form-control form-white" data-placeholder="Choose a color..." name="category-color">
+										<option value="success">Success</option>
+										<option value="danger">Danger</option>
+										<option value="info">Info</option>
+										<option value="primary">Primary</option>
+										<option value="warning">Warning</option>
+										<option value="inverse">Inverse</option>
+									</select>
 								</div>
 							</div>
-						</div>
+						</form>
 					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger waves-effect waves-light save-category" data-dismiss="modal">Save</button>
+						<button type="button" class="btn btn-white waves-effect" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END MODAL -->
+      
+      <!-- /.row -->
+    </section>
        				
        				</div>
+       				</form:form>
             </div>
         </div>
 
@@ -275,6 +387,9 @@
 	<!-- FastClick -->
 	<script src="../../../assets/vendor_components/fastclick/lib/fastclick.js"></script>
 	
+		<!-- (This is only for demo purposes) -->
+	<script src="${ctx}/common/js/jquery-ui.min.js"></script>
+	
 	<!-- Crypto_Admin App -->
 	<script src=${ctx}/common/js/template.js"></script>
 	
@@ -289,6 +404,10 @@
     
     <!-- wizard  -->
     <script src="${ctx}/common/js/MySteps.js"></script>
+    	<script type="text/javascript" src="${ctx}/common/css/plugins/moment/moment.js"></script>
+	  	<script type="text/javascript" src="${ctx}/common/scripts/fullcalendar/dist/fullcalendar.min.js"></script>
+	
+	<script type="text/javascript" src="${ctx}/common/js/calendar.js"></script>
 		
 </body>
 </html>
