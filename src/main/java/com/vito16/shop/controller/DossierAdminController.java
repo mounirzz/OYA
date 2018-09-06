@@ -21,7 +21,9 @@ import org.springframework.web.servlet.ModelAndView;
 import com.vito16.shop.common.AppConfig;
 import com.vito16.shop.common.Page;
 import com.vito16.shop.model.DossierAdmin;
+import com.vito16.shop.model.Project;
 import com.vito16.shop.service.DossierService;
+import com.vito16.shop.service.ProjectService;
 import com.vito16.shop.service.UserService;
 import com.vito16.shop.util.AdminUtil;
 import com.vito16.shop.util.UserUtil;
@@ -38,6 +40,8 @@ public class DossierAdminController {
 	DossierService DossierService;
 	@Autowired
 	UserService userService;
+	@Autowired
+	ProjectService projectService;
 
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView index(ModelAndView model, HttpServletRequest request) {
@@ -81,8 +85,10 @@ public class DossierAdminController {
 	}
 
 	@RequestMapping(value = "/dossier/edit", method = RequestMethod.POST)
-	public ModelAndView doEdit(ModelAndView model, DossierAdmin dossierAdmin, HttpSession session) {
+	public ModelAndView doEdit(ModelAndView model, DossierAdmin dossierAdmin,@PathVariable Long id, HttpSession session) {
 		dossierAdmin.setInputAdmin(AdminUtil.getAdminFromSession(session));
+		Project project = projectService.findById(id);
+		dossierAdmin.setProject_doss(project);
 		DossierService.addDossier(dossierAdmin);
 		model.setViewName("redirect:/Project/dossier");
 		return model;
@@ -105,9 +111,11 @@ public class DossierAdminController {
 	}
 
 	@RequestMapping(value = "/dossier/add", method = RequestMethod.POST)
-	public String dossieradd(@Valid  DossierAdmin dossierAdmin, BindingResult result,
+	public String dossieradd(@Valid  DossierAdmin dossierAdmin,Long id, BindingResult result,
 			HttpSession session) throws Exception {
 		dossierAdmin.setInputAdmin(AdminUtil.getAdminFromSession(session));
+		Project project = projectService.findById(id);
+		dossierAdmin.setProject_doss(project);
 		DossierService.addDossier(dossierAdmin);
 		return "redirect:/Plan/plan#step-3";
 	}

@@ -8,7 +8,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.vito16.shop.common.Page;
 import com.vito16.shop.model.DossierAdmin;
+import com.vito16.shop.model.Project;
 import com.vito16.shop.repository.DossierRepository;
+import com.vito16.shop.repository.ProjectRepository;
 
 @Service
 @Transactional
@@ -16,7 +18,6 @@ public class DossierService {
 
 	@Autowired
 	DossierRepository dossierRepository;
-
 	public void addDossier(DossierAdmin dossierAdmin) {
 		dossierRepository.save(dossierAdmin);
 	}
@@ -34,5 +35,6 @@ public class DossierService {
 	public DossierAdmin findById(Long idDossier) {
 		return dossierRepository.findOne(idDossier);
 	}
+
 
 }
