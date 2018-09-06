@@ -2,6 +2,7 @@ package com.vito16.shop.model;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,6 +26,8 @@ public class Project implements Serializable {
 	private String titleProject ;
 	private String num_title_foncier ;
 	private String intitule ;
+	private DossierAdmin dossierAdmin ;
+	private Plan plan ;
 	private long  certificat_propriete ;
 	//@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date date_debut ;
@@ -166,5 +169,21 @@ public class Project implements Serializable {
 	}
 	public void setTitleProject(String titleProject) {
 		this.titleProject = titleProject;
+	}
+	@ManyToOne
+	@JoinColumn
+	public DossierAdmin getDossierAdmin() {
+		return dossierAdmin;
+	}
+	public void setDossierAdmin(DossierAdmin dossierAdmin) {
+		this.dossierAdmin = dossierAdmin;
+	}
+	@ManyToOne
+	@JoinColumn
+	public Plan getPlan() {
+		return plan;
+	}
+	public void setPlan(Plan plan) {
+		this.plan = plan;
 	}
 }

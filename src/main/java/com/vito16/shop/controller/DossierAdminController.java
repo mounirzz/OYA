@@ -87,8 +87,6 @@ public class DossierAdminController {
 	@RequestMapping(value = "/dossier/edit", method = RequestMethod.POST)
 	public ModelAndView doEdit(ModelAndView model, DossierAdmin dossierAdmin,@PathVariable Long id, HttpSession session) {
 		dossierAdmin.setInputAdmin(AdminUtil.getAdminFromSession(session));
-		Project project = projectService.findById(id);
-		dossierAdmin.setProject_doss(project);
 		DossierService.addDossier(dossierAdmin);
 		model.setViewName("redirect:/Project/dossier");
 		return model;
@@ -114,8 +112,6 @@ public class DossierAdminController {
 	public String dossieradd(@Valid  DossierAdmin dossierAdmin,Long id, BindingResult result,
 			HttpSession session) throws Exception {
 		dossierAdmin.setInputAdmin(AdminUtil.getAdminFromSession(session));
-		Project project = projectService.findById(id);
-		dossierAdmin.setProject_doss(project);
 		DossierService.addDossier(dossierAdmin);
 		return "redirect:/Plan/plan#step-3";
 	}

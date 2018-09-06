@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 @Entity
@@ -24,7 +25,6 @@ public class DossierAdmin implements Serializable {
 	private double estimation_trav; 
 	private double honoraires ;
 	private double Devis_topographe;
-	private Project project_doss ;
 	private Admin InputAdmin ;
 	
 	public DossierAdmin() {}
@@ -68,14 +68,6 @@ public class DossierAdmin implements Serializable {
 	public void setHonoraires(double honoraires) {
 		this.honoraires = honoraires;
 	}
-	@OneToOne
-	@JoinColumn
-	public Project getProject_doss() {
-		return project_doss;
-	}
-	public void setProject_doss(Project project_doss) {
-		this.project_doss = project_doss;
-	}
 	@ManyToOne
 	@JoinColumn
 	public Admin getInputAdmin() {
@@ -96,14 +88,13 @@ public class DossierAdmin implements Serializable {
 		this.estimation_trav = estimation_trav;
 		this.honoraires = honoraires;
 		Devis_topographe = devis_topographe;
-		this.project_doss = project_doss;
 	}
 
 	@Override
 	public String toString() {
 		return "DossierAdmin [idDossier=" + idDossier + ", idContrat=" + idContrat + ", Objet_contrat=" + Objet_contrat
 				+ ", estimation_trav=" + estimation_trav + ", honoraires=" + honoraires + ", Devis_topographe="
-				+ Devis_topographe + ", project_doss=" + project_doss + ", InputAdmin=" + InputAdmin + "]";
+				+ Devis_topographe + ", project_doss=" + ", InputAdmin=" + InputAdmin + "]";
 	}
 	
 
