@@ -32,168 +32,47 @@
     <!-- Main content -->
     <section class="content">
 	
-		<div class="row">
-			<div class="col-md-6 col-lg-4">
-            <div class="box">
-              <div class="box-header with-border">
-                <h5 class="box-title">Statut de la Tâche </h5>
-				<div class="box-tools pull-right">
-					<ul class="card-controls">
-					  <li class="dropdown">
-						<a data-toggle="dropdown" href="#"><i class="ion-android-more-vertical"></i></a>
-					  </li>
-					  <li><a href="" class="link card-btn-reload" data-toggle="tooltip" title="" data-original-title="Refresh"><i class="fa fa-circle-thin"></i></a></li>
-					</ul>
-				</div>
-              </div>
-
-              <div class="box-body">
-              <p>Gardez une trace des tâches dans votre projet.</p>
-                <div class="text-center py-20">                  
-				  <div class="donut" data-peity="{ &quot;fill&quot;: [&quot;#00c292&quot;, &quot;#03a9f3&quot;, &quot;#fbae1c&quot;], &quot;radius&quot;: 78, &quot;innerRadius&quot;: 58  }" style="display: none;">20,18,32</div><svg class="peity" height="156" width="156"><path d="M 78 0 A 78 78 0 0 1 154.04437715018224 95.35663284859253 L 134.54581890654578 90.90621416946624 A 58 58 0 0 0 78 20" fill="#926dde"></path><path d="M 154.04437715018224 95.35663284859253 A 78 78 0 0 1 57.24912604579938 153.18910313427656 L 62.56986295713287 133.9098459203595 A 58 58 0 0 0 134.54581890654578 90.90621416946624" fill="#926dde"></path><path d="M 57.24912604579938 153.18910313427656 A 78 78 0 0 1 77.99999999999999 0 L 77.99999999999999 20 A 58 58 0 0 0 62.56986295713287 133.9098459203595" fill="#926dde"></path></svg>
-                </div>
-               <ul class="flexbox flex-justified text-center mt-30">
-                  <li class="br-1">
-                    <div class="font-size-20 text-purple">1</div>
-                    <small>Ouvrir</small>
-                  </li>
-
-                  <li class="br-1">
-                    <div class="font-size-20 text-pink">0</div>
-                    <small>Fermé</small>
-                  </li>
-
-                  <li>
-                    <div class="font-size-20 text-cyan">1</div>
-                    <small>Total</small>
-                  </li>
-                </ul>
-                
-                
-              </div>
-            </div>
-                      <div class="box box-danger box-inverse">
-            <div class="box-header">
-              <h3 class="box-title">événements à venir</h3>
-            </div>
-            <div class="box-body">
-              Pour la Semaine en cours seulement
-            </div>
-            <!-- /.box-body -->
-            <!-- Loading (remove the following to stop the loading)-->
-            <div class="overlay">
-              <i class="fa fa-refresh fa-spin"></i>
-            </div>
-            <!-- end loading -->
-          </div>
-          <!-- /.box -->
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="box">
-              <div class="box-header with-border">
-                <h5 class="box-title red">Articles du travail en retard </h5>
-				<div class="box-tools pull-right">
-					<ul class="card-controls">
-					  <li class="dropdown">
-						<a data-toggle="dropdown" href="#"><i class="ion-android-more-vertical"></i></a>
-					  </li>
-					  <li><a href="" class="link card-btn-reload" data-toggle="tooltip" title="" data-original-title="Refresh"><i class="fa fa-circle-thin"></i></a></li>
-					</ul>
-				</div>
-              </div>
-
-              <div class="box-body">
-              <p></p>
-                <div class="text-center py-20">                  
-				  <div class="donut" data-peity="{ &quot;fill&quot;: [&quot;#00c292&quot;, &quot;#03a9f3&quot;, &quot;#fbae1c&quot;], &quot;radius&quot;: 78, &quot;innerRadius&quot;: 58  }" style="display: none;">20,18,32</div><svg class="peity" height="156" width="156"><path d="M 78 0 A 78 78 0 0 1 154.04437715018224 95.35663284859253 L 134.54581890654578 90.90621416946624 A 58 58 0 0 0 78 20" fill="#00c292"></path><path d="M 154.04437715018224 95.35663284859253 A 78 78 0 0 1 57.24912604579938 153.18910313427656 L 62.56986295713287 133.9098459203595 A 58 58 0 0 0 134.54581890654578 90.90621416946624" fill="#00c292"></path><path d="M 57.24912604579938 153.18910313427656 A 78 78 0 0 1 77.99999999999999 0 L 77.99999999999999 20 A 58 58 0 0 0 62.56986295713287 133.9098459203595" fill="#00c292"></path></svg>
-                </div>
-				<ul class="list-inline">
-					<p>Bon travail! Aucun (s) article (s) de travail en retard pour le moment.
-					</p>
-				</ul>
-<!-- 
-               <ul class="list-inline">
-                  <li class="flexbox mb-5">
-                    <div>
-                      <span class="badge badge-dot badge-lg mr-1" style="background-color: #fbae1c"></span>
-                      <span>Ouvrir</span>
-                    </div>
-                    <div>1</div>
-                  </li>
-
-                  <li class="flexbox mb-5">
-                    <div>
-                      <span class="badge badge-dot badge-lg mr-1" style="background-color: #03a9f3"></span>
-                      <span>Fermé</span>
-                    </div>
-                    <div>0</div>
-                  </li>
-
-                  <li class="flexbox">
-                    <div>
-                      <span class="badge badge-dot badge-lg mr-1" style="background-color: #00c292"></span>
-                      <span>Total</span>
-                    </div>
-                    <div>1</div>
-                  </li>
-                </ul> --> 
-              </div>
-            </div>
-             <div class="box">
-              <div class="box-header with-border">
-                <h5 class="box-title">Statut d'étape</h5>
-				<div class="box-tools pull-right">
-					<ul class="card-controls">
-					  <li class="dropdown">
-						<a data-toggle="dropdown" href="#"><i class="ion-android-more-vertical"></i></a>
-					  </li>
-					  <li><a href="" class="link card-btn-reload" data-toggle="tooltip" title="" data-original-title="Refresh"><i class="fa fa-circle-thin"></i></a></li>
-					</ul>
-				</div>
-              </div>
-
-              <div class="box-body">
-                <div class="text-center py-20">
-					<div class="donut" data-peity="{ &quot;fill&quot;: [&quot;#57c7d4&quot;, &quot;#f96197&quot;, &quot;#926dde&quot;], &quot;radius&quot;: 80, &quot;innerRadius&quot;: 60  }" style="display: none;">9,6,5</div><svg class="peity" height="160" width="160">
-					<path d="M 80 0 A 80 80 0 0 1 104.7213595499958 156.0845213036123 L 98.54101966249685 137.06339097770922 A 60 60 0 0 0 80 20" fill="#faa64b"></path>
-					<path d="M 104.7213595499958 156.0845213036123 A 80 80 0 0 1 0 80.00000000000001 L 20 80.00000000000001 A 60 60 0 0 0 98.54101966249685 137.06339097770922" fill="#faa64b"></path><path d="M 0 80.00000000000001 A 80 80 0 0 1 79.99999999999999 0 L 79.99999999999999 20 A 60 60 0 0 0 20 80.00000000000001" fill="#faa64b"></path></svg>
-                </div>
-
-                <ul class="flexbox flex-justified text-center mt-30">
-                  <li class="br-1">
-                    <div class="font-size-20 text-warning">1</div>
-                    <small>Ouvrir</small>
-                  </li>
-
-                  <li class="br-1">
-                    <div class="font-size-20 text-pink">0</div>
-                    <small>Fermé</small>
-                  </li>
-
-                  <li>
-                    <div class="font-size-20 text-cyan">1</div>
-                    <small>Total</small>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-  <div class="col-lg-4 col-md-6">
+<div class="row">
+        <div class="col-12">
           <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">Statut Probléme</h3>
-               <p class="m-0">(Click sur l'image)</p> 
+            <div class="box-header with-border">
+              <h3 class="box-title">Responsive Hover Table</h3>
             </div>
-            <div class="box-body pad res-tb-block">
-              <img src="/images/alert/alert5.png" alt="alert" class="model_img img-fluid" id="sa-params">              
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
+				<div class="table-responsive">
+				  <table class="table table-hover">
+					<tbody><tr>
+					  <th>Projet</th>
+					  <th>certificat de propriété</th>
+					  <th>Date de début</th>
+					  <th>Description</th>
+					  <th>Etat du projet</th>
+					  <th>Intitule</th>
+					  <th>Numéro titre financier </th>
+					</tr>
+					<c:forEach items="${page.result}" var="project">
+					 <c:set var="task" value="${leave.task }"/>
+            		<c:set var="pi" value="${leave.processInstance }"/>
+					<tr>
+					<tr pid="${project.id}"></tr>
+					  <td><a href="javascript:void(0)">${project.categorie}</a></td>
+					  <td>${project.certificat_propriete} </td>
+					  <td><span class="text-muted"><i class="fa fa-clock-o"></i> ${project.date_debut}</span> </td>
+					  <td>${project.description}</td>
+					  <td><span class="label label-danger">${project.etat}</span></td>
+					  <td>${project.intitule}</td>
+					  <td>${project.num_title_foncier}</td>
+					</tr>
+					</c:forEach>
+				  </tbody></table>
+				</div>
             </div>
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
         </div>
-	
-		</div>
+      </div>
 
 		<div class="col-lg-6 col-12">
 		<div class="row">			

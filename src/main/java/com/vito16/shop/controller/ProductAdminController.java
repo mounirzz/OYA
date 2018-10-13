@@ -63,7 +63,6 @@ public class ProductAdminController {
         model.setViewName("admin/product/productAdmin");
         return model;
     }
-
     @RequestMapping(value = "/new", method = RequestMethod.GET)
     public ModelAndView newForm(ModelAndView model ,HttpSession session ) {
     //	model.addObject("ListMarque", marqueService.findMarque());

@@ -25,10 +25,12 @@ import com.vito16.shop.model.DossierAdmin;
 import com.vito16.shop.model.Order;
 import com.vito16.shop.model.Picture;
 import com.vito16.shop.model.Product;
+import com.vito16.shop.model.Project;
 import com.vito16.shop.model.Remember;
 import com.vito16.shop.service.DossierService;
 import com.vito16.shop.service.OrderService;
 import com.vito16.shop.service.ProductService;
+import com.vito16.shop.service.ProjectService;
 import com.vito16.shop.service.RememberService;
 import com.vito16.shop.util.AdminUtil;
 import com.vito16.shop.util.CookieUtil;
@@ -62,6 +64,9 @@ public class UserController {
 
     @Autowired
     UserService userService;
+    
+    @Autowired
+    ProjectService projectService ;
 
     @Autowired
     OrderService orderService;
@@ -145,9 +150,12 @@ public class UserController {
         return "redirect:/user/login?errorPwd=true";
     }
     @RequestMapping(value ="/home", method = RequestMethod.GET)
-    public String Myhome(HttpSession session, HttpServletResponse reponse,Model model) {
+    public String Myhome(HttpSession session,HttpServletRequest request, HttpServletResponse reponse,Model model,Project project) {
     	User user = UserUtil.getUserFromSession(session);
     	model.addAttribute("user", user);
+    	Page<Project> page = new Page<Project>(request);
+    	projectService.findProjects(page);
+    	model.addAttribute("page", page);
     	return "user/home";
     }
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
@@ -182,7 +190,6 @@ public class UserController {
         return "order/orderList";
     }
 
- 
     @RequestMapping(value = "/order/{id}", method = RequestMethod.GET)
     public String orderView(@PathVariable Integer id, Model model, HttpSession session, HttpServletRequest request) {
         User user = UserUtil.getUserFromSession(session);
@@ -190,7 +197,6 @@ public class UserController {
         model.addAttribute("order", order);
         return "order/orderView";
     }
-
  
     @RequestMapping(value = "/order/confirm/{id}")
     @ResponseBody
@@ -278,6 +284,20 @@ public class UserController {
         logger.debug("Adresse de réception supprimée avec succès ...");
         return "success";
     }
+  /*  @RequestMapping(method = RequestMethod.GET)
+	public ModelAndView admin(ModelAndView model,HttpSession session, HttpServletRequest request) {
+		Page<Project> page = new Page<Project>(request);
+		projectService.findProjects(page);
+		model.addObject("page", page);
+		model.setViewName("user/home");
+		return model ;
+	}
+    @RequestMapping(value = "/{id}")
+    public String showInfo(@PathVariable Integer id, Model model) {
+        Project  project = projectService.findById(id);
+        model.addAttribute("project", project);
+        return "product/productView";
+    }*/
 
 
 }

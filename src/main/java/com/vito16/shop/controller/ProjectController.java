@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.vito16.shop.common.Page;
+import com.vito16.shop.model.DossierAdmin;
 import com.vito16.shop.model.Project;
 import com.vito16.shop.service.ChantierService;
 import com.vito16.shop.service.ProjectService;
@@ -42,6 +43,7 @@ public class ProjectController {
 		model.setViewName("Project/ListProject");
 		return model ;
 	}
+	
 	@RequestMapping(value="/add" ,method = RequestMethod.GET)
 	public ModelAndView newForm(ModelAndView model,HttpSession session) {
 		model.setViewName("Project/addProject");
@@ -51,7 +53,7 @@ public class ProjectController {
 		return model ;
 	}
 	@RequestMapping(value="/add",method =RequestMethod.POST)
-	public String doNew(@Valid @ModelAttribute Project project,BindingResult result , HttpSession session, Integer id) throws Exception{
+	public String doNew(@Valid @ModelAttribute Project project, BindingResult result , HttpSession session, Integer id) throws Exception{
 		project.setInputColl(CollaUtil.getCollFromSession(session));
 		project.setDate_debut(new Date());
 		projectService.save(project);
