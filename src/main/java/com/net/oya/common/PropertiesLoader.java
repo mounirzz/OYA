@@ -1,4 +1,4 @@
-package com.vito16.shop.common;
+package com.net.oya.common;
 /**
  * @author Mounir
  * @email m.ezzahar@madrex.ma

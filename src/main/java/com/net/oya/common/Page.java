@@ -1,4 +1,4 @@
-package com.vito16.shop.common;
+package com.net.oya.common;
 
 import com.google.common.collect.Lists;
 import org.apache.commons.lang3.StringUtils;

@@ -5,7 +5,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
- * @author  muyu@yiji.com
+ * @author  
  * @version 2016/03/14
  */
 @RunWith(SpringRunner.class)

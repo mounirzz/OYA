@@ -3,14 +3,14 @@
  * @email m.ezzahar@madrex.ma
  * @date 2017-10-20
  */
-package com.vito16.shop.service;
+package com.net.oya.service;
 
-import com.vito16.shop.common.Page;
-import com.vito16.shop.repository.ProductRepository;
-import com.vito16.shop.repository.ProductTypeRepository;
-import com.vito16.shop.model.Product;
-import com.vito16.shop.model.ProductType;
-import com.vito16.shop.model.User;
+import com.net.oya.common.Page;
+import com.net.oya.model.Product;
+import com.net.oya.model.ProductType;
+import com.net.oya.model.User;
+import com.net.oya.repository.ProductRepository;
+import com.net.oya.repository.ProductTypeRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.vito16.shop.service;
+package com.net.oya.service;
 
 import java.util.List;
 
@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.vito16.shop.repository.UserAddressRepository;
-import com.vito16.shop.model.User;
-import com.vito16.shop.model.UserAddress;
+import com.net.oya.model.User;
+import com.net.oya.model.UserAddress;
+import com.net.oya.repository.UserAddressRepository;
 
 /**
  * @author Mounir

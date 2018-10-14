@@ -1,4 +1,4 @@
-package com.vito16.shop.controller;
+package com.net.oya.controller;
 /**
  * @author Mounir
  * @email m.ezzahar@madrex.ma
@@ -18,23 +18,28 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
-import com.vito16.shop.common.AppConfig;
-import com.vito16.shop.common.Constants;
-import com.vito16.shop.common.Page;
-import com.vito16.shop.model.DossierAdmin;
-import com.vito16.shop.model.Order;
-import com.vito16.shop.model.Picture;
-import com.vito16.shop.model.Product;
-import com.vito16.shop.model.Project;
-import com.vito16.shop.model.Remember;
-import com.vito16.shop.service.DossierService;
-import com.vito16.shop.service.OrderService;
-import com.vito16.shop.service.ProductService;
-import com.vito16.shop.service.ProjectService;
-import com.vito16.shop.service.RememberService;
-import com.vito16.shop.util.AdminUtil;
-import com.vito16.shop.util.CookieUtil;
-import com.vito16.shop.util.Image;
+import com.net.oya.common.AppConfig;
+import com.net.oya.common.Constants;
+import com.net.oya.common.Page;
+import com.net.oya.model.DossierAdmin;
+import com.net.oya.model.Order;
+import com.net.oya.model.Picture;
+import com.net.oya.model.Product;
+import com.net.oya.model.Project;
+import com.net.oya.model.Remember;
+import com.net.oya.model.User;
+import com.net.oya.model.UserAddress;
+import com.net.oya.service.DossierService;
+import com.net.oya.service.OrderService;
+import com.net.oya.service.ProductService;
+import com.net.oya.service.ProjectService;
+import com.net.oya.service.RememberService;
+import com.net.oya.service.UserAddressService;
+import com.net.oya.service.UserService;
+import com.net.oya.util.AdminUtil;
+import com.net.oya.util.CookieUtil;
+import com.net.oya.util.Image;
+import com.net.oya.util.UserUtil;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -46,12 +51,6 @@ import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
-
-import com.vito16.shop.model.User;
-import com.vito16.shop.model.UserAddress;
-import com.vito16.shop.service.UserAddressService;
-import com.vito16.shop.service.UserService;
-import com.vito16.shop.util.UserUtil;
 
 
 @Controller

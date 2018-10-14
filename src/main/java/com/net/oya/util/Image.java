@@ -1,4 +1,4 @@
-package com.vito16.shop.util;
+package com.net.oya.util;
 
 import java.awt.*;
 import java.awt.color.ColorSpace;

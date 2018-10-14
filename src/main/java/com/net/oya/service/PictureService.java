@@ -1,4 +1,4 @@
-package com.vito16.shop.service;
+package com.net.oya.service;
 /**
  * @author Mounir
  * @email m.ezzahar@madrex.ma
@@ -10,9 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.vito16.shop.repository.PictureRepository;
-import com.vito16.shop.repository.ProductRepository;
-import com.vito16.shop.model.Picture;
+import com.net.oya.model.Picture;
+import com.net.oya.repository.PictureRepository;
+import com.net.oya.repository.ProductRepository;
 
 @Service
 @Transactional

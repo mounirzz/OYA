@@ -1,16 +1,7 @@
-package com.vito16.shop.controller;
+package com.net.oya.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-
-import com.vito16.shop.common.Page;
-import com.vito16.shop.common.PageUtil;
-import com.vito16.shop.model.News;
-import com.vito16.shop.model.Order;
-import com.vito16.shop.model.Product;
-import com.vito16.shop.service.NewsService;
-import com.vito16.shop.service.OrderService;
-import com.vito16.shop.util.UserUtil;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,9 +14,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.vito16.shop.model.Admin;
-import com.vito16.shop.service.AdminService;
-import com.vito16.shop.util.AdminUtil;
+import com.net.oya.common.Page;
+import com.net.oya.common.PageUtil;
+import com.net.oya.model.Admin;
+import com.net.oya.model.News;
+import com.net.oya.model.Order;
+import com.net.oya.model.Product;
+import com.net.oya.service.AdminService;
+import com.net.oya.service.NewsService;
+import com.net.oya.service.OrderService;
+import com.net.oya.util.AdminUtil;
+import com.net.oya.util.UserUtil;
 
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;

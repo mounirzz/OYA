@@ -1,4 +1,4 @@
-package com.vito16.shop.util;
+package com.net.oya.util;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,9 +10,9 @@ import javax.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.vito16.shop.common.Constants;
-import com.vito16.shop.model.OrderItem;
-import com.vito16.shop.model.Product;
+import com.net.oya.common.Constants;
+import com.net.oya.model.OrderItem;
+import com.net.oya.model.Product;
 
 /**
  * Classe d'outils du panier

@@ -1,14 +1,17 @@
-package com.vito16.shop.model;
+package com.net.oya.model;
 
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -27,6 +30,8 @@ public class Project implements Serializable {
 	private String num_title_foncier ;
 	private String intitule ;
 	private DossierAdmin dossierAdmin ;
+	//private Picture masterPic;// class photo																																				//private  Picture masterPic ;
+	//private List<Picture> slavePic;// liste des photos
 	private Plan plan ;
 	private long  certificat_propriete ;
 	//@DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -127,7 +132,7 @@ public class Project implements Serializable {
 	
 	public Project(Integer id,String titleProject, String num_title_foncier, String intitule, long certificat_propriete, Date date_debut,
 			Date date_realisation, String description, String etat, Collaborateur inputColl, Admin inputAssocie,
-			Client clt, String categorie, Chantier chantier) {
+			Client clt, String categorie, Chantier chantier,Picture masterPic) {
 		super();
 		this.id = id;
 		this.titleProject=titleProject ;
@@ -147,8 +152,9 @@ public class Project implements Serializable {
 	@Override
 	public String toString() {
 		return "Project [id=" + id + ",  titleProject= " + titleProject +", num_title_foncier=" + num_title_foncier + ", intitule=" + intitule
-				+ ", certificat_propriete=" + certificat_propriete + ", date_debut=" + date_debut
-				+ ", date_realisation=" + date_realisation + ", description=" + description + ", etat=" + etat
+				+ ",  certificat_propriete=" + certificat_propriete + ", date_debut=" + date_debut
+				+ ", masterPic=\" + masterPic\r\n" + 
+				"				+ \", slavePic=\" + slavePic + \", date_realisation=" + date_realisation + ", description=" + description + ", etat=" + etat
 				+ ", inputColl=" + inputColl + ", inputAssocie=" + inputAssocie + ", categorie="
 				+ categorie + ", chantier=" + chantier + "]";
 	}
@@ -186,4 +192,19 @@ public class Project implements Serializable {
 	public void setPlan(Plan plan) {
 		this.plan = plan;
 	}
+	/*@ManyToOne
+	@JoinColumn(name="certificat_propriete")
+	public Picture getMasterPic() {
+		return masterPic;
+	}
+	public void setMasterPic(Picture masterPic) {
+		this.masterPic = masterPic;
+	}
+	@ManyToMany(cascade = CascadeType.ALL, fetch=FetchType.EAGER)
+	public List<Picture> getSlavePic() {
+		return slavePic;
+	}
+	public void setSlavePic(List<Picture> slavePic) {
+		this.slavePic = slavePic;
+	}*/
 }

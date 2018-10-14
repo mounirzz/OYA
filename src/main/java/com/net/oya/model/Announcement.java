@@ -1,3 +1,4 @@
+package com.net.oya.model;
 /*package com.vito16.shop.model;
 
 import java.io.Serializable;

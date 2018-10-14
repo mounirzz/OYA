@@ -1,9 +1,10 @@
 package com.vito16.shop.test;
 
-import com.vito16.shop.repository.AdminRepository;
-import com.vito16.shop.model.Admin;
-import com.vito16.shop.model.Product;
-import com.vito16.shop.service.ProductService;
+import com.net.oya.model.Admin;
+import com.net.oya.model.Product;
+import com.net.oya.repository.AdminRepository;
+import com.net.oya.service.ProductService;
+
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
@@ -12,7 +13,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @author 木鱼 muyu@yiji.com
+ * @author 
  * @version 2016/03/14
  */
 public class ProductTest extends BaseTest {

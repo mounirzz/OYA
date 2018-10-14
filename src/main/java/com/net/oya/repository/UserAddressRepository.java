@@ -1,12 +1,12 @@
-package com.vito16.shop.repository;
+package com.net.oya.repository;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.vito16.shop.model.User;
-import com.vito16.shop.model.UserAddress;
+import com.net.oya.model.User;
+import com.net.oya.model.UserAddress;
 
 /**
  * @author Mounir

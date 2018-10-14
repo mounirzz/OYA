@@ -8,7 +8,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- * @author 木鱼 muyu@yiji.com
+ * @author 
  * @version 2016/03/14
  */
 public class RegTest {

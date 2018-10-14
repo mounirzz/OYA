@@ -1,4 +1,4 @@
-package com.vito16.shop.controller;
+package com.net.oya.controller;
 
 import javax.servlet.http.HttpSession;
 
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.vito16.shop.model.Product;
-import com.vito16.shop.service.ProductService;
-import com.vito16.shop.util.CartUtil;
+import com.net.oya.model.Product;
+import com.net.oya.service.ProductService;
+import com.net.oya.util.CartUtil;
 
 /**
  * @author Mounir

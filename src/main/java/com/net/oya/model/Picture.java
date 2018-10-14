@@ -1,4 +1,4 @@
-package com.vito16.shop.model;
+package com.net.oya.model;
 
 import java.util.Date;
 
@@ -22,6 +22,7 @@ public class Picture {
     private String url;
     private Date updateTime;
     private Admin updateAdmin;
+    private User updateUser ;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -74,4 +75,13 @@ public class Picture {
     public void setUpdateAdmin(Admin updateAdmin) {
         this.updateAdmin = updateAdmin;
     }
+    @ManyToOne
+    @JoinColumn
+	public User getUpdateUser() {
+		return updateUser;
+	}
+
+	public void setUpdateUser(User updateUser) {
+		this.updateUser = updateUser;
+	}
 }

@@ -1,4 +1,4 @@
-package com.vito16.shop.repository;
+package com.net.oya.repository;
 /**
  * @author Mounir
  * @email m.ezzahar@madrex.ma
@@ -8,9 +8,8 @@ package com.vito16.shop.repository;
 import java.util.List;
 
 import com.alibaba.druid.stat.TableStat.Mode;
-import com.vito16.shop.model.Product;
-import com.vito16.shop.model.ProductType;
-
+import com.net.oya.model.Product;
+import com.net.oya.model.ProductType;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

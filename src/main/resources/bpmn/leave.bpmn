@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
-  <process id="leave" name="请假" isExecutable="true">
+  <process id="leave" name="Partir" isExecutable="true">
     <startEvent id="startevent1" name="Start"></startEvent>
-    <userTask id="usertask1" name="上级批准"></userTask>
+    <userTask id="usertask1" name="Approbation supérieure"></userTask>
     <endEvent id="endevent1" name="End"></endEvent>
     <sequenceFlow id="flow1" sourceRef="exclusivegateway2" targetRef="endevent1"></sequenceFlow>
     <sequenceFlow id="flow2" sourceRef="startevent1" targetRef="usertask1"></sequenceFlow>
     <exclusiveGateway id="exclusivegateway1" name="Exclusive Gateway" default="notAllow"></exclusiveGateway>
     <sequenceFlow id="flow3" sourceRef="usertask1" targetRef="exclusivegateway1"></sequenceFlow>
-    <serviceTask id="servicetask1" name="请假存档" activiti:expression="${leaveService.archive(execution.getProcessBusinessKey())}"></serviceTask>
-    <sequenceFlow id="allow" name="批准" sourceRef="exclusivegateway1" targetRef="servicetask1">
+    <serviceTask id="servicetask1" name="Laisser les archives" activiti:expression="${leaveService.archive(execution.getProcessBusinessKey())}"></serviceTask>
+    <sequenceFlow id="allow" name="Approuver" sourceRef="exclusivegateway1" targetRef="servicetask1">
       <conditionExpression xsi:type="tFormalExpression"><![CDATA[${allow}]]></conditionExpression>
     </sequenceFlow>
     <exclusiveGateway id="exclusivegateway2" name="Exclusive Gateway"></exclusiveGateway>
     <sequenceFlow id="flow5" sourceRef="servicetask1" targetRef="exclusivegateway2"></sequenceFlow>
-    <sequenceFlow id="notAllow" name="未批准" sourceRef="exclusivegateway1" targetRef="exclusivegateway2"></sequenceFlow>
+    <sequenceFlow id="notAllow" name="Non approuvé" sourceRef="exclusivegateway1" targetRef="exclusivegateway2"></sequenceFlow>
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_leave">
     <bpmndi:BPMNPlane bpmnElement="leave" id="BPMNPlane_leave">

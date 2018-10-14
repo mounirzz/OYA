@@ -1,4 +1,4 @@
-package com.vito16.shop.controller;
+package com.net.oya.controller;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -18,16 +18,16 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.vito16.shop.common.Constants;
-import com.vito16.shop.common.Page;
-import com.vito16.shop.common.PageUtil;
-import com.vito16.shop.model.News;
-import com.vito16.shop.model.Picture;
-import com.vito16.shop.model.Product;
-import com.vito16.shop.service.PictureService;
-import com.vito16.shop.service.ProductService;
-import com.vito16.shop.util.AdminUtil;
-import com.vito16.shop.util.Image;
+import com.net.oya.common.Constants;
+import com.net.oya.common.Page;
+import com.net.oya.common.PageUtil;
+import com.net.oya.model.News;
+import com.net.oya.model.Picture;
+import com.net.oya.model.Product;
+import com.net.oya.service.PictureService;
+import com.net.oya.service.ProductService;
+import com.net.oya.util.AdminUtil;
+import com.net.oya.util.Image;
 
 @Controller
 @RequestMapping(value = "/product")

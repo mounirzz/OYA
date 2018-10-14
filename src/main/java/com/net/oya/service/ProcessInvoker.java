@@ -1,4 +1,4 @@
-package com.vito16.shop.service;
+package com.net.oya.service;
 
 /**
  * @author Mounir

@@ -1,4 +1,4 @@
-package com.vito16.shop.util;
+package com.net.oya.util;
 /**
  * Classe Outils utilisateur
  * @author Mounir
@@ -7,8 +7,8 @@ package com.vito16.shop.util;
  */
 import javax.servlet.http.HttpSession;
 
-import com.vito16.shop.common.Constants;
-import com.vito16.shop.model.User;
+import com.net.oya.common.Constants;
+import com.net.oya.model.User;
 
 public class UserUtil {
 

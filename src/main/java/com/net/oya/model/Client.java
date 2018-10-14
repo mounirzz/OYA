@@ -1,4 +1,4 @@
-package com.vito16.shop.model;
+package com.net.oya.model;
 
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;

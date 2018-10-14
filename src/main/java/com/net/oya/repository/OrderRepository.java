@@ -1,11 +1,12 @@
-package com.vito16.shop.repository;
+package com.net.oya.repository;
 
-import com.vito16.shop.model.Order;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
+
+import com.net.oya.model.Order;
 
 /**
  * @author Mounir

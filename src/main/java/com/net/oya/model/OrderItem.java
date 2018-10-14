@@ -3,7 +3,7 @@
  * @email m.ezzahar@madrex.ma
  * @date 2017-10-20
  */
-package com.vito16.shop.model;
+package com.net.oya.model;
 
 import java.io.Serializable;
 

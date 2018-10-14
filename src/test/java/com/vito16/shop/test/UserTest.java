@@ -3,16 +3,17 @@
  */
 package com.vito16.shop.test;
 
-import com.vito16.shop.repository.UserRepository;
-import com.vito16.shop.model.User;
-import com.vito16.shop.service.UserService;
+import com.net.oya.model.User;
+import com.net.oya.repository.UserRepository;
+import com.net.oya.service.UserService;
+
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
- * @author 木鱼 muyu@yiji.com
+ * @author 
  * @version 2016/03/14
  */
 public class UserTest extends BaseTest {

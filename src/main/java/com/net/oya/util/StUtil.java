@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.vito16.shop.util;
+package com.net.oya.util;
 
 /**
  * @author Mounir

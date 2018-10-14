@@ -1,14 +1,15 @@
-package com.vito16.shop.controller;
-import com.vito16.shop.common.Constants;
-import com.vito16.shop.common.Page;
-import com.vito16.shop.model.Picture;
-import com.vito16.shop.model.Product;
-import com.vito16.shop.model.UserAddress;
-import com.vito16.shop.service.PictureService;
-import com.vito16.shop.service.ProductService;
-import com.vito16.shop.util.AdminUtil;
-import com.vito16.shop.util.Image;
-import com.vito16.shop.util.UserUtil;
+package com.net.oya.controller;
+import com.net.oya.common.Constants;
+import com.net.oya.common.Page;
+import com.net.oya.model.Picture;
+import com.net.oya.model.Product;
+import com.net.oya.model.UserAddress;
+import com.net.oya.service.PictureService;
+import com.net.oya.service.ProductService;
+import com.net.oya.util.AdminUtil;
+import com.net.oya.util.Image;
+import com.net.oya.util.UserUtil;
+
 import javax.validation.Valid;
 
 import org.springframework.ui.ModelMap;

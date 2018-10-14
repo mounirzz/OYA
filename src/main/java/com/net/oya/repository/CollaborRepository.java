@@ -1,3 +1,4 @@
+package com.net.oya.repository;
 /*package com.vito16.shop.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;

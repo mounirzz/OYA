@@ -1,7 +1,7 @@
-package com.vito16.shop.util;
+package com.net.oya.util;
 
-import com.vito16.shop.model.Product;
-import com.vito16.shop.model.User;
+import com.net.oya.model.Product;
+import com.net.oya.model.User;
 
 /**
  * Articles liés au panier d'achat

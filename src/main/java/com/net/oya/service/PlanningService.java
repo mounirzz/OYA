@@ -1,4 +1,4 @@
-package com.vito16.shop.service;
+package com.net.oya.service;
 
 import java.util.List;
 
@@ -7,9 +7,9 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.vito16.shop.common.Page;
-import com.vito16.shop.model.Planning;
-import com.vito16.shop.repository.PlanningRepository;
+import com.net.oya.common.Page;
+import com.net.oya.model.Planning;
+import com.net.oya.repository.PlanningRepository;
 
 @Service
 @Transactional

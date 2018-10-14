@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.vito16.shop.service;
+package com.net.oya.service;
 
 import java.util.Date;
 import java.util.List;
@@ -10,13 +10,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.vito16.shop.common.Constants;
-import com.vito16.shop.common.Page;
-import com.vito16.shop.repository.OrderRepository;
-import com.vito16.shop.repository.OrderItemRepository;
-import com.vito16.shop.model.Order;
-import com.vito16.shop.model.OrderItem;
-import com.vito16.shop.model.UserAddress;
+import com.net.oya.common.Constants;
+import com.net.oya.common.Page;
+import com.net.oya.model.Order;
+import com.net.oya.model.OrderItem;
+import com.net.oya.model.UserAddress;
+import com.net.oya.repository.OrderItemRepository;
+import com.net.oya.repository.OrderRepository;
 
 /**
  * @author Mounir

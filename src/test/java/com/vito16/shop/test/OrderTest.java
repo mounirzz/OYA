@@ -1,12 +1,13 @@
 package com.vito16.shop.test;
 
-import com.vito16.shop.model.Order;
-import com.vito16.shop.model.OrderItem;
-import com.vito16.shop.model.Product;
-import com.vito16.shop.model.UserAddress;
-import com.vito16.shop.service.OrderService;
-import com.vito16.shop.service.ProductService;
-import com.vito16.shop.service.UserService;
+import com.net.oya.model.Order;
+import com.net.oya.model.OrderItem;
+import com.net.oya.model.Product;
+import com.net.oya.model.UserAddress;
+import com.net.oya.service.OrderService;
+import com.net.oya.service.ProductService;
+import com.net.oya.service.UserService;
+
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -15,7 +16,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @author 木鱼 muyu@yiji.com
+ * @author 
  * @version 2016/03/14
  */
 public class OrderTest extends BaseTest {

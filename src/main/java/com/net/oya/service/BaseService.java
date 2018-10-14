@@ -1,13 +1,13 @@
 /**
  * 
  */
-package com.vito16.shop.service;
+package com.net.oya.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.vito16.shop.common.Page;
-import com.vito16.shop.model.News;
+import com.net.oya.common.Page;
+import com.net.oya.model.News;
 
 /**
  * @author Mounir

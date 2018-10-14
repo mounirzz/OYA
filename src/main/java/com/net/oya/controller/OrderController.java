@@ -1,4 +1,4 @@
-package com.vito16.shop.controller;
+package com.net.oya.controller;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -15,18 +15,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import com.vito16.shop.common.Constants;
-import com.vito16.shop.common.Page;
-import com.vito16.shop.common.PageUtil;
-import com.vito16.shop.model.Order;
-import com.vito16.shop.model.OrderItem;
-import com.vito16.shop.model.User;
-import com.vito16.shop.model.UserAddress;
-import com.vito16.shop.service.OrderService;
-import com.vito16.shop.service.UserAddressService;
-import com.vito16.shop.service.UserService;
-import com.vito16.shop.util.CartUtil;
-import com.vito16.shop.util.UserUtil;
+import com.net.oya.common.Constants;
+import com.net.oya.common.Page;
+import com.net.oya.common.PageUtil;
+import com.net.oya.model.Order;
+import com.net.oya.model.OrderItem;
+import com.net.oya.model.User;
+import com.net.oya.model.UserAddress;
+import com.net.oya.service.OrderService;
+import com.net.oya.service.UserAddressService;
+import com.net.oya.service.UserService;
+import com.net.oya.util.CartUtil;
+import com.net.oya.util.UserUtil;
 
 /**
  * @author 

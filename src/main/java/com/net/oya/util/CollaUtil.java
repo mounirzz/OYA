@@ -1,4 +1,4 @@
-package com.vito16.shop.util;
+package com.net.oya.util;
 /**
  * 
  * @author Mounir
@@ -8,8 +8,8 @@ package com.vito16.shop.util;
 
 import javax.servlet.http.HttpSession;
 
-import com.vito16.shop.common.Constants;
-import com.vito16.shop.model.Collaborateur;
+import com.net.oya.common.Constants;
+import com.net.oya.model.Collaborateur;
 
 public class CollaUtil {
 

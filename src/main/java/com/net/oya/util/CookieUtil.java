@@ -1,4 +1,4 @@
-package com.vito16.shop.util;
+package com.net.oya.util;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;

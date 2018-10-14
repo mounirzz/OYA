@@ -1,11 +1,7 @@
-package com.vito16.shop.repository;
-/**
- * @author Mounir
- * @email m.ezzahar@madrex.ma
- * @date 2017-10-20
- */
-import com.vito16.shop.model.Remember;
+package com.net.oya.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.net.oya.model.Remember;
 
 
 public interface RememberRepository extends JpaRepository<Remember,String> {

@@ -1,7 +1,8 @@
-package com.vito16.shop.service;
+package com.net.oya.service;
 
-import com.vito16.shop.model.Remember;
-import com.vito16.shop.repository.RememberRepository;
+import com.net.oya.model.Remember;
+import com.net.oya.repository.RememberRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

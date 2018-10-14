@@ -1,7 +1,8 @@
 package com.vito16.shop.test;
 
-import com.vito16.shop.model.Admin;
-import com.vito16.shop.service.AdminService;
+import com.net.oya.model.Admin;
+import com.net.oya.service.AdminService;
+
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 

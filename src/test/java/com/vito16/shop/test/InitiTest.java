@@ -1,12 +1,13 @@
 package com.vito16.shop.test;
 
-import com.vito16.shop.model.Admin;
-import com.vito16.shop.model.Product;
-import com.vito16.shop.model.User;
-import com.vito16.shop.service.AdminService;
-import com.vito16.shop.service.OrderService;
-import com.vito16.shop.service.ProductService;
-import com.vito16.shop.service.UserService;
+import com.net.oya.model.Admin;
+import com.net.oya.model.Product;
+import com.net.oya.model.User;
+import com.net.oya.service.AdminService;
+import com.net.oya.service.OrderService;
+import com.net.oya.service.ProductService;
+import com.net.oya.service.UserService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Date;

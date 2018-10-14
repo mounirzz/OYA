@@ -1,4 +1,4 @@
-package com.vito16.shop.controller;
+package com.net.oya.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -16,13 +16,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.vito16.shop.common.AppConfig;
-import com.vito16.shop.common.Page;
-import com.vito16.shop.model.Planning;
-import com.vito16.shop.service.PlanningService;
-import com.vito16.shop.service.UserService;
-import com.vito16.shop.util.AdminUtil;
-import com.vito16.shop.util.UserUtil;
+import com.net.oya.common.AppConfig;
+import com.net.oya.common.Page;
+import com.net.oya.model.Planning;
+import com.net.oya.service.PlanningService;
+import com.net.oya.service.UserService;
+import com.net.oya.util.AdminUtil;
+import com.net.oya.util.UserUtil;
 
 @Controller
 @RequestMapping("/Planning")

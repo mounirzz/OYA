@@ -1,4 +1,4 @@
-package com.vito16.shop.controller;
+package com.net.oya.controller;
 /**
  * @author Mounir
  * @email m.ezzahar@madrex.ma
@@ -20,11 +20,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.vito16.shop.common.Page;
-import com.vito16.shop.common.PageUtil;
-import com.vito16.shop.model.News;
-import com.vito16.shop.service.NewsService;
-import com.vito16.shop.util.AdminUtil;
+import com.net.oya.common.Page;
+import com.net.oya.common.PageUtil;
+import com.net.oya.model.News;
+import com.net.oya.service.NewsService;
+import com.net.oya.util.AdminUtil;
+
 import org.springframework.web.servlet.ModelAndView;
 
 

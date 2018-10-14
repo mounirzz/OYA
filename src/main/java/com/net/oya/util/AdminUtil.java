@@ -1,9 +1,9 @@
-package com.vito16.shop.util;
+package com.net.oya.util;
 
 import javax.servlet.http.HttpSession;
 
-import com.vito16.shop.common.Constants;
-import com.vito16.shop.model.Admin;
+import com.net.oya.common.Constants;
+import com.net.oya.model.Admin;
 
 /**
  * Classe Outils d'administration

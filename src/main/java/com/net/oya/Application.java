@@ -1,4 +1,4 @@
-package com.vito16.shop;
+package com.net.oya;
 
 import com.alibaba.druid.pool.DruidDataSource;
 
@@ -69,7 +69,7 @@ public class Application {
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 		LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
 		entityManagerFactoryBean.setDataSource(dataSource());
-		entityManagerFactoryBean.setPackagesToScan("com.vito16.shop.model");
+		entityManagerFactoryBean.setPackagesToScan("com.net.oya.model");
 		Properties jpaProperties = new Properties();
 		jpaProperties.setProperty("hibernate.hbm2ddl.auto", "update");
 		jpaProperties.setProperty("hibernate.ejb.naming_strategy", "org.hibernate.cfg.ImprovedNamingStrategy");

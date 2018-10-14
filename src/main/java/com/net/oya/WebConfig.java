@@ -1,11 +1,4 @@
-package com.vito16.shop;
-/**
- * @author Mounir
- * @email m.ezzahar@madrex.ma
- * @date 2017-10-20
- */
-import com.vito16.shop.common.AdminAuthenticationInterceptor;
-import com.vito16.shop.common.AuthenticationInterceptor;
+package com.net.oya;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
@@ -17,6 +10,9 @@ import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+import com.net.oya.common.AdminAuthenticationInterceptor;
+import com.net.oya.common.AuthenticationInterceptor;
 
 import java.text.ParseException;
 import java.util.Date;

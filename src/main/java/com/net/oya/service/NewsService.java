@@ -1,16 +1,16 @@
-package com.vito16.shop.service;
+package com.net.oya.service;
 
 import java.util.List;
 
-import com.vito16.shop.model.Order;
-import com.vito16.shop.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.vito16.shop.common.Page;
-import com.vito16.shop.repository.NewsRepository;
-import com.vito16.shop.model.News;
+import com.net.oya.common.Page;
+import com.net.oya.model.News;
+import com.net.oya.model.Order;
+import com.net.oya.model.Product;
+import com.net.oya.repository.NewsRepository;
 /**
  * Module de nouvelles Service
  * @author Mounir

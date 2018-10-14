@@ -4,7 +4,7 @@
  * @date 2017-10-20
  */
 
-package com.vito16.shop.common;
+package com.net.oya.common;
 
 
 public class Constants {
