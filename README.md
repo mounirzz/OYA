@@ -1,6 +1,5 @@
 Management of architect
 =====================
-[![Build Status]()]() [![Coverage Status]()]()  
 
 Online Architecture Management Project, Continuous Improvement ...
 
