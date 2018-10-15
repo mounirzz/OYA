@@ -35,9 +35,9 @@
           </a>
         </li>
         <li class="">
-          <a href="${ctx}/order/">
+          <a href="${ctx}/Projects/add#step-1">
             <i class="icon-list"></i>
-            <span>Alimentation</span>
+            <span>PROJETS</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
@@ -46,30 +46,30 @@
         <li class="">
           <a href="#">
             <i class="icon-directions"></i>
-            <span>Les Tâches</span>
+            <span>PLANS</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
         </li>
-        <li>
+        <!--  <li>
           <a href="pages/currency-ex/exchange.html">
             <i class="icon-close"></i> <span>Problèmes</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
-        </li>
+        </li>-->
         <li class="treeview">
           <a href="#">
             <i class="icon-people"></i>
-            <span>Utilisateurs</span>
+            <span>COMPTES</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
         </li>
-        <li class="treeview">
+        <!--  <li class="treeview">
           <a href="#">
             <i class="icon-equalizer"></i>
             <span>Les étapes</span>
@@ -77,11 +77,11 @@
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
-        </li>
+        </li>-->
         <li class="treeview">
           <a href="${ctx}/user/Documents">
              <i class="icon-folder-alt"></i> 
-            <span>Documents</span>
+            <span>DOCUMENTS</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
@@ -90,13 +90,13 @@
         <li class="">
           <a href="${ctx}/user/userAddress">
             <i class="icon-calendar"></i>
-            <span>Planning</span>
+            <span>PLANNING</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
         </li>
-        <li class="treeview">
+       <!--   <li class="treeview">
           <a href="#">
             <i class="icon-speedometer"></i>
             <span>Emploi du temps</span>
@@ -117,7 +117,7 @@
             <li><a href="pages/mailbox/compose.html">Compose</a></li>
             <li><a href="pages/mailbox/read-mail.html">Read</a></li>
           </ul>
-        </li>
+        </li>-->
           </ul>     
         
       </ul>
