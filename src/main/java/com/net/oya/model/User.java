@@ -126,9 +126,8 @@ public  class User implements Serializable {
 	 * @param nom 
 	 * @param prenom 
 	 * @param mail
-	 * @param password2 
 	 */
-	public User(Integer id, String username, String password,String nom , String prenom,String mail, String password2) {
+	public User(Integer id, String username, String password,String nom , String prenom,String mail) {
 		super();
 		this.id = id;
 		this.username = username;

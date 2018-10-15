@@ -4,90 +4,90 @@
 <html>
 <head>
     <%@ include file="/common/global.jsp" %>
-    <title>Authentification administrative</title>
+    <title>Authentification</title>
     <%@ include file="/common/meta.jsp" %>
-    <%@ include file="/common/include-base-styles.jsp" %>
-    <link type="text/css" rel="stylesheet" href="${ctx}/css/login.css"/>
+    <%@ include file="/common/include-base-style-man.jsp" %>
+    <%@ include file="/common/include-base-scss-man.jsp" %>
+    
 </head>
 
-<body>
+<body class="hold-transition login-page">
 
-<%@include file="/common/header-nav.jsp" %>
-<div class="container">
+<div class="login-box">
+  <div class="login-logo">
+    <a href="../../index.html"><b>O.Y.A</b>Office of Young Architecture</a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+    <p class="login-box-msg">Connectez-vous pour commencer votre session</p>
 
-				<div class="small-dialog-header">
-					<h3>Authentification administrative</h3>
-				</div>
-
-				<!--Tabs -->
-				<div class="sign-in-form style-1" style="margin: 0px -36px 0 258px;">
-
-					<ul class="tabs-nav">
-						<li class=""><a href="#tab1">M'identifier</a></li>
-						<li><a href="#tab2">Créez un compte</a></li>
-					</ul>
-
-					<div class="tabs-container alt" style=" width: 70%;">
-
-						<!-- Login -->
-						<div class="tab-content" id="tab1" style="display: none;">
-							<form:form role="form" action="${ctx}/admin/login"
-             													  method="post" class="login">
-					                <!--   masquer automatiquement le message -->
-					        <c:if test="${not empty param.errorPwd}">
-					            <div id="errorPwd" class="notification error closeable">Le mot de passe de l'administration est incorrect ...</div>
-					           <!--   masquer automatiquement le message -->
-					            <script type="text/javascript">
-					                setTimeout(function () {
-					                    $('#errorPwd').hide('slow');
-					                }, 5000);
-					            </script>
-					        </c:if>
-					         <!--   masquer automatiquement le message -->
-					        <c:if test="${not empty param.error}">
-					            <div id="error" class="notification error closeable">Admin Non connecté ou session échoué ...</div>
-					            <script type="text/javascript">
+    <form:form role="form" action="${ctx}/user/login" method="post" class="form-element">
+   		<c:if test="${not empty param.errorpwd}"><div id="errorPwd" class="alert alert-danger"> Le mot de passe de l'utilisateur est incorrect ... </div>
+   				<script type="text/javascript">setTimeout(function(){
+   					$('#errorPwd').hide('slow');
+   				}, 5000);</script>
+   		</c:if>
+   		  <!--   masquer automatiquement le message -->
+		<c:if test="${not empty param.error}">
+				<div id="error"  class="alert alert-danger">Non connecté ou session échoué ...</div>
+					<script type="text/javascript">
 					                setTimeout(function () {
 					                    $('#error').hide('slow');
 					                }, 5000);
-					            </script>
-					        </c:if>
+					 </script>
+	 </c:if>
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" name="username" id="username" placeholder="username">
+        <span class="ion ion-email form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+        <span class="ion ion-locked form-control-feedback"></span>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="checkbox">
+            <input type="checkbox" id="id="remember-me" >
+			<label for="remember-me">Remember Me</label>
+          </div>
+        </div>
+        <!-- /.col -->
+        <div class="col-6">
+         <div class="fog-pwd">
+          	<a href="javascript:void(0)"><i class="ion ion-locked"></i> Mot de passe oublié?</a><br>
+          </div>
+        </div>
+        <!-- /.col -->
+        <div class="col-12 text-center">
+          <button type="submit" name="login" value="login" class="btn btn-info btn-block margin-top-10">SE CONNECTER</button>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form:form>
 
-								<p class="form-row form-row-wide">
-									<label for="username">Username:
-										<i class="fa fa-user"></i>
-										<input type="text" class="input-text" style="color: #000 ;" name="username" id="username" value="" />
-									</label>
-								</p>
+    <div class="social-auth-links text-center">
+      <p>- OR -</p>
+      <a href="#" class="btn btn-social-icon btn-circle btn-facebook"><i class="fa fa-facebook"></i></a>
+      <a href="#" class="btn btn-social-icon btn-circle btn-google"><i class="fa fa-google-plus"></i></a>
+    </div>
+    <!-- /.social-auth-links -->
 
-								<p class="form-row form-row-wide">
-									<label for="password">Mot de passe:
-										<i class="fa fa-key"></i>
-										<input class="input-text" type="password"   style="color: #000 ;" name="password" id="password"/>
-									</label>
-									<span class="lost_password">
-										<a href="#" >Mot de passe oublié ?</a>
-									</span>
-								</p>
+    <div class="margin-top-30 text-center">
+    	<p>Vous n'avez pas de compte? <a href="${ctx}/user/reg" class="text-info m-l-5">S'inscrire</a></p>
+    </div>
 
-								<div class="form-row">
-									<input type="submit" class="button border margin-top-5"  style="color: #000 ;" name="login" value="Login" />
-									<div class="checkboxes margin-top-10">
-										<input id="remember-me" type="checkbox"  name="check">
-										<label for="remember-me">Remember Me</label>
-									</div>
-								</div>
-								
-							 </form:form>
-						</div>
+  </div>
+  <!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->
 
-						<!-- Register -->
-						<div class="tab-content" id="tab2" style="display: none;">
-					  <c:if test="${not empty error}">
-					        <div id="error" class="alert alert-success">${error}</div>
-					        <script type="text/javascript">
-					            setTimeout(function () {
-					                $('#error').hide('slow');
+
+
+<%@ include file="/common/include-base-js-man.jsp" %>
+<script src="${ctx }/js/login.js" type="text/javascript"></script>
+</body>
+</html>		              
+  $('#error').hide('slow');
 					            }, 4000);
 					        </script>
 					    </c:if>

@@ -21,8 +21,8 @@
   <div class="login-box-body">
     <p class="login-box-msg">Connectez-vous pour commencer votre session</p>
 
-    <form:form role="form" action="${ctx}/user/login" method="post" class="form-element">
-   		<c:if test="${not empty param.errorpwd}"><div id="errorPwd" class="alert alert-danger"> Le mot de passe de l'utilisateur est incorrect ... </div>
+    <form:form role="form" action="${ctx}/admin/login" method="post" class="form-element">
+   		<c:if test="${not empty param.errorpwd}"><div id="errorPwd" class="alert alert-danger"> Le mot de passe de l'administrateur est incorrect ... </div>
    				<script type="text/javascript">setTimeout(function(){
    					$('#errorPwd').hide('slow');
    				}, 5000);</script>

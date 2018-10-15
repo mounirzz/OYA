@@ -45,7 +45,7 @@ public class Collaborateur extends User {
 		// TODO Auto-generated constructor stub
 	}
 	public Collaborateur(Integer id, String username, String password, String nom, String prenom, String mail) {
-		super(id, username, password, nom, prenom, mail, password);
+		super(id, username, password, nom, prenom, mail);
 		// TODO Auto-generated constructor stub
 	}
 	public Collaborateur(long idCollab, String agence, String username, String password) {

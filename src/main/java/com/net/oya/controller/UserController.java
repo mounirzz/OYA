@@ -93,7 +93,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "/reg", method = RequestMethod.POST)
-    public String doReg(@Valid User user, Model model, BindingResult result, HttpSession session) {
+    public String doReg(@Valid @ModelAttribute User user,BindingResult result, Model model,  HttpSession session) {
         if (result.hasErrors()) {
             for (ObjectError or : result.getAllErrors()) {
                 logger.warn("Type d'authentification:" + or.getCode() + " \t Message d'erreur:"
