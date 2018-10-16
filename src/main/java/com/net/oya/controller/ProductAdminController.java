@@ -92,7 +92,6 @@ public class ProductAdminController {
         model.setViewName("admin/product/productEdit");
         return model;
     }
-
     @RequestMapping(value = "/edit", method = RequestMethod.POST)
     public ModelAndView doEdit(ModelAndView model, Product product, HttpSession session) {
         product.setInputUser(AdminUtil.getAdminFromSession(session));
@@ -100,7 +99,6 @@ public class ProductAdminController {
         model.setViewName("redirect:/admin/product");
         return model;
     }
-
     private void uploadImage(Product product, HttpSession session, MultipartFile file) {
         String fileName = generateFileName();
         String path = generateFilePath(session);

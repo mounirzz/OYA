@@ -73,6 +73,7 @@ public class ProjectController {
 		model.addObject("project" , project);
 		model.setViewName("Project/ProjectDetail");
 		return model ;
+		
 	}
 	@RequestMapping(value="/add",method =RequestMethod.POST)
 	public String doNew(@Valid @ModelAttribute Project project, BindingResult result , HttpSession session, Integer id) throws Exception{
