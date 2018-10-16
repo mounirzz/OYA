@@ -21,8 +21,8 @@
   <div class="login-box-body">
     <p class="login-box-msg">Connectez-vous pour commencer votre session</p>
 
-    <form:form role="form" action="${ctx}/user/login" method="post" class="form-element">
-   		<c:if test="${not empty param.errorpwd}"><div id="errorPwd" class="alert alert-danger"> Le mot de passe de l'utilisateur est incorrect ... </div>
+    <form:form role="form" action="${ctx}/admin/login" method="post" class="form-element">
+   		<c:if test="${not empty param.errorpwd}"><div id="errorPwd" class="alert alert-danger"> Le mot de passe de l'administrateur est incorrect ... </div>
    				<script type="text/javascript">setTimeout(function(){
    					$('#errorPwd').hide('slow');
    				}, 5000);</script>
@@ -67,13 +67,13 @@
 
     <div class="social-auth-links text-center">
       <p>- OR -</p>
-      <a href="#" class="btn btn-social-icon btn-circle btn-facebook"><i class="fa fa-facebook"></i></a>
-      <a href="#" class="btn btn-social-icon btn-circle btn-google"><i class="fa fa-google-plus"></i></a>
     </div>
     <!-- /.social-auth-links -->
-
+ 		<div class="text-center">
+          <a  href="http://localhost:8031/user/login" class="btn btn-info btn-block margin-top-10">SE CONNECTER USER</a>
+        </div>
     <div class="margin-top-30 text-center">
-    	<p>Vous n'avez pas de compte? <a href="${ctx}/user/reg" class="text-info m-l-5">S'inscrire</a></p>
+    	<p>Vous n'avez pas de compte? <a href="${ctx}/admin/reg" class="text-info m-l-5">S'inscrire</a></p>
     </div>
 
   </div>
@@ -84,82 +84,6 @@
 
 
 <%@ include file="/common/include-base-js-man.jsp" %>
-<script src="${ctx }/js/login.js" type="text/javascript"></script>
-</body>
-</html>		              
-  $('#error').hide('slow');
-					            }, 4000);
-					        </script>
-					    </c:if>
-					    <form:form role="form" action="${ctx}/admin/reg"  method="post" class="register">
-								
-							<p class="form-row form-row-wide">
-								<label for="username2">Username:
-									<i class="fa fa-user"></i>
-									<input type="text" class="input-text" name="username"  style="color: #000 ;" id="username" value="" />
-								</label>
-							</p>
-								<p class="form-row form-row-wide">
-								<label for="password1">Mot de passe:
-									<i class="fa fa-key"></i>
-									<input class="input-text" type="password" name="password"  style="color: #000 ;" id="password"/>
-								</label>
-							</p>
-
-							<p class="form-row form-row-wide">
-								<label for="password2">Confirmé le mot de passe:
-									<i class="fa fa-key"></i>
-									<input class="input-text" type="password" name=""  style="color: #000 ;" id="password"/>
-								</label>
-							</p>
-								<p class="form-row form-row-wide">
-								<label for="email2">Email Address:
-									<i class="fa fa-envelope-o"></i>
-									<input type="text" class="input-text" name="mail" style="color: #000 ;"  id="email2" value="" />
-								</label>
-							</p>
-								<p class="form-row form-row-wide">
-								<label for="username2">Nom:
-									<i class="fa fa-user"></i>
-									<input type="text" class="input-text" name="nom" style="color: #000 ;" id="username2" value="" />
-								</label>
-							</p>
-								<p class="form-row form-row-wide">
-								<label for="username2">Prenom:
-									<i class="fa fa-user"></i>
-									<input type="text" class="input-text" name="prenom" style="color: #000 ;" id="username2" value="" />
-								</label>
-							</p>
-								<p class="form-row form-row-wide">
-								<label for="username2">CIN:
-									<i class="fa fa-user"></i>
-									<input type="text" class="input-text" name="cin" style="color: #000 ;" id="username2" value="" />
-								</label>
-							</p>
-								<p class="form-row form-row-wide">
-								<label for="username2">Adress:
-									<i class="fa fa-location-arrow"></i>
-									<input type="text" class="input-text" name="address" style="color: #000 ;" id="username2" value="" />
-								</label>
-							</p>
-								<p class="form-row form-row-wide">
-								<label for="username2">Telephone:
-									<i class="fa fa-phone"></i>
-									<input type="text" class="input-text" name="phone" style="color: #000 ;" id="username2" value="" />
-								</label>
-							</p>
-											<input type="submit" class="button border fw margin-top-10" name="register" value="CREER" />
-	
-							 </form:form>
-						</div>
-
-					</div>
-				</div>
-			
-</div>
-<!-- /container -->
-
-<%@ include file="/common/include-base-js.jsp" %>
 <script src="${ctx }/js/login.js" type="text/javascript"></script>
 </body>
 </html>

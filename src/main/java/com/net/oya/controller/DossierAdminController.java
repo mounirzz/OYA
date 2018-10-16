@@ -109,8 +109,8 @@ public class DossierAdminController {
 	}
 
 	@RequestMapping(value = "/dossier/add", method = RequestMethod.POST)
-	public String dossieradd(@Valid  DossierAdmin dossierAdmin,Long id, BindingResult result,
-			HttpSession session) throws Exception {
+	public String dossieradd(@Valid @ModelAttribute  DossierAdmin dossierAdmin,  BindingResult result, 
+			HttpSession session ,Long id) throws Exception {
 		dossierAdmin.setInputAdmin(AdminUtil.getAdminFromSession(session));
 		DossierService.addDossier(dossierAdmin);
 		return "redirect:/Plan/plan#step-3";

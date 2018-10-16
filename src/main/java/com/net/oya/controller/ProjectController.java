@@ -26,12 +26,14 @@ import com.net.oya.model.DossierAdmin;
 import com.net.oya.model.Picture;
 import com.net.oya.model.Product;
 import com.net.oya.model.Project;
+import com.net.oya.model.User;
 import com.net.oya.service.ChantierService;
 import com.net.oya.service.PictureService;
 import com.net.oya.service.ProjectService;
 import com.net.oya.util.AdminUtil;
 import com.net.oya.util.CollaUtil;
 import com.net.oya.util.Image;
+import com.net.oya.util.UserUtil;
 
 @Controller
 @RequestMapping(value="/Projects")
@@ -47,11 +49,12 @@ public class ProjectController {
 	PictureService pictureService ;
 	
 	@RequestMapping(method = RequestMethod.GET)
-	public ModelAndView admin(ModelAndView model,HttpSession session, HttpServletRequest request) {
+	public ModelAndView admin(ModelAndView model,HttpSession session, HttpServletRequest request,User user) {
+		UserUtil.getUserFromSession(session);
 		Page<Project> page = new Page<Project>(request);
 		projectService.findProjects(page);
 		model.addObject("page", page);
-		model.setViewName("Project/ListProject");
+		model.setViewName("Project/ProjectList");
 		return model ;
 	}
 	
@@ -61,6 +64,14 @@ public class ProjectController {
 		if (AdminUtil.getAdminFromSession(session) != null) {
 			model.setViewName("redirect:/");
 		}
+		return model ;
+	}
+	@RequestMapping(value="/Project/{id}", method = RequestMethod.GET)
+	public ModelAndView ViewProject(HttpSession session,ModelAndView model,@PathVariable Integer id) throws Exception {
+		UserUtil.getUserFromSession(session);
+		Project project = projectService.findById(id);
+		model.addObject("project" , project);
+		model.setViewName("Project/ProjectDetail");
 		return model ;
 	}
 	@RequestMapping(value="/add",method =RequestMethod.POST)

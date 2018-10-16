@@ -1,10 +1,14 @@
 
 package com.net.oya.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.net.oya.common.Page;
+import com.net.oya.model.Project;
 import com.net.oya.model.User;
 import com.net.oya.repository.UserRepository;
 
@@ -34,7 +38,11 @@ public class UserService {
     public User findByUsername(String username){
         return userDao.findByUsername(username);
     }
-	
+    public List<User> findUsers(Page<User> page2){
+		page2.setResult(userDao.findAll(page2.getPageable()).getContent());
+		page2.setTotalCount(userDao.count());
+		return page2.getResult();
+	}
 	public void save(User user) {
 		userDao.save(user);
 	}

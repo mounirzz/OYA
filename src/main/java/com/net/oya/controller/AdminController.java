@@ -1,6 +1,7 @@
 package com.net.oya.controller;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
@@ -20,9 +21,13 @@ import com.net.oya.model.Admin;
 import com.net.oya.model.News;
 import com.net.oya.model.Order;
 import com.net.oya.model.Product;
+import com.net.oya.model.Project;
+import com.net.oya.model.User;
 import com.net.oya.service.AdminService;
 import com.net.oya.service.NewsService;
 import com.net.oya.service.OrderService;
+import com.net.oya.service.ProjectService;
+import com.net.oya.service.UserService;
 import com.net.oya.util.AdminUtil;
 import com.net.oya.util.UserUtil;
 
@@ -49,6 +54,10 @@ public class AdminController {
 
     @Autowired
     NewsService newsService;
+    @Autowired
+    ProjectService projectService ;
+    @Autowired
+    UserService userService ;
 
     @RequestMapping(value = "/reg", method = RequestMethod.GET)
     public String reg() {
@@ -71,11 +80,23 @@ public class AdminController {
         if (adminService.checkLogin(admin)) {
             AdminUtil.saveAdminToSession(session, adminService.findByUsernameAndPassword(admin.getUsername(), admin.getPassword()));
             logger.debug("L'administrateur[{}]Atterrissage réussi",admin.getUsername());
-            return "redirect:/admin/product";
+            return "redirect:/admin/home";
         }
         return "redirect:/admin/login?errorPwd=true";
     }
-
+    @RequestMapping(value="/home", method = RequestMethod.GET)
+    public String MyHome(HttpSession session,HttpServletResponse response, HttpServletRequest request, Model model,Project project,User user) {
+    	Admin admin = AdminUtil.getAdminFromSession(session);
+    	model.addAttribute("admin" ,admin);
+    	Page<User> page2 = new Page<User>(request);
+    	userService.findUsers(page2);
+    	model.addAttribute("page2" ,page2);
+    	Page<Project> page = new Page<Project>(request);
+    	projectService.findProjects(page);
+    	model.addAttribute("page" ,page);
+    	return "admin/index" ;
+    	
+    }
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public String doLogout(HttpSession session) {
         AdminUtil.deleteAdminFromSession(session);

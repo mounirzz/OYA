@@ -38,7 +38,8 @@
           </a>
         </li>
         <li class="">
-          <a href="${ctx}/Projects/add#step-1">
+         <!--   <a href="${ctx}/Projects/add#step-1"> -->
+         <a href="${ctx}/Projects">
             <i class="icon-list"></i>
             <span>PROJETS</span>
             <span class="pull-right-container">
@@ -119,7 +120,8 @@
           </a>
         </li>
         <li class="">
-          <a href="${ctx}/Projects/add#step-1">
+            <!--   <a href="${ctx}/Projects/add#step-1"> -->
+         <a href="${ctx}/Projects">
             <i class="icon-list"></i>
             <span>PROJETS</span>
             <span class="pull-right-container">

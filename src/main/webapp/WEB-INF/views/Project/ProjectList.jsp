@@ -37,6 +37,9 @@
           <div class="box">
             <div class="box-header with-border">
               <h3 class="box-title">Contenu</h3>
+               <div class="text-left" style=" float: right;">
+       			   <a  href="${ctx}/Projects/add#step-1" class="btn btn-yellow btn-lg mx-auto">Ajouter un Projet</a>
+      		  </div> 
             </div>
             <!-- /.box-header -->
             <div class="box-body no-padding">
@@ -73,125 +76,6 @@
           <!-- /.box -->
         </div>
       </div>
-
-		<div class="col-lg-6 col-12">
-		<div class="row">			
-			 <div class="box">
-				<div class="box-header with-border">
-				  <h4 class="box-title">Statut de l'équipe</h4>
-				</div>
-				<!-- /.box-header -->
-				<div class="box-body">
-					  <div class="col-12">
-					<table class="table table-lg table-separated">
-					  <thead>
-						<tr>
-						  <th>Utilisateur</th>
-						  <th>Tâches</th>
-						  <th>Problémes</th>
-						</tr>
-					  </thead>
-					  <tbody>
-						<tr class="bg-secondary">
-						  <th scope="row">Mounir Test</th>
-						  <td><span class="label label-danger">En retard</span></td>
-						  <td><span class="label label-success">Aujourd'hui</span></td>
-						</tr>
-			<!--			<tr class="bg-gray">
-						  <th scope="row">2</th>
-						  <td>.bg-gray</td>
-						  <td>Column content</td>
-						</tr>
-						<tr class="bg-dark">
-						  <th scope="row">3</th>
-						  <td>.bg-dark</td>
-						  <td>Column content</td>
-						</tr>
-						<tr class="bg-primary">
-						  <th scope="row">4</th>
-						  <td>.bg-primary</td>
-						  <td>Column content</td>
-						</tr>
-						<tr class="bg-info">
-						  <th scope="row">5</th>
-						  <td>.bg-info</td>
-						  <td>Column content</td>
-						</tr> -->
-						<tr class="bg-success">
-						  <th scope="row">Kamal Test</th>
-						  <td><span class="label label-success">Non-retard</span></td>
-						  <td><span class="label label-success">Non-Probléme</span></td>
-						</tr>
-						<tr class="bg-warning">
-						  <th scope="row">Mehdi Test</th>
-						  <td><span class="label label-danger">En retard</span></td>
-						  <td><span class="label label-success">Non-Probléme</span></td>
-						</tr>
-						<tr class="bg-danger">
-						  <th scope="row">Zineb Test</th>
-						  <td><span class="label label-danger">En retard</span></td>
-						  <td><span class="label label-danger">6 Probléme</span></td>
-						</tr>
-					<!--<tr class="bg-pink">
-						  <th scope="row">9</th>
-						  <td>.bg-pink</td>
-						  <td>Column content</td>
-							</tr>
-						<tr class="bg-purple">
-						  <th scope="row">10</th>
-						  <td>.bg-purple</td>
-						  <td>Column content</td>
-						</tr>
-						<tr class="bg-brown">
-						  <th scope="row">11</th>
-						  <td>.bg-brown</td>
-						  <td>Column content</td>
-						</tr>
-						<tr class="bg-cyan">
-						  <th scope="row">12</th>
-						  <td>.bg-cyan</td>
-						  <td>Column content</td>
-						</tr>
-						<tr class="bg-yellow">
-						  <th scope="row">13</th>
-						  <td>.bg-yellow</td>
-						  <td>Column content</td>
-						</tr>  -->
-					  </tbody>
-					</table>
-				  </div>
-
-				</div>
-				<!-- /.box-body -->
-			  <!-- /.box -->       
-			</div>
-			</div>
-			
-		   <div class="col-lg-6 col-12">
-			  <!-- Chart -->
-			  <div class="box">
-				<div class="box-header with-border">
-				  <h4 class="box-title">Les objets de travail d'aujourd'hui</h4>
-			
-					<div class="box-body">
-				<div class="table-responsive">
-				  	<table class="table">
-					  <tbody>
-						<tr>
-						  <th scope="row">Nom_tache</th>
-						  <td>Tâche_valid</td>
-						</tr>
-					  </tbody>
-					</table>
-				</div>
-            </div>
-				</div>
-			  </div>
-			  <!-- /.box -->
-		   </div>
-
-			
-		</div>	
 		
 		
 	</section>

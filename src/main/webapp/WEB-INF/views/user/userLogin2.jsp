@@ -21,7 +21,7 @@
   <div class="login-box-body">
     <p class="login-box-msg">Connectez-vous pour commencer votre session</p>
 
-    <form:form role="form" action="${ctx}/admin/login" method="post" class="form-element">
+    <form:form role="form" action="${ctx}/user/login" method="post" class="form-element">
    		<c:if test="${not empty param.errorpwd}"><div id="errorPwd" class="alert alert-danger"> Le mot de passe de l'administrateur est incorrect ... </div>
    				<script type="text/javascript">setTimeout(function(){
    					$('#errorPwd').hide('slow');
@@ -67,9 +67,10 @@
 
     <div class="social-auth-links text-center">
       <p>- OR -</p>
-      <a href="#" class="btn btn-social-icon btn-circle btn-facebook"><i class="fa fa-facebook"></i></a>
-      <a href="#" class="btn btn-social-icon btn-circle btn-google"><i class="fa fa-google-plus"></i></a>
     </div>
+    <div class="text-center">
+          <a  href="http://localhost:8031/admin/login" class="btn btn-info btn-block margin-top-10">SE CONNECTER ADMIN</a>
+        </div>
     <!-- /.social-auth-links -->
 
     <div class="margin-top-30 text-center">
