@@ -58,15 +58,6 @@ public class ProjectController {
 		model.setViewName("Project/ProjectList");
 		return model ;
 	}
-	
-	@RequestMapping(value="/add" ,method = RequestMethod.GET)
-	public ModelAndView newForm(ModelAndView model,HttpSession session) {
-		model.setViewName("Project/addProject");
-		if (AdminUtil.getAdminFromSession(session) != null) {
-			model.setViewName("redirect:/");
-		}
-		return model ;
-	}
 	@RequestMapping(value="/Project/{id}", method = RequestMethod.GET)
 	public String ViewProject(@Valid @PathVariable Integer id ,Model model, HttpSession session){
 		UserUtil.getUserFromSession(session);
@@ -77,6 +68,15 @@ public class ProjectController {
 	//	model.setViewName("Project/ProjectDetail");
 	//	return model ;
 	}
+	@RequestMapping(value="/add" ,method = RequestMethod.GET)
+	public ModelAndView newForm(ModelAndView model,HttpSession session) {
+		model.setViewName("Project/addProject");
+		if (AdminUtil.getAdminFromSession(session) != null) {
+			model.setViewName("redirect:/");
+		}
+		return model ;
+	}
+	
 	@RequestMapping(value="/add",method =RequestMethod.POST)
 	public String doNew(@Valid @ModelAttribute Project project, BindingResult result , HttpSession session, Integer id) throws Exception{
 		project.setInputColl(CollaUtil.getCollFromSession(session));

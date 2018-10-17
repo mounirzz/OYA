@@ -2426,7 +2426,7 @@ select.form-control:not([size]):not([multiple]) {
     -o-transition: all .25s ease;
     -moz-transition: all .25s ease;
     transition: all .25s ease;
-    padding: 16px 13px;
+   /* padding: 16px 13px;*/
 }
 .pull-up:hover {
     -webkit-transform: translateY(-4px) scale(1.02);

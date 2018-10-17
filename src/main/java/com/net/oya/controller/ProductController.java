@@ -38,7 +38,6 @@ public class ProductController {
     @Autowired
     ProductService productService;
 
-
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView listProduct(ModelAndView model , HttpServletRequest request,String name,Integer id) {
         Page<Product> page = new Page<Product>(request);

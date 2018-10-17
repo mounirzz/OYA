@@ -21,7 +21,7 @@ public class ProjectService {
 	public void save(Project project) {
 		projectDao.save(project);
 	}
-	public Project findById(long id) {
+	public Project findById(Integer id) {
 		return projectDao.findOne(id);
 	}
 	/*public List<Project> findnew(){
@@ -40,8 +40,5 @@ public class ProjectService {
 	}
 	public List<Project> finAll(){
 		return projectDao.findAll();
-	}
-	public Project finOne(long id) {
-		return projectDao.findOne(id);
 	}
 }

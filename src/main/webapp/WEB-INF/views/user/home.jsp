@@ -15,189 +15,111 @@
 
 
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="min-height: 1923.5px;">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Tableau de bord
-        <small>Control panel</small>
+        Tickets
       </h1>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Accueil</a></li>
-        <li class="breadcrumb-item active">Tableau de bord</li>
+        <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Examples</a></li>
+        <li class="breadcrumb-item active">Tickets</li>
       </ol>
     </section>
 
     <!-- Main content -->
     <section class="content">
-	
-<div class="row">
-        <div class="col-12">
-          <div class="box">
-            <div class="box-header with-border">
-              <h3 class="box-title">Contenu</h3>
+        
+        <div class="row">
+            <!-- Column -->
+            <div class="col-md-6 col-lg-3 col-xlg-3">
+                <div class="box box-inverse box-info pull-up bg-hexagons-dark">
+                    <div class="box-body text-center">
+                        <div class="flexbox align-content-end"> 
+                            <h2 class="text-white mb-10">Total Project</h2>                     
+                            <h1 class="font-light text-white">164</h1>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- /.box-header -->
-            <div class="box-body no-padding">
-				<div class="table-responsive">
-				  <table class="table table-hover">
-					<tbody><tr>
-					  <th>Projet</th>
-					  <th>certificat de propriété</th>
-					  <th>Date de début</th>
-					  <th>Description</th>
-					  <th>Etat du projet</th>
-					  <th>Intitule</th>
-					  <th>Numéro titre financier </th>
-					</tr>
-					<c:forEach items="${page.result}" var="project">
-					 <c:set var="task" value="${leave.task }"/>
-            		<c:set var="pi" value="${leave.processInstance }"/>
-					<tr>
-					<tr pid="${project.id}"></tr>
-					  <td><a href="${ctx}/Projects/Project/{id}">${project.categorie}</a></td>
-					  <td>${project.certificat_propriete} </td>
-					  <td><span class="text-muted"><i class="fa fa-clock-o"></i> ${project.date_debut}</span> </td>
-					  <td>${project.description}</td>
-					  <td><span class="label label-danger">${project.etat}</span></td>
-					  <td>${project.intitule}</td>
-					  <td>${project.num_title_foncier}</td>
-					</tr>
-					</c:forEach>
-				  </tbody></table>
-				</div>
+            <!-- Column -->
+            <div class="col-md-6 col-lg-3 col-xlg-3">
+                <div class="box box-success box-inverse pull-up bg-hexagons-dark">
+                    <div class="box-body text-center">
+                        <div class="flexbox align-content-end">
+                            <h2 class="text-white mb-10">Projets réaliser</h2>
+                            <h1 class="font-light text-white">244</h1>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
+            <!-- Column -->
+            <div class="col-md-6 col-lg-3 col-xlg-3">
+                <div class="box box-inverse box-danger pull-up bg-hexagons-dark">
+                    <div class="box-body text-center">
+                        <div class="flexbox align-content-end">
+                            <h2 class="text-white mb-10">Projets En cours</h2>
+                            <h1 class="font-light text-white">10</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-6 col-lg-3 col-xlg-3">
+                <div class="box box-inverse box-dark pull-up bg-hexagons-white">
+                    <div class="box-body text-center">
+                        <div class="flexbox align-content-end">
+                            <h2 class="text-white mb-10">Clients</h2>
+                            <h1 class="font-light text-white">90</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
         </div>
-      </div>
-
-		<div class="col-lg-6 col-12">
-		<div class="row">			
-			 <div class="box">
-				<div class="box-header with-border">
-				  <h4 class="box-title">Statut de l'équipe</h4>
-				</div>
-				<!-- /.box-header -->
-				<div class="box-body">
-					  <div class="col-12">
-					<table class="table table-lg table-separated">
-					  <thead>
-						<tr>
-						  <th>Utilisateur</th>
-						  <th>Tâches</th>
-						  <th>Problémes</th>
-						</tr>
-					  </thead>
-					  <tbody>
-						<tr class="bg-secondary">
-						  <th scope="row">Mounir Test</th>
-						  <td><span class="label label-danger">En retard</span></td>
-						  <td><span class="label label-success">Aujourd'hui</span></td>
-						</tr>
-			<!--			<tr class="bg-gray">
-						  <th scope="row">2</th>
-						  <td>.bg-gray</td>
-						  <td>Column content</td>
-						</tr>
-						<tr class="bg-dark">
-						  <th scope="row">3</th>
-						  <td>.bg-dark</td>
-						  <td>Column content</td>
-						</tr>
-						<tr class="bg-primary">
-						  <th scope="row">4</th>
-						  <td>.bg-primary</td>
-						  <td>Column content</td>
-						</tr>
-						<tr class="bg-info">
-						  <th scope="row">5</th>
-						  <td>.bg-info</td>
-						  <td>Column content</td>
-						</tr> -->
-						<tr class="bg-success">
-						  <th scope="row">Kamal Test</th>
-						  <td><span class="label label-success">Non-retard</span></td>
-						  <td><span class="label label-success">Non-Probléme</span></td>
-						</tr>
-						<tr class="bg-warning">
-						  <th scope="row">Mehdi Test</th>
-						  <td><span class="label label-danger">En retard</span></td>
-						  <td><span class="label label-success">Non-Probléme</span></td>
-						</tr>
-						<tr class="bg-danger">
-						  <th scope="row">Zineb Test</th>
-						  <td><span class="label label-danger">En retard</span></td>
-						  <td><span class="label label-danger">6 Probléme</span></td>
-						</tr>
-					<!--<tr class="bg-pink">
-						  <th scope="row">9</th>
-						  <td>.bg-pink</td>
-						  <td>Column content</td>
-							</tr>
-						<tr class="bg-purple">
-						  <th scope="row">10</th>
-						  <td>.bg-purple</td>
-						  <td>Column content</td>
-						</tr>
-						<tr class="bg-brown">
-						  <th scope="row">11</th>
-						  <td>.bg-brown</td>
-						  <td>Column content</td>
-						</tr>
-						<tr class="bg-cyan">
-						  <th scope="row">12</th>
-						  <td>.bg-cyan</td>
-						  <td>Column content</td>
-						</tr>
-						<tr class="bg-yellow">
-						  <th scope="row">13</th>
-						  <td>.bg-yellow</td>
-						  <td>Column content</td>
-						</tr>  -->
-					  </tbody>
-					</table>
-				  </div>
-
-				</div>
-				<!-- /.box-body -->
-			  <!-- /.box -->       
-			</div>
-			</div>
-			
-		   <div class="col-lg-6 col-12">
-			  <!-- Chart -->
-			  <div class="box">
-				<div class="box-header with-border">
-				  <h4 class="box-title">Les objets de travail d'aujourd'hui</h4>
-			
-					<div class="box-body">
-				<div class="table-responsive">
-				  	<table class="table">
-					  <tbody>
-						<tr>
-						  <th scope="row">Nom_tache</th>
-						  <td>Tâche_valid</td>
-						</tr>
-					  </tbody>
-					</table>
-				</div>
+      <div class="row">
+        <div class="col-12">
+            <div class="box">
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <div id="tickets_wrapper" class="dataTables_wrapper no-footer"><table id="tickets" class="table mt-0 table-hover no-wrap dataTable no-footer" data-page-size="10" role="grid" aria-describedby="tickets_info">
+                            <thead>
+                                <tr class="bg-light" role="row"><th class="sorting" tabindex="0" aria-controls="tickets" rowspan="1" colspan="1" aria-label="ID #: activate to sort column ascending">ID #</th><th class="sorting" tabindex="0" aria-controls="tickets" rowspan="1" colspan="1" aria-label="Opened By: activate to sort column ascending">Par Clients</th><th class="sorting" tabindex="0" aria-controls="tickets" rowspan="1" colspan="1" aria-label="Cust. Email: activate to sort column ascending">Clients Email</th><th class="sorting" tabindex="0" aria-controls="tickets" rowspan="1" colspan="1" aria-label="Sbuject: activate to sort column ascending">Nom Projects</th><th class="sorting" tabindex="0" aria-controls="tickets" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending">Etats du projets</th><th class="sorting_desc" tabindex="0" aria-controls="tickets" rowspan="1" colspan="1" aria-label="Assign to: activate to sort column ascending" aria-sort="descending">Intitule</th><th class="sorting" tabindex="0" aria-controls="tickets" rowspan="1" colspan="1" aria-label="Date: activate to sort column ascending">Date de début</th><th class="sorting" tabindex="0" aria-controls="tickets" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending">Action</th></tr>
+                            </thead>
+                            <tbody>
+                                
+                                 <c:forEach items="${page.result}" var="project">
+                                  <c:set var="task" value="${leave.task }"/>
+                                  <c:set var="pi" value="${leave.processInstance }"/>
+                                <tr role="row" class="odd">
+                                     <tr pid="${project.id}"></tr>
+                                    <td class="">${project.id}</td>
+                                    <td>
+                                        <a href="javascript:void(0)"><img src="../../../images/avatar/3.jpg" alt="user" class="avatar avatar-sm mr-5"> William</a>
+                                    </td>
+                                    <td>William@gmail.com</td>
+                                    <td>${project.categorie}</td>
+                                    <td><span class="label label-success">${project.etat}</span> </td>
+                                    <td class="sorting_1">${project.intitule}</td>
+                                    <td>${project.date_debut}</td>
+                                    <td class="">
+                                        <button type="button" class="btn btn-sm btn-danger-outline" data-toggle="tooltip" data-original-title="Delete"><i class="ti-trash" aria-hidden="true"></i></button>
+                                    </td>
+                                </tr>
+                                </c:forEach> 
+                                </tbody>
+                        </table><div class="dataTables_info" id="tickets_info" role="status" aria-live="polite">Showing 1 to 10 of 20 entries</div><div class="dataTables_paginate paging_simple_numbers" id="tickets_paginate"><a class="paginate_button previous disabled" aria-controls="tickets" data-dt-idx="0" tabindex="0" id="tickets_previous">Previous</a><span><a class="paginate_button current" aria-controls="tickets" data-dt-idx="1" tabindex="0">1</a><a class="paginate_button " aria-controls="tickets" data-dt-idx="2" tabindex="0">2</a></span><a class="paginate_button next" aria-controls="tickets" data-dt-idx="3" tabindex="0" id="tickets_next">Next</a></div></div>
+                    </div>
+                </div>
             </div>
-				</div>
-			  </div>
-			  <!-- /.box -->
-		   </div>
+        </div>
+        </div>
+      <!-- /.row -->
 
-			
-		</div>	
-		
-		
-	</section>
+    </section>
     <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
   
   <footer class="main-footer">
     <div class="pull-right d-none d-sm-inline-block">
@@ -395,6 +317,6 @@
   	
 	    <%@ include file="/common/include-base-js-man.jsp" %>
 	
-
+<script type="text/javascript" src="${ctx}/common/js/data-table.js"></script>
 </body>
 </html>

@@ -42,6 +42,7 @@
 	
 	<!-- This is data table -->
     <script src="${ctx}/common/scripts/DataTables-1.10.15/media/js/jquery.dataTables.min.js"></script>
+	    <script src="${ctx}/common/scripts/DataTables-1.10.15/media/js/dataTables.bootstrap.min.js"></script>
 	
 	<!-- Crypto_Admin App -->
 	<script src="${ctx}/common/js/template.js"></script>
