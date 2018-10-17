@@ -96,9 +96,9 @@
                                      <tr pid="${project.id}"></tr>
                                     <td class="">${project.id}</td>
                                     <td>
-                                        <a href="javascript:void(0)"><img src="../../../images/avatar/3.jpg" alt="user" class="avatar avatar-sm mr-5"> William</a>
+                                        <a href="javascript:void(0)">Client 1</a>
                                     </td>
-                                    <td>William@gmail.com</td>
+                                    <td>test@gmail.com</td>
                                     <td>${project.categorie}</td>
                                     <td><span class="label label-success">${project.etat}</span> </td>
                                     <td class="sorting_1">${project.intitule}</td>
