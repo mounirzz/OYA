@@ -128,7 +128,51 @@
     <section class="content">
 	
 	    <div class="row">
-        <div class="col-md-12 col-lg-6">
+	    
+	      <!-- /.col -->
+        <div class="col-xl-6 col-lg-6">
+          
+
+          <div class="box">
+            <div class="box-header with-border">
+              <h3 class="box-title">Liste des Admin</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+				<div class="table-responsive">
+				  <table class="table table-hover">
+					  <thead>
+						<tr>
+						  <th scope="col">#</th>
+						  <th scope="col">First</th>
+						  <th scope="col">Last</th>
+						  <th scope="col">Handle</th>
+						</tr>
+					  </thead>
+					  <tbody>
+						<tr>
+						  <th scope="row">1</th>
+						  <td>Mark</td>
+						  <td>Otto</td>
+						  <td>@mdo</td>
+						</tr>
+						<tr>
+						  <th scope="row">2</th>
+						  <td>Jacob</td>
+						  <td>Thornton</td>
+						  <td>@fat</td>
+						</tr>
+					  </tbody>
+					</table>
+				</div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+        
+        <div class="col-xl-6 col-lg-6">
           <div class="box">
             <div class="box-header with-border">
               <h3 class="box-title">Liste des Utilisateurs</h3>
@@ -169,49 +213,7 @@
           </div>
           <!-- /.box -->
         </div>
-        <!-- /.col -->
-        <div class="col-md-12 col-lg-6">
-          
-
-          <div class="box">
-            <div class="box-header with-border">
-              <h3 class="box-title">Liste</h3>
-              <h6 class="box-subtitle">Add class <code>.table-hover</code></h6>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-				<div class="table-responsive">
-				  <table class="table table-hover">
-					  <thead>
-						<tr>
-						  <th scope="col">#</th>
-						  <th scope="col">First</th>
-						  <th scope="col">Last</th>
-						  <th scope="col">Handle</th>
-						</tr>
-					  </thead>
-					  <tbody>
-						<tr>
-						  <th scope="row">1</th>
-						  <td>Mark</td>
-						  <td>Otto</td>
-						  <td>@mdo</td>
-						</tr>
-						<tr>
-						  <th scope="row">2</th>
-						  <td>Jacob</td>
-						  <td>Thornton</td>
-						  <td>@fat</td>
-						</tr>
-					  </tbody>
-					</table>
-				</div>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-        </div>
-        <!-- /.col -->
+      
       </div>
 <div class="row">
         <div class="col-12">
