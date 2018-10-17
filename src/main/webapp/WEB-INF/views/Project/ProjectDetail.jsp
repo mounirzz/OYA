@@ -15,324 +15,353 @@
 
 
 
-  <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper" style="min-height: 1923.5px;">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Blog widgets
+        User Profile
       </h1>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="breadcrumb-item active">Blog widgets</li>
+        <li class="breadcrumb-item"><a href="#">Examples</a></li>
+        <li class="breadcrumb-item active">User profile</li>
       </ol>
     </section>
 
     <!-- Main content -->
     <section class="content">
-      
+
       <div class="row">
+        <div class="col-lg-3 col-12">
 
-          <div class="col-12">
-            <div class="box">
+          <!-- Profile Image -->
+          <div class="box bg-inverse bg-dark bg-hexagons-white">
+            <div class="box-body box-profile">
+              <img class="profile-user-img rounded-circle img-fluid mx-auto d-block" src="../../../images/5.jpg" alt="User profile picture">
 
-              <div class="row no-gutters">
-                <div class="col-md-8">
-                  <div class="box-body">
-                    <h4><a href="#">Integer efficitur nunc in blandit maximus.</a></h4>
-                    <p><span>April 28, 2022</span></p>
+              <h3 class="profile-username text-center">Liam</h3>
 
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+              <p class="text-center">Accoubts Manager Jindal Cop.</p>
+				
+              <div class="row social-states">
+				  <div class="col-6 text-right"><a href="#" class="link text-white"><i class="ion ion-ios-people-outline"></i> 254</a></div>
+				  <div class="col-6 text-left"><a href="#" class="link text-white"><i class="ion ion-images"></i> 54</a></div>
+			  </div>
+            
+              <div class="row">
+              	<div class="col-12">
+              		<div class="profile-user-info">
+						<p><i class="fa fa-envelope pr-15"></i>Liam@yahoo.com </p>
+						<p><i class="fa fa-phone pr-15"></i>+11 123 456 7890</p>
+						<p><i class="fa fa-map-marker pr-15"></i>123, Lorem Ipsum, Florida, USA</p>
+						<p class="mt-25">Social Profile</p>
+						<div class="user-social-acount">
+							<button class="btn btn-block btn-social btn-facebook"><i class="fa fa-facebook"></i> Facebook</button>
+							<button class="btn btn-block btn-social btn-twitter"><i class="fa fa-twitter"></i> Twitter</button>
+							<button class="btn btn-block btn-social btn-instagram"><i class="fa fa-instagram"></i> Instagram</button>
+							<button class="btn btn-block btn-social btn-google"><i class="fa fa-google-plus"></i> Google</button>
+						</div>
+						<div class="map-box mt-25 mb-0">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2805244.1745767146!2d-86.32675167439648!3d29.383165774894163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c1766591562abf%3A0xf72e13d35bc74ed0!2sFlorida%2C+USA!5e0!3m2!1sen!2sin!4v1501665415329" height="150" class="w-p100 b-0" allowfullscreen=""></iframe>
+						</div>
+					</div>
+             	</div>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-lg-9 col-12">
+          <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+              
+              <li><a class="" href="#timeline" data-toggle="tab">Timeline</a></li>
+              <li><a href="#activity" data-toggle="tab" class="">Activity</a></li>
+              <li><a href="#settings" data-toggle="tab" class="active show">Settings</a></li>
+            </ul>
+                        
+            <div class="tab-content">
+             
+             <div class="tab-pane" id="timeline">
+                <!-- The timeline -->
+				 <ul class="timeline2">
+					<li>
+					  <div class="timeline-badge bg-info"><i class="glyphicon glyphicon-check"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge bg-warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+						</div>
+						<div class="timeline-body">
+						  <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+						  <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge bg-danger"><i class="glyphicon glyphicon-credit-card"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+						</div>
+						<div class="timeline-body">
+						  <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+						</div>
+						<div class="timeline-body">
+						  <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge bg-info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+						</div>
+						<div class="timeline-body">
+						  <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+						  <hr>
+						  <div class="btn-group">
+							  <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown"><i class="icon ti-settings"></i></button>
+							  <div class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+							  </div>
+							</div>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+						</div>
+						<div class="timeline-body">
+						  <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge bg-success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+						</div>
+						<div class="timeline-body">
+						  <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
+						</div>
+					  </div>
+					</li>
+				</ul>
+                
+              </div>    
+              <!-- /.tab-pane -->
+              
+              <div class="tab-pane" id="activity">
+                <!-- Post -->
+                <div class="post">
+                  <div class="user-block">
+                    <img class="img-bordered-sm rounded-circle" src="../../../images/user1-128x128.jpg" alt="user image">
+                        <span class="username">
+                          <a href="#">John Doe</a>
+                          <a href="#" class="pull-right btn-box-tool"><i class="fa fa-times"></i></a>
+                        </span>
+                    <span class="description">5 minutes ago</span>
+                  </div>
+                  <!-- /.user-block -->
+                  <div class="activitytimeline">
+					  <p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
+					  </p>
+					  <ul class="list-inline">
+						<li><a href="#" class="link-black text-sm"><i class="fa fa-share margin-r-5"></i> Share</a></li>
+						<li><a href="#" class="link-black text-sm"><i class="fa fa-thumbs-o-up margin-r-5"></i> Like</a>
+						</li>
+						<li class="pull-right">
+						  <a href="#" class="link-black text-sm"><i class="fa fa-comments-o margin-r-5"></i> Comments
+							(5)</a></li>
+					  </ul>
+					  <form class="form-element">
+						  <input class="form-control input-sm" type="text" placeholder="Type a comment">
+					 </form>
+                  </div>
+                </div>
+                <!-- /.post -->
+                
+                <!-- Post -->
+                <div class="post">
+                  <div class="user-block">
+                    <img class="img-bordered-sm rounded-circle" src="../../../images/user6-128x128.jpg" alt="user image">
+                        <span class="username">
+                          <a href="#">John Doe</a>
+                          <a href="#" class="pull-right btn-box-tool"><i class="fa fa-times"></i></a>
+                        </span>
+                    <span class="description">5 minutes ago</span>
+                  </div>
+                  <!-- /.user-block -->
+                  <div class="activitytimeline">
+					  <div class="row margin-bottom">
+						<div class="col-sm-6">
+						  <img class="img-fluid" src="../../../images/photo1.png" alt="Photo">
+						</div>
+						<!-- /.col -->
+						<div class="col-sm-6">
+						  <div class="row">
+							<div class="col-sm-6">
+							  <img class="img-fluid" src="../../../images/photo2.png" alt="Photo">
+							  <br><br>
+							  <img class="img-fluid" src="../../../images/photo3.jpg" alt="Photo">
+							</div>
+							<!-- /.col -->
+							<div class="col-sm-6">
+							  <img class="img-fluid" src="../../../images/photo4.jpg" alt="Photo">
+							  <br><br>
+							  <img class="img-fluid" src="../../../images/photo1.png" alt="Photo">
+							</div>
+							<!-- /.col -->
+						  </div>
+						  <!-- /.row -->
+						</div>
+						<!-- /.col -->
+					  </div>
+					  <!-- /.row -->
 
-                    <div class="flexbox align-items-center mt-3">
-                      <a class="btn btn-info" href="#">Read more</a>
+					  <ul class="list-inline">
+						<li><a href="#" class="link-black text-sm"><i class="fa fa-share margin-r-5"></i> Share</a></li>
+						<li><a href="#" class="link-black text-sm"><i class="fa fa-thumbs-o-up margin-r-5"></i> Like</a>
+						</li>
+						<li class="pull-right">
+						  <a href="#" class="link-black text-sm"><i class="fa fa-comments-o margin-r-5"></i> Comments
+							(5)</a></li>
+					  </ul>
 
-                      <div class="gap-items-4">
-                        <a class="text-muted" href="#">
-                          <i class="fa fa-heart mr-1"></i> 12
-                        </a>
-                        <a class="text-muted" href="#">
-                          <i class="fa fa-comment mr-1"></i> 3
-                        </a>
+					  <form class="form-element">
+						  <input class="form-control input-sm" type="text" placeholder="Type a comment">
+					 </form>
+					</div>
+				</div>
+                <!-- /.post -->
+
+                <!-- Post -->
+                <div class="post clearfix">
+                  <div class="user-block">
+                    <img class="img-bordered-sm rounded-circle" src="../../../images/user7-128x128.jpg" alt="user image">
+                        <span class="username">
+                          <a href="#">John Doe</a>
+                          <a href="#" class="pull-right btn-box-tool"><i class="fa fa-times"></i></a>
+                        </span>
+                    <span class="description">5 minutes ago</span>
+                  </div>
+                  <!-- /.user-block -->
+                    <div class="activitytimeline">
+					  <p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
+					  </p>
+
+					  <form class="form-horizontal form-element">
+						<div class="form-group row no-gutters">
+						  <div class="col-sm-9">
+							<input class="form-control input-sm" placeholder="Response">
+						  </div>
+						  <div class="col-sm-3">
+							<button type="submit" class="btn btn-danger pull-right btn-block btn-sm">Send</button>
+						  </div>
+						</div>
+					  </form>
+					</div>
+                </div>
+                <!-- /.post -->
+                
+              </div>
+              <!-- /.tab-pane -->
+              
+              <div class="tab-pane active show" id="settings">
+                <form class="form-horizontal form-element col-12">
+                  <div class="form-group row">
+                    <label for="inputName" class="col-sm-2 control-label">Name</label>
+
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="inputName" placeholder="">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="inputEmail" placeholder="">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPhone" class="col-sm-2 control-label">Phone</label>
+
+                    <div class="col-sm-10">
+                      <input type="tel" class="form-control" id="inputPhone" placeholder="">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputExperience" class="col-sm-2 control-label">Experience</label>
+
+                    <div class="col-sm-10">
+                      <textarea class="form-control" id="inputExperience" placeholder=""></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
+
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputSkills" placeholder="">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="ml-auto col-sm-10">
+                      <div class="checkbox">
+                       	<input type="checkbox" id="basic_checkbox_1" checked="">
+						<label for="basic_checkbox_1"> I agree to the</label>
+                          &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Terms and Conditions</a>
                       </div>
                     </div>
                   </div>
-                </div>
-
-                <div class="col-4 bg-img d-none d-md-block" style="background-image: url(../../../images/gallery/thumb/13.jpg)"></div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-12">
-            <div class="box">
-
-              <div class="row no-gutters">
-                <a class="col-4 bg-img d-none d-md-block" style="background-image: url(../../../images/gallery/thumb/9.jpg)" href="#"></a>
-
-                <div class="col-md-8">
-                  <div class="box-body">
-                    <h4><a href="#">Integer efficitur nunc in blandit maximus.</a></h4>
-                    <hr class="w-50 ml-0 bt-2">
-
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-
-                    <div class="flexbox align-items-center mt-3">
-                      <a class="text-gray" href="#">
-                        <img class="avatar avatar-sm" src="../../../images/avatar/1.jpg" alt="...">
-                        <span class="ml-2">Hos Shams</span>
-                      </a>
-
-                      <a href="#">
-                        <i class="ion-heart text-danger font-size-11"></i>
-                        <span class="font-size-11 text-fade ml-1">128</span>
-                      </a>
+                  <div class="form-group row">
+                    <div class="ml-auto col-sm-10">
+                      <button type="submit" class="btn btn-success">Submit</button>
                     </div>
                   </div>
-                </div>
-
+                </form>
               </div>
+              <!-- /.tab-pane -->
             </div>
+            <!-- /.tab-content -->
           </div>
-
-
-          <div class="col-md-6">
-            <div class="box">
-              <div class="card-body bg-img py-70" style="background-image: url(../../../images/gallery/thumb/5.jpg)" data-overlay="5">
-                <blockquote class="blockquote blockquote-inverse no-border no-margin">
-                  <p class="font-size-22">Integer efficitur nunc in blandit maximus.</p>
-                  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                </blockquote>
-              </div>
-
-              <div class="box-body">
-                <h4><a href="#">Nullam id arcu dictum, volutpat dui nec</a></h4>
-                <p><span>April 28, 2022</span></p>
-
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-
-                <div class="flexbox align-items-center mt-3">
-                  <a class="btn btn-bold btn-info" href="#">Read more</a>
-
-                  <div class="gap-items-4">
-                    <a class="text-muted" href="#">
-                      <i class="fa fa-heart mr-1"></i> 12
-                    </a>
-                    <a class="text-muted" href="#">
-                      <i class="fa fa-comment mr-1"></i> 3
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="box card-inverse bg-img text-center py-80" style="background-image: url(../../../images/gallery/thumb/12.jpg)" data-overlay="5">
-              <div class="card-body">
-                <span class="bb-1 opacity-80 pb-2">16 October, 2022</span>
-                <br><br>
-                <h3>Integer efficitur nunc in blandit maximus.</h3>
-                <br><br>
-                <a class="btn btn-outline no-radius btn-light btn-default" href="#">Read More</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="box">
-              <figure class="img-hov-zoomin">
-                <img src="../../../images/gallery/thumb/11.jpg" alt="...">
-              </figure>
-
-              <div class="box-body">
-                <p class="text-info text-uppercase">Nature</p>
-                <h4><a href="#">Proin at libero id erat tristique convallis.</a></h4>
-                <br>
-                <br>
-                <hr class="my-0">
-
-                <div class="flexbox align-items-center mt-15">
-                  <small>14 minutes ago</small>
-
-                  <a class="text-muted" href="#">
-                    <i class="ion-chatbox"></i>
-                    <span>4</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="box">
-              <figure class="img-hov-zoomin">
-                <img src="../../../images/gallery/thumb/18.jpg" alt="...">
-              </figure>
-
-              <div class="box-body">
-                <p class="text-info text-uppercase">People</p>
-                <h4><a href="#">Proin at libero id erat tristique convallis.</a></h4>
-                <p>Conveniently reintermediate bleeding-edge metrics with unique initiatives. Credibly pontificate efficient relationships before corporate action items. Distinctively optimize interactive meta services.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="box">
-              <figure class="img-hov-zoomin">
-                <img src="../../../images/gallery/thumb/2.jpg" alt="...">
-              </figure>
-
-              <div class="box-body">
-                <h4><a href="#">Proin at libero id erat tristique convallis.</a></h4>
-                <p><span>April 28, 2022</span></p>
-
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-
-                <div class="flexbox align-items-center mt-3">
-                  <a class="btn btn-bold btn-info" href="#">Read more</a>
-
-                  <div class="gap-items-4">
-                    <a class="text-muted" href="#">
-                      <i class="fa fa-heart mr-1"></i> 12
-                    </a>
-                    <a class="text-muted" href="#">
-                      <i class="fa fa-comment mr-1"></i> 3
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-6">
-            <div class="box">
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe src="https://www.youtube.com/embed/kN9SZtwP1ys" class="b-0" allowfullscreen=""></iframe>
-              </div>
-
-              <div class="box-body">
-                <h4><a class="hover-info" href="#">Proin at libero id erat tristique convallis.</a></h4>
-                <p><span>April 28, 2022</span></p>
-
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-
-                <div class="flexbox align-items-center mt-3">
-                  <a class="btn btn-bold btn-info" href="#">Read more</a>
-
-                  <div class="gap-items-4">
-                    <a class="text-muted" href="#">
-                      <i class="fa fa-heart mr-1"></i> 12
-                    </a>
-                    <a class="text-muted" href="#">
-                      <i class="fa fa-comment mr-1"></i> 3
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="box">
-              <div id="#carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item">
-                    <img src="../../../images/gallery/thumb/8.jpg" alt="First slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../../../images/gallery/thumb/1.jpg" alt="Second slide">
-                  </div>
-                  <div class="carousel-item active">
-                    <img src="../../../images/gallery/thumb/6.jpg" alt="Third slide">
-                  </div>
-                </div>
-
-                <ol class="carousel-indicators">
-                  <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>
-                </ol>
-              </div>
-
-              <div class="box-body">
-                <ul class="nav nav-dot-separated no-gutters mb-1">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">16 Oct</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="ion-heart mr-1"></i> 15</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="ion-chatbubble"></i> 4</a>
-                  </li>
-                </ul>
-
-                <h4><a class="hover-info" href="#">Proin at libero id erat tristique convallis.</a></h4>
-
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-
-                <p class="text-right">
-                  <a class="btn btn-bold btn-info" href="#">Read more</a>
-                </p>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-6">
-            <div class="box">
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe height="450" class="b-0 w-p100" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/5203969&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-              </div>
-
-              <div class="box-body">
-                <h4><a href="#">Proin at libero id erat tristique convallis.</a></h4>
-                <p><span>April 28, 2022</span></p>
-
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-              </div>
-
-              <div class="box-body bg-lightest bt-1">
-                <div class="flexbox align-items-center">
-                  <a class="text-primary font-size-15" href="#">Continue reading...</a>
-
-                  <ul class="flexbox">
-                    <li class="px-15 br-1">
-                      <a class="text-muted" href="#">
-                        <i class="fa fa-share-alt"></i>
-                      </a>
-                    </li>
-
-                    <li class="px-15 br-1">
-                      <a class="text-muted" href="#">
-                        <i class="fa fa-heart mr-1"></i> 12
-                      </a>
-                    </li>
-
-                    <li class="px-15">
-                      <a class="text-muted" href="#">
-                        <i class="fa fa-comment mr-1"></i> 3
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
+          <!-- /.nav-tabs-custom -->
         </div>
-      
+        <!-- /.col -->
+      </div>
       <!-- /.row -->
 
     </section>
     <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
   
   <footer class="main-footer">
     <div class="pull-right d-none d-sm-inline-block">
