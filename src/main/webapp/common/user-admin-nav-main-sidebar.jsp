@@ -57,8 +57,8 @@
           </a>
         </li>
       
-        <li class="treeview">
-          <a href="#">
+        <li class="">
+          <a href="${ctx}/admin/reg">
             <i class="icon-people"></i>
             <span>COMPTES</span>
             <span class="pull-right-container">
@@ -67,7 +67,7 @@
           </a>
         </li>
         
-        <li class="treeview">
+        <li class="">
           <a href="${ctx}/user/Documents">
              <i class="icon-folder-alt"></i> 
             <span>DOCUMENTS</span>

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.net.oya.model.Project;
 @Repository
-public interface ProjectRepository extends JpaRepository<Project, Long> {
+public interface ProjectRepository extends JpaRepository<Project, Integer> {
 
 	//List<Project> findByDateCreateTimeDesc();
 	

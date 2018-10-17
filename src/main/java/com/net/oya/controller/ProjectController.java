@@ -12,6 +12,7 @@ import javax.validation.Valid;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -67,13 +68,14 @@ public class ProjectController {
 		return model ;
 	}
 	@RequestMapping(value="/Project/{id}", method = RequestMethod.GET)
-	public ModelAndView ViewProject(HttpSession session,ModelAndView model,@PathVariable Integer id) throws Exception {
+	public String ViewProject(@Valid @PathVariable Integer id ,Model model, HttpSession session){
 		UserUtil.getUserFromSession(session);
 		Project project = projectService.findById(id);
-		model.addObject("project" , project);
-		model.setViewName("Project/ProjectDetail");
-		return model ;
-		
+		model.addAttribute("project" , project);
+		return "Project/ProjectDetail" ;
+		//model.addObject("project" , project);
+	//	model.setViewName("Project/ProjectDetail");
+	//	return model ;
 	}
 	@RequestMapping(value="/add",method =RequestMethod.POST)
 	public String doNew(@Valid @ModelAttribute Project project, BindingResult result , HttpSession session, Integer id) throws Exception{
@@ -103,7 +105,6 @@ public class ProjectController {
 		}
 		return "/Projects";
 	}
-	
 /*	 private void uploadImage(Project project, HttpSession session, MultipartFile file) {
 	        String fileName = generateFileName();
 	        String path = generateFilePath(session);

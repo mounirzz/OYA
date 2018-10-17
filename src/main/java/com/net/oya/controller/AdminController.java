@@ -60,14 +60,15 @@ public class AdminController {
     UserService userService ;
 
     @RequestMapping(value = "/reg", method = RequestMethod.GET)
-    public String reg() {
-        return "admin/adminReg";
+    public String reg(HttpSession session) {
+        Admin admin = AdminUtil.getAdminFromSession(session);
+    	return "admin/Comptes";
     }
 
     @RequestMapping(value = "/reg", method = RequestMethod.POST)
     public String doReg(Admin admin, HttpSession session) {
         adminService.save(admin);
-        return "redirect:/";
+        return "admin/Comptes";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
