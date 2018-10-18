@@ -19,12 +19,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        User Profile
+        ${project.categorie}
       </h1>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Examples</a></li>
-        <li class="breadcrumb-item active">User profile</li>
+        <li class="breadcrumb-item"><a href="#">Project</a></li>
+        <li class="breadcrumb-item active">${project.categorie}</li>
       </ol>
     </section>
 
@@ -77,9 +77,10 @@
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
               
-              <li><a class="" href="#timeline" data-toggle="tab">Timeline</a></li>
-              <li><a href="#activity" data-toggle="tab" class="">Activity</a></li>
-              <li><a href="#settings" data-toggle="tab" class="active show">Settings</a></li>
+              <li><a class="" href="#settings" data-toggle="tab">Projet</a></li>
+              <li><a href="#activity" data-toggle="tab" class="">Plan</a></li>
+              <li><a href="#timeline" data-toggle="tab" class="active show">Phase</a></li>
+              <li><a href="#planning" data-toggle="tab" class="">Planning</a></li>
             </ul>
                         
             <div class="tab-content">

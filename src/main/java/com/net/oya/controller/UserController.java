@@ -21,6 +21,7 @@ import javax.validation.Valid;
 import com.net.oya.common.AppConfig;
 import com.net.oya.common.Constants;
 import com.net.oya.common.Page;
+import com.net.oya.model.Admin;
 import com.net.oya.model.DossierAdmin;
 import com.net.oya.model.Order;
 import com.net.oya.model.Picture;
@@ -88,8 +89,10 @@ public class UserController {
     }
 
     @RequestMapping(value = "/reg", method = RequestMethod.GET)
-    public String reg() {
-        return "user/Register";
+    public String reg(HttpSession session, Model model) {
+        Admin admin = AdminUtil.getAdminFromSession(session);
+    	model.addAttribute("admin" ,admin);
+        return "admin/Comptes";
     }
 
     @RequestMapping(value = "/reg", method = RequestMethod.POST)
@@ -100,15 +103,19 @@ public class UserController {
                         + or.getDefaultMessage());
             }
             model.addAttribute("error", "Les données sont erronées, veuillez réessayer");
-            return "user/Register";
+            return "admin/Comptes";
         }
         userService.save(user);
         logger.info("Utilisateurs ajoutés avec succès:" + user);
        	UserUtil.getUserFromSession(session);
     	model.addAttribute("user", user);
-    	return "user/home";
+    	return "admin/Comptes";
     }
-
+    @RequestMapping(value="/delete/{id}",method = RequestMethod.GET)
+    public String admindelete(@PathVariable("id") Integer id) {
+    	userService.userdelete(id);
+    	return "redirect:/admin/reg";
+    }
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String loginForm(HttpServletRequest request, HttpSession session) {
         String uuid;

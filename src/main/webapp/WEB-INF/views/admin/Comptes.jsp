@@ -162,24 +162,25 @@
 					  <thead>
 						<tr>
 						  <th scope="col">#</th>
-						  <th scope="col">First</th>
-						  <th scope="col">Last</th>
-						  <th scope="col">Handle</th>
+						  <th scope="col">Username</th>
+						  <th scope="col">Password</th>
+						  <th scope="col">Adresse mail</th>
+						  <th scope="col">Action</th>
 						</tr>
 					  </thead>
 					  <tbody>
+					  <c:forEach items="${page.result}" var="admin">
+					  <c:set var="task" value="${leave.task}" />
+					  <c:set var="pi" value="${leave.processInstanace}" />
 						<tr>
-						  <th scope="row">1</th>
-						  <td>Mark</td>
-						  <td>Otto</td>
-						  <td>@mdo</td>
+						<tr pid="${admin.id}"> </tr>
+						  <th scope="row">${admin.id}</th>
+						  <td>${admin.username}</td>
+						  <td>${admin.password}</td>
+						  <td>${admin.mail}</td>
+						  <td><a href="${ctx}/admin/delete/${admin.id}">Suprrimer</a></td>
 						</tr>
-						<tr>
-						  <th scope="row">2</th>
-						  <td>Jacob</td>
-						  <td>Thornton</td>
-						  <td>@fat</td>
-						</tr>
+						</c:forEach>
 					  </tbody>
 					</table>
 				</div>
@@ -218,55 +219,11 @@
 						  <td>${user.username}</td>
 						  <td>${user.password}</td>
 						  <td>${user.mail}</td>
-						  <td><a href="">Modifier</a>
-						  <a href="#">Supprimer</a>
-						  <a href="#">Mdofication</a></td>
+						   <td>  <a href="${ctx}/user/delete/${user.id}">Supprimer</a></td>
 						</tr>
 						</c:forEach>
 					  </tbody>
 					</table>
-				</div>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-        </div>
-      
-      </div>
-<div class="row">
-        <div class="col-12">
-          <div class="box">
-            <div class="box-header with-border">
-              <h3 class="box-title">Contenu</h3>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body no-padding">
-				<div class="table-responsive">
-				  <table class="table table-hover">
-					<tbody><tr>
-					  <th>Projet</th>
-					  <th>certificat de propriété</th>
-					  <th>Date de début</th>
-					  <th>Description</th>
-					  <th>Etat du projet</th>
-					  <th>Intitule</th>
-					  <th>Numéro titre financier </th>
-					</tr>
-					<c:forEach items="${page.result}" var="project">
-					 <c:set var="task" value="${leave.task }"/>
-            		<c:set var="pi" value="${leave.processInstance }"/>
-					<tr>
-					<tr pid="${project.id}"></tr>
-					  <td><a href="">${project.categorie}</a></td>
-					  <td>${project.certificat_propriete} </td>
-					  <td><span class="text-muted"><i class="fa fa-clock-o"></i> ${project.date_debut}</span> </td>
-					  <td>${project.description}</td>
-					  <td><span class="label label-danger">${project.etat}</span></td>
-					  <td>${project.intitule}</td>
-					  <td>${project.num_title_foncier}</td>
-					</tr>
-					</c:forEach>
-				  </tbody></table>
 				</div>
             </div>
             <!-- /.box-body -->

@@ -59,11 +59,11 @@ public class AdminController {
     @Autowired
     UserService userService ;
 
-    @RequestMapping(value = "/reg", method = RequestMethod.GET)
+    /*@RequestMapping(value = "/reg", method = RequestMethod.GET)
     public String reg(HttpSession session) {
         Admin admin = AdminUtil.getAdminFromSession(session);
     	return "admin/Comptes";
-    }
+    }*/
 
     @RequestMapping(value = "/reg", method = RequestMethod.POST)
     public String doReg(Admin admin, HttpSession session) {
@@ -98,6 +98,25 @@ public class AdminController {
     	return "admin/index" ;
     	
     }
+    @RequestMapping(value="/reg", method = RequestMethod.GET)
+    public String Mytable(HttpSession session, HttpServletResponse response , HttpServletRequest request, Model model, User user) {
+    	Admin admin = AdminUtil.getAdminFromSession(session);
+    	model.addAttribute("admin2" ,admin);
+    	Page<User> page2 = new Page<User>(request);
+    	userService.findUsers(page2);
+    	model.addAttribute("page2" ,page2);
+    	Page<Admin> page= new Page<Admin>(request);
+    	adminService.findAdmin(page);
+    	model.addAttribute("page" ,page);
+    	return "admin/Comptes";
+    }
+    
+    @RequestMapping(value="/delete/{id}" ,method = RequestMethod.GET)
+    public String admindelete(@PathVariable("id") Integer id) {
+    	adminService.admindelete(id);
+    	return "redirect:/admin/Comptes";
+    }
+    
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public String doLogout(HttpSession session) {
         AdminUtil.deleteAdminFromSession(session);

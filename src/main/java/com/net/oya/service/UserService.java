@@ -55,7 +55,9 @@ public class UserService {
 		 userDao.save(user);
 		
 	}
-
+	public void userdelete(Integer id) {
+		userDao.delete(id);
+	}
 	public User findById(Integer id) {
 		return userDao.findOne(id);
 	}

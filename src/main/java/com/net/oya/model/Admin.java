@@ -17,6 +17,7 @@ public class Admin implements Serializable {
 	private Integer id;
 	private String username;//Username
 	private String password;//Mot de passe
+	private String mail;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,5 +43,13 @@ public class Admin implements Serializable {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getMail() {
+		return mail;
+	}
+
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
 }

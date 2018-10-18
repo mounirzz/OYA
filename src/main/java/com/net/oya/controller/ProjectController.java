@@ -105,12 +105,13 @@ public class ProjectController {
 		}
 		return "/Projects";
 	}
-/*	 private void uploadImage(Project project, HttpSession session, MultipartFile file) {
+	/* private void uploadImage(Project project, HttpSession session, MultipartFile file) {
 	        String fileName = generateFileName();
 	        String path = generateFilePath(session);
 	        String serverFile = path + "/" + fileName;
 	        Picture picture = uploadAndSaveImg(session, file, fileName, path, serverFile);
-	        project.setMasterPic(picture);
+	        project.setProjectPic(picture);
+	        //setMasterPic(picture);
 	    }
 
 	    private String generateFilePath(HttpSession session) {

@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -19,6 +21,7 @@ import javax.persistence.Table;
 import org.hibernate.annotations.DynamicUpdate;
 import org.springframework.format.annotation.DateTimeFormat;
 @Entity
+@DynamicUpdate
 @Table(name="t_project")
 public class Project implements Serializable {
 
@@ -30,8 +33,6 @@ public class Project implements Serializable {
 	private String num_title_foncier ;
 	private String intitule ;
 	private DossierAdmin dossierAdmin ;
-	//private Picture masterPic;// class photo																																				//private  Picture masterPic ;
-	//private List<Picture> slavePic;// liste des photos
 	private Plan plan ;
 	private long  certificat_propriete ;
 	//@DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -42,7 +43,8 @@ public class Project implements Serializable {
 	private String etat ;
 	private Collaborateur inputColl ;
 	private Admin inputAssocie;
-	
+	//private Picture ProjectPic;// class photo																																				//private  Picture masterPic ;
+	//private List<Picture> listPic;// liste des photos
 	private Client clt;
 	@ManyToOne
 	@JoinColumn
@@ -128,36 +130,6 @@ public class Project implements Serializable {
 		this.categorie = categorie;
 	}
 	
-	
-	
-	public Project(Integer id,String titleProject, String num_title_foncier, String intitule, long certificat_propriete, Date date_debut,
-			Date date_realisation, String description, String etat, Collaborateur inputColl, Admin inputAssocie,
-			Client clt, String categorie, Chantier chantier,Picture masterPic) {
-		super();
-		this.id = id;
-		this.titleProject=titleProject ;
-		this.num_title_foncier = num_title_foncier;
-		this.intitule = intitule;
-		this.certificat_propriete = certificat_propriete;
-		this.date_debut = date_debut;
-		this.date_realisation = date_realisation;
-		this.description = description;
-		this.etat = etat;
-		this.inputColl = inputColl;
-		this.inputAssocie = inputAssocie;
-		//this.clt = clt;
-		this.categorie = categorie;
-		this.chantier = chantier;
-	}
-	@Override
-	public String toString() {
-		return "Project [id=" + id + ",  titleProject= " + titleProject +", num_title_foncier=" + num_title_foncier + ", intitule=" + intitule
-				+ ",  certificat_propriete=" + certificat_propriete + ", date_debut=" + date_debut
-				+ ", masterPic=\" + masterPic\r\n" + 
-				"				+ \", slavePic=\" + slavePic + \", date_realisation=" + date_realisation + ", description=" + description + ", etat=" + etat
-				+ ", inputColl=" + inputColl + ", inputAssocie=" + inputAssocie + ", categorie="
-				+ categorie + ", chantier=" + chantier + "]";
-	}
 	public Collaborateur getInputColl() {
 		return inputColl;
 	}
@@ -192,19 +164,13 @@ public class Project implements Serializable {
 	public void setPlan(Plan plan) {
 		this.plan = plan;
 	}
-	/*@ManyToOne
-	@JoinColumn(name="certificat_propriete")
-	public Picture getMasterPic() {
-		return masterPic;
+	@Override
+	public String toString() {
+		return "Project [id=" + id + ", titleProject=" + titleProject + ", num_title_foncier=" + num_title_foncier
+				+ ", intitule=" + intitule + ", dossierAdmin=" + dossierAdmin + ", plan=" + plan
+				+ ", certificat_propriete=" + certificat_propriete + ", date_debut=" + date_debut
+				+ ", date_realisation=" + date_realisation + ", description=" + description + ", etat=" + etat
+				+ ", inputColl=" + inputColl + ", inputAssocie=" + inputAssocie + ", clt=" + clt + ", categorie=" + categorie + ", chantier=" + chantier
+				+ "]";
 	}
-	public void setMasterPic(Picture masterPic) {
-		this.masterPic = masterPic;
-	}
-	@ManyToMany(cascade = CascadeType.ALL, fetch=FetchType.EAGER)
-	public List<Picture> getSlavePic() {
-		return slavePic;
-	}
-	public void setSlavePic(List<Picture> slavePic) {
-		this.slavePic = slavePic;
-	}*/
 }
