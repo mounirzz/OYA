@@ -46,6 +46,7 @@ public class Project implements Serializable {
 	//private Picture ProjectPic;// class photo																																				//private  Picture masterPic ;
 	//private List<Picture> listPic;// liste des photos
 	private Client clt;
+	
 	@ManyToOne
 	@JoinColumn
 	public Admin getInputAssocie() {
@@ -54,8 +55,9 @@ public class Project implements Serializable {
 	public void setInputAssocie(Admin inputAssocie) {
 		this.inputAssocie = inputAssocie;
 	}
+	
 	@ManyToOne
-	@JoinColumn
+	@JoinColumn(name="id_client")
 	public Client getClients() {
 		return clt;
 	}

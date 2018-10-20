@@ -13,6 +13,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 import com.net.oya.common.AdminAuthenticationInterceptor;
 import com.net.oya.common.AuthenticationInterceptor;
+import com.net.oya.common.ClientAuthenticationInterceptor;
 
 import java.text.ParseException;
 import java.util.Date;
@@ -32,6 +33,9 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         registry.addInterceptor(new AdminAuthenticationInterceptor()).addPathPatterns(
                 "/admin/*","/admin/product/{id}","/*/admin/*"
         ).excludePathPatterns("/admin/login","/admin/logout");
+        
+      /*  registry.addInterceptor(new ClientAuthenticationInterceptor()).addPathPatterns(
+        		"/client/*","/client/project/{id}").excludePathPatterns("/client/login", "/client/logout");*/
     }
 
     @Bean(name = "multipartResolver")

@@ -15,7 +15,13 @@ public class AppConfig {
 	// Fichier d'attributs pour charger l'objet
 	
 	private static PropertiesLoader propertiesLoader;
-
+	
+	/*@Value("${client.cookie.name}")
+	public String CLIENT_COOKIE_NAME;
+	
+	@Value("${client.cookie.age}")
+	public int CLIENT_COOKIE_AGE;*/
+	
 	@Value("${user.cookie.name}")
 	public String USER_COOKIE_NAME;
 

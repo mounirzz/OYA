@@ -77,15 +77,15 @@
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
               
-              <li><a class="" href="#settings" data-toggle="tab">Projet</a></li>
-              <li><a href="#activity" data-toggle="tab" class="">Plan</a></li>
-              <li><a href="#timeline" data-toggle="tab" class="active show">Phase</a></li>
+              <li><a class="" href="#project" data-toggle="tab">Projet</a></li>
+              <li><a href="#plan" data-toggle="tab" class="">Plan</a></li>
+              <li><a href="#phase" data-toggle="tab" class="active show">Phase</a></li>
               <li><a href="#planning" data-toggle="tab" class="">Planning</a></li>
             </ul>
                         
             <div class="tab-content">
              
-             <div class="tab-pane" id="timeline">
+             <div class="tab-pane" id="phase">
                 <!-- The timeline -->
 				 <ul class="timeline2">
 					<li>
@@ -179,7 +179,7 @@
               </div>    
               <!-- /.tab-pane -->
               
-              <div class="tab-pane" id="activity">
+              <div class="tab-pane" id="plan">
                 <!-- Post -->
                 <div class="post">
                   <div class="user-block">
@@ -297,13 +297,13 @@
               </div>
               <!-- /.tab-pane -->
               
-              <div class="tab-pane active show" id="settings">
-                <form class="form-horizontal form-element col-12">
+              <div class="tab-pane active show" id="project">
+                <form class="form-horizontal form-element col-12" action="${ctx}/Projects/edit/{id}">
                   <div class="form-group row">
                     <label for="inputName" class="col-sm-2 control-label">Name</label>
 
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputName" placeholder="">
+                      <input type="text" class="form-control" id="inputName" value="${project.categorie}" placeholder="">
                     </div>
                   </div>
                   <div class="form-group row">
@@ -349,6 +349,9 @@
                     </div>
                   </div>
                 </form>
+              </div>
+                <div class="tab-pane active show" id="planning">
+                		<h2>Calendrier</h2>
               </div>
               <!-- /.tab-pane -->
             </div>

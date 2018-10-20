@@ -85,6 +85,15 @@
             </span>
           </a>
         </li>
+         <li class="">
+          <a href="${ctx}/client/reg">
+            <i class="icon-people"></i>
+            <span>CLIENTS</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+        </li>
        <!--   <li class="treeview">
           <a href="#">
             <i class="icon-speedometer"></i>

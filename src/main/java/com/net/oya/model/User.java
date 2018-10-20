@@ -7,8 +7,13 @@ import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.annotations.DiscriminatorFormula;
+import org.hibernate.annotations.DynamicUpdate;
+import org.hibernate.annotations.NaturalIdCache;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.stereotype.Component;
 
 
 /**
@@ -19,7 +24,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @Table(name = "t_user")
-public  class User implements Serializable {
+public  class  User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -83,19 +88,7 @@ public  class User implements Serializable {
 	 * Remarques
 	 */
 	private String remark;
-	
-	public Client getIncludeClient() {
-		return IncludeClient;
-	}
-
-	public void setIncludeClient(Client includeClient) {
-		IncludeClient = includeClient;
-	}
-
-	private Collaborateur IncludeColl ;
-	
-	private Client IncludeClient ;
-
+		
 	/**
 	 * Informations sur le mot de passe (cryptage)
 	 */
@@ -301,11 +294,4 @@ public  class User implements Serializable {
 		this.mail = mail;
 	}
 
-	public Collaborateur getIncludeColl() {
-		return IncludeColl;
-	}
-
-	public void setIncludeColl(Collaborateur includeColl) {
-		IncludeColl = includeColl;
-	}
 }

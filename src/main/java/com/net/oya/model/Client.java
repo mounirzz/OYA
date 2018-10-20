@@ -1,52 +1,59 @@
 package com.net.oya.model;
 
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import java.io.Serializable;
 
-public class Client extends User {
+import javax.persistence.*;
 
-	/**
-	 * 
-	 */
+import org.hibernate.annotations.DynamicUpdate;
+
+/**
+ * @author Mounir
+ * @email m.ezzahar@madrex.ma
+ * @date 2017-10-20
+ */
+@Entity
+@DynamicUpdate
+@Table(name = "t_clients")
+public class Client implements Serializable {
+
 	private static final long serialVersionUID = 1L;
-	private long id_client ;
-	private String Reference ;
-	private String username ;
-	//@OneToMany
-	//@JoinColumn
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	private String username;//Username
+	private String password;//Mot de passe
+	private String mail;
+
 	
-	public long getId_client() {
-		return id_client;
+	public Integer getId() {
+		return id;
 	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	public String getUsername() {
 		return username;
 	}
+
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	public void setId_client(long id_client) {
-		this.id_client = id_client;
-	}
-	public String getReference() {
-		return Reference;
-	}
-	public void setReference(String reference) {
-		Reference = reference;
+
+	public String getPassword() {
+		return password;
 	}
 
-	public Client(long id_client, String reference, String username) {
-		super();
-		this.id_client = id_client;
-		Reference = reference;
-		this.username = username;
-	}
-	public Client() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	public Client(Integer id, String username, String password, String nom, String prenom, String mail) {
-		super();
-		// TODO Auto-generated constructor stub
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
+	public String getMail() {
+		return mail;
+	}
+
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
 }

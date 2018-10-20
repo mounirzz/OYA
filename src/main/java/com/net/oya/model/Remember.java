@@ -1,5 +1,6 @@
 package com.net.oya.model;
 
+import org.hibernate.annotations.DynamicUpdate;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
@@ -12,6 +13,7 @@ import java.util.Date;
  */
 
 @Entity
+@DynamicUpdate
 @Table(name = "t_remember")
 public class Remember {
 
@@ -21,6 +23,10 @@ public class Remember {
     @ManyToOne
     @JoinColumn
     private User user;
+    
+    @ManyToOne
+    @JoinColumn
+    private Client client ;
 
     @CreatedDate
     private Date addTime;
@@ -48,4 +54,12 @@ public class Remember {
     public void setAddTime(Date addTime) {
         this.addTime = addTime;
     }
+
+	public Client getClient() {
+		return client;
+	}
+
+	public void setClient(Client client) {
+		this.client = client;
+	}
 }
