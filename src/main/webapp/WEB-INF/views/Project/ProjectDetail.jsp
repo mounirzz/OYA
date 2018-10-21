@@ -78,14 +78,14 @@
             <ul class="nav nav-tabs">
               
               <li><a class="" href="#project" data-toggle="tab">Projet</a></li>
-              <li><a href="#plan" data-toggle="tab" class="">Plan</a></li>
-              <li><a href="#phase" data-toggle="tab" class="active show">Phase</a></li>
+              <li><a href="#activity" data-toggle="tab" class="">Plan</a></li>
+              <li><a href="#timeline" data-toggle="tab" class="active show">Phase</a></li>
               <li><a href="#planning" data-toggle="tab" class="">Planning</a></li>
             </ul>
                         
             <div class="tab-content">
              
-             <div class="tab-pane" id="phase">
+             <div class="tab-pane" id="timeline">
                 <!-- The timeline -->
 				 <ul class="timeline2">
 					<li>
@@ -179,7 +179,7 @@
               </div>    
               <!-- /.tab-pane -->
               
-              <div class="tab-pane" id="plan">
+              <div class="tab-pane" id="activity">
                 <!-- Post -->
                 <div class="post">
                   <div class="user-block">
@@ -300,41 +300,60 @@
               <div class="tab-pane active show" id="project">
                 <form class="form-horizontal form-element col-12" action="${ctx}/Projects/edit/{id}">
                   <div class="form-group row">
-                    <label for="inputName" class="col-sm-2 control-label">Name</label>
+                    <label for="inputName" class="col-sm-2 control-label">Catégorie</label>
 
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputName" value="${project.categorie}" placeholder="">
+                      <input type="text" class="form-control" id="inputName" value="${project.categorie}"    placeholder="">
+                    </div>
+                  </div>
+                  <!--  <div class="form-group row">
+                    <label for="inputEmail" class="col-sm-2 control-label">Certificat de propriété</label>
+
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputEmail" value="${project.certificat_propriete}"     placeholder="">
+                    </div>
+                  </div>-->
+                  
+                  
+                  
+                  
+                  <div class="form-group row">
+                    <label for="inputPhone" class="col-sm-2 control-label">Date début</label>
+
+                    <div class="col-sm-10">
+                      <input type="date" class="form-control" id="inputPhone" value="${project.date_debut}"  placeholder="">
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                    <label for="inputExperience" class="col-sm-2 control-label">Description</label>
 
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputEmail" placeholder="">
+                      <input type="text" class="form-control" id="inputExperience"   value="${project.description}" placeholder=""></input>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="inputPhone" class="col-sm-2 control-label">Phone</label>
+                    <label for="inputSkills" class="col-sm-2 control-label">Etat</label>
 
                     <div class="col-sm-10">
-                      <input type="tel" class="form-control" id="inputPhone" placeholder="">
+                      <input type="text" class="form-control" id="inputSkills" value="${project.etat}"  placeholder="">
                     </div>
                   </div>
-                  <div class="form-group row">
-                    <label for="inputExperience" class="col-sm-2 control-label">Experience</label>
+                              <div class="form-group row">
+                    <label for="inputSkills" class="col-sm-2 control-label">Intitulé</label>
 
                     <div class="col-sm-10">
-                      <textarea class="form-control" id="inputExperience" placeholder=""></textarea>
+                      <input type="text" class="form-control" id="inputSkills" value="${project.intitule}"  placeholder="">
                     </div>
                   </div>
-                  <div class="form-group row">
-                    <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
+                  
+                              <div class="form-group row">
+                    <label for="inputSkills" class="col-sm-2 control-label">Titre foncier</label>
 
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputSkills" placeholder="">
+                      <input type="text" class="form-control" id="inputSkills" value="${project.num_title_foncier}"  placeholder="">
                     </div>
                   </div>
-                  <div class="form-group row">
+                  <!--  <div class="form-group row">
                     <div class="ml-auto col-sm-10">
                       <div class="checkbox">
                        	<input type="checkbox" id="basic_checkbox_1" checked="">
@@ -348,10 +367,8 @@
                       <button type="submit" class="btn btn-success">Submit</button>
                     </div>
                   </div>
+                  -->
                 </form>
-              </div>
-                <div class="tab-pane active show" id="planning">
-                		<h2>Calendrier</h2>
               </div>
               <!-- /.tab-pane -->
             </div>

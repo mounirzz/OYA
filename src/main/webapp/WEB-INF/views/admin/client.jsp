@@ -37,7 +37,10 @@
           <!-- Horizontal Form -->
           <div class="box">
             <div class="box-header with-border bg-dark">
-              <h3 class="box-title">Enregistrement du User</h3>
+              <h3 class="box-title">Enregistrement de client</h3>
+               <div class="text-left" style=" float: right;">
+       			   <a  href="${ctx}/Projects/add#step-1" class="btn btn-yellow btn-lg mx-auto">Affecter à un Projet</a>
+      		  </div> 
             </div>
             <!-- /.box-header -->
             <!-- form start -->
