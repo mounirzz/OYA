@@ -37,7 +37,7 @@
                 <div class="box box-inverse box-info pull-up bg-hexagons-dark">
                     <div class="box-body text-center">
                         <div class="flexbox align-content-end"> 
-                            <h2 class="text-white mb-10">Total Project</h2>                     
+                            <h2 class="text-white mb-10">Total Projects</h2>                     
                             <h1 class="font-light text-white">164</h1>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                 <div class="box box-success box-inverse pull-up bg-hexagons-dark">
                     <div class="box-body text-center">
                         <div class="flexbox align-content-end">
-                            <h2 class="text-white mb-10">Projets réaliser</h2>
+                            <h2 class="text-white mb-10">Projets réalisés</h2>
                             <h1 class="font-light text-white">244</h1>
                         </div>
                     </div>

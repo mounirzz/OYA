@@ -15,7 +15,7 @@
 
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index.html"><b>O.Y.A</b>Office of Young Architecture</a>
+    <a href="../../index.html"><b>O.Y.A: </b>Office of Young Architecture</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">

@@ -52,21 +52,58 @@
                   <label for="inputEmail3" class="col-sm-2 control-label">Username</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="Username" id="Username" placeholder="Username">
+                    <input type="text" class="form-control" name="username" id="Username" value="${Client.username}" placeholder="Username">
                   </div>
                 </div>
+                   <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Nom</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="nom" id="Nom" value="${User.nom}" placeholder="Nom">
+                  </div>
+                </div>
+                   <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Prénom</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="prenom" id="Prenom" value="${User.prenom}" placeholder="Prénom">
+                  </div>
+                </div>
+                   <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Téléphone</label>
+
+                  <div class="col-sm-10">
+                    <input type="tel" class="form-control" name="telPhone" id="tel"  value="${User.telPhone}" placeholder="Tél">
+                  </div>
+                </div>
+                
+                   <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Fax</label>
+
+                  <div class="col-sm-10">
+                    <input type="tel" class="form-control" name="phone" id="fax"  value="${User.phone}"  placeholder="Fax">
+                  </div>
+                </div>
+                   <div class="form-group row">
+                  <label for="inputEmail3" class="col-sm-2 control-label">Adresse</label>
+
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="address" id="address" value="${User.address}" placeholder="Adresse">
+                  </div>
+                </div>
+             
                 <div class="form-group row">
                   <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
 
                   <div class="col-sm-10">
-                    <input type="email" class="form-control" name="mail" id="inputEmail3" placeholder="Email">
+                    <input type="email" class="form-control" name="mail" id="inputEmail3" value="${Client.mail}"   placeholder="Email">
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
 
                   <div class="col-sm-10">
-                    <input type="password" class="form-control" name="password" minlength="6" id="inputPassword3" placeholder="Password">
+                    <input type="password" class="form-control" name="password" minlength="6" id="inputPassword3" value="${Client.password}" placeholder="Password">
                   </div>
                 </div>
                  <div class="form-group row">

@@ -63,7 +63,7 @@
 						  <td>${user.mail}</td>
 						  <td><a href="">Modifier</a>
 						  <a href="#">Supprimer</a>
-						  <a href="#">Mdofication</a></td>
+						 
 						</tr>
 						</c:forEach>
 					  </tbody>
