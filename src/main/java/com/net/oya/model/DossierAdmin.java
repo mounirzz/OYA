@@ -29,6 +29,7 @@ public class DossierAdmin implements Serializable {
 	
 	public DossierAdmin() {}
 	
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Integer getIdDossier() {

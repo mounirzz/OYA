@@ -18,7 +18,6 @@ import com.net.oya.repository.PlanRepository;
 @Transactional
 public class PlanService {
 
-
 	@Autowired
 	PlanRepository planRepository;
 

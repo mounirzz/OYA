@@ -83,7 +83,6 @@ public class DossierAdminController {
 		DossierService.deleteDossier(idDossier);
 		return "success";
 	}
-
 	@RequestMapping(value = "/dossier/edit", method = RequestMethod.POST)
 	public ModelAndView doEdit(ModelAndView model, DossierAdmin dossierAdmin,@PathVariable Long id, HttpSession session) {
 		dossierAdmin.setInputAdmin(AdminUtil.getAdminFromSession(session));

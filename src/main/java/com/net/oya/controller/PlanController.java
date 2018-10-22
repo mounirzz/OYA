@@ -67,6 +67,7 @@ public class PlanController {
 	    	model.setViewName("redirect:/Project/plan/planDetail");
 	    	return model ;
 	    }
+	    
 	    @RequestMapping(value = "/plan/delete/{id}")
 	    @ResponseBody
 	    public String PlanDelete(@PathVariable("id") Long idPlan) {

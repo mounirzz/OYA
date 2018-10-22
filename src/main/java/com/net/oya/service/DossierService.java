@@ -21,7 +21,6 @@ public class DossierService {
 	public void addDossier(DossierAdmin dossierAdmin) {
 		dossierRepository.save(dossierAdmin);
 	}
-
 	public void deleteDossier(Long idDossier) {
 		dossierRepository.delete(idDossier);
 	}

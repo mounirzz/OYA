@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 import com.net.oya.model.Plan;
 @Repository
 public interface PlanRepository extends JpaRepository<Plan, Long> {
-
 	
 	@Query("FROM Plan p")
 	List<Plan> findPopPlan();
