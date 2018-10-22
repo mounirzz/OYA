@@ -14,4 +14,8 @@ public interface PlanRepository extends JpaRepository<Plan, Long> {
 	List<Plan> findPopPlan();
 
 
+	
+	
+	
+	
 }
