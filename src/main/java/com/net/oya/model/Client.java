@@ -20,6 +20,7 @@ public class Client implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	private String nom,prenom,tel,fax,adresse;
 	private String username;//Username
 	private String password;//Mot de passe
 	private String mail;
@@ -29,12 +30,82 @@ public class Client implements Serializable {
 		return id;
 	}
 
+	@Override
+	public String toString() {
+		return "Client [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", tel=" + tel + ", fax=" + fax
+				+ ", adresse=" + adresse + ", username=" + username + ", password=" + password + ", mail=" + mail + "]";
+	}
+	
+	
+	
+
+	public Client(Integer id, String nom, String prenom, String tel, String fax, String adresse, String username,
+			String password, String mail) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.tel = tel;
+		this.fax = fax;
+		this.adresse = adresse;
+		this.username = username;
+		this.password = password;
+		this.mail = mail;
+	}
+	
+	
+
+	public Client() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
 
 	public String getUsername() {
 		return username;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	public String getTel() {
+		return tel;
+	}
+
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+
+	public String getFax() {
+		return fax;
+	}
+
+	public void setFax(String fax) {
+		this.fax = fax;
+	}
+
+	public String getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
 	}
 
 	public void setUsername(String username) {

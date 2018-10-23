@@ -49,46 +49,46 @@
               <div class="box-body">
                 
                   <div class="form-group row">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Username</label>
+                  <label for="username" class="col-sm-2 control-label">Username</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="username" id="Username" value="${Client.username}" placeholder="Username">
+                    <input type="text" class="form-control" name="username" id="username" value="${client.username}" placeholder="">
                   </div>
                 </div>
                    <div class="form-group row">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Nom</label>
+                  <label for="nom" class="col-sm-2 control-label">Nom</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="nom" id="Nom" value="${User.nom}" placeholder="Nom">
+                    <input type="text" class="form-control" name="nom" id="nom" value="${client.nom}" placeholder="">
                   </div>
                 </div>
                    <div class="form-group row">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Prénom</label>
+                  <label for="prenom" class="col-sm-2 control-label">Prénom</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="prenom" id="Prenom" value="${User.prenom}" placeholder="Prénom">
+                    <input type="text" class="form-control" name="prenom" id="prenom" value="${client.prenom}" placeholder="">
                   </div>
                 </div>
                    <div class="form-group row">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Téléphone</label>
+                  <label for="tel" class="col-sm-2 control-label">Téléphone</label>
 
                   <div class="col-sm-10">
-                    <input type="tel" class="form-control" name="telPhone" id="tel"  value="${User.telPhone}" placeholder="Tél">
+                    <input type="tel" class="form-control" name="tel" id="tel"  value="${client.tel}" placeholder="">
                   </div>
                 </div>
                 
                    <div class="form-group row">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Fax</label>
+                  <label for="fax" class="col-sm-2 control-label">Fax</label>
 
                   <div class="col-sm-10">
-                    <input type="tel" class="form-control" name="phone" id="fax"  value="${User.phone}"  placeholder="Fax">
+                    <input type="tel" class="form-control" name="fax" id="fax"  value="${client.fax}"  placeholder="">
                   </div>
                 </div>
                    <div class="form-group row">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Adresse</label>
+                  <label for="adresse" class="col-sm-2 control-label">Adresse</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" name="address" id="address" value="${User.address}" placeholder="Adresse">
+                    <input type="text" class="form-control" name="adresse" id="adresse" value="${client.adresse}" placeholder="">
                   </div>
                 </div>
              
@@ -96,21 +96,21 @@
                   <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
 
                   <div class="col-sm-10">
-                    <input type="email" class="form-control" name="mail" id="inputEmail3" value="${Client.mail}"   placeholder="Email">
+                    <input type="email" class="form-control" name="mail" id="inputEmail3" value="${client.mail}"   placeholder="">
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
 
                   <div class="col-sm-10">
-                    <input type="password" class="form-control" name="password" minlength="6" id="inputPassword3" value="${Client.password}" placeholder="Password">
+                    <input type="password" class="form-control" name="password" minlength="6" id="inputPassword3" value="${client.password}" placeholder="">
                   </div>
                 </div>
                  <div class="form-group row">
-                  <label for="inputPassword3" class="col-sm-2 control-label">Confirm Password</label>
+                  <label for="inputPassword4" class="col-sm-2 control-label">Confirm Password</label>
 
                   <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="">
                   </div>
                 </div>
               </div>
@@ -159,7 +159,7 @@
 						  <td>${client.username}</td>
 						  <td>${client.password}</td>
 						  <td>${client.mail}</td>
-						  <td><a href="${ctx}/client/delete/${client.id}">Suprrimer</a></td>
+						  <td><a href="${ctx}/client/delete/${client.id}">Supprimer</a></td>
 						</tr>
 						</c:forEach>
 					  </tbody>
