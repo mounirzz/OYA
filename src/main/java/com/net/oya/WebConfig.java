@@ -32,7 +32,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
         registry.addInterceptor(new AdminAuthenticationInterceptor()).addPathPatterns(
                 "/admin/*","/admin/product/{id}","/*/admin/*"
-        ).excludePathPatterns("/admin/login","/admin/logout");
+        ).excludePathPatterns("/admin/login","/admin/logout","/user/*");
         
       /*  registry.addInterceptor(new ClientAuthenticationInterceptor()).addPathPatterns(
         		"/client/*","/client/project/{id}").excludePathPatterns("/client/login", "/client/logout");*/

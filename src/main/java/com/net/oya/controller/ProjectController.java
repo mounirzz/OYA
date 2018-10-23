@@ -23,15 +23,18 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.net.oya.common.Constants;
 import com.net.oya.common.Page;
+import com.net.oya.model.Client;
 import com.net.oya.model.DossierAdmin;
 import com.net.oya.model.Picture;
 import com.net.oya.model.Product;
 import com.net.oya.model.Project;
 import com.net.oya.model.User;
 import com.net.oya.service.ChantierService;
+import com.net.oya.service.ClientService;
 import com.net.oya.service.PictureService;
 import com.net.oya.service.ProjectService;
 import com.net.oya.util.AdminUtil;
+import com.net.oya.util.ClientUtil;
 import com.net.oya.util.CollaUtil;
 import com.net.oya.util.Image;
 import com.net.oya.util.UserUtil;
@@ -48,10 +51,13 @@ public class ProjectController {
 	ChantierService chantierService ;
 	@Autowired
 	PictureService pictureService ;
+	@Autowired
+	ClientService ClientService ;
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView admin(ModelAndView model,HttpSession session, HttpServletRequest request,User user) {
-		UserUtil.getUserFromSession(session);
+		AdminUtil.getAdminFromSession(session);
+		//UserUtil.getUserFromSession(session);
 		Page<Project> page = new Page<Project>(request);
 		projectService.findProjects(page);
 		model.addObject("page", page);
@@ -60,6 +66,7 @@ public class ProjectController {
 	}
 	@RequestMapping(value="/Project/{id}", method = RequestMethod.GET)
 	public String ViewProject(@Valid @PathVariable Integer id ,Model model, HttpSession session){
+		AdminUtil.getAdminFromSession(session);
 		UserUtil.getUserFromSession(session);
 		Project project = projectService.findById(id);
 		model.addAttribute("project" , project);
@@ -69,9 +76,14 @@ public class ProjectController {
 	//	return model ;
 	}
 	@RequestMapping(value="/add" ,method = RequestMethod.GET)
-	public ModelAndView newForm(ModelAndView model,HttpSession session) {
+	public ModelAndView newForm(ModelAndView model,HttpSession session,HttpServletRequest request) {
+		AdminUtil.getAdminFromSession(session);
+		UserUtil.getUserFromSession(session);
 		model.setViewName("Project/addProject");
-		if (AdminUtil.getAdminFromSession(session) != null) {
+		Page<Client> page2 = new Page<Client>(request);
+		ClientService.findClient(page2);
+		model.addObject("page2", page2);
+		if (ClientUtil.getClientFromSession(session) != null) {
 			model.setViewName("redirect:/");
 		}
 		return model ;
@@ -79,13 +91,16 @@ public class ProjectController {
 	
 	@RequestMapping(value="/add",method =RequestMethod.POST)
 	public String doNew(@Valid @ModelAttribute Project project, BindingResult result , HttpSession session, Integer id) throws Exception{
-		project.setInputColl(CollaUtil.getCollFromSession(session));
+		AdminUtil.getAdminFromSession(session);
+		UserUtil.getUserFromSession(session);
 		project.setDate_debut(new Date());
 		projectService.save(project);
 		return "redirect:/DossierAdministratif/dossier#step-2";
 	}
 	@RequestMapping(value="/edit" , method = RequestMethod.POST)
 	public ModelAndView doEdit(ModelAndView model , Project project , HttpSession session) {
+		AdminUtil.getAdminFromSession(session);
+		UserUtil.getUserFromSession(session);
 		project.setInputColl(CollaUtil.getCollFromSession(session));
 		projectService.save(project);
 		model.setViewName("redirect:/Projects/ListProject");
@@ -93,6 +108,8 @@ public class ProjectController {
 	}
 	@RequestMapping(value="/edit/{id}", method = RequestMethod.GET)
 	public ModelAndView editProject(ModelAndView model , @PathVariable Integer id, HttpSession session) {
+		AdminUtil.getAdminFromSession(session);
+		UserUtil.getUserFromSession(session);
 		Project project = projectService.findById(id);
 		model.addObject("projects", project);
 		model.setViewName("Projects/ListProject");

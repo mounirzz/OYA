@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Access;
+import javax.persistence.AccessType;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
@@ -21,7 +23,6 @@ import javax.persistence.Table;
 import org.hibernate.annotations.DynamicUpdate;
 import org.springframework.format.annotation.DateTimeFormat;
 @Entity
-@DynamicUpdate
 @Table(name="t_project")
 public class Project implements Serializable {
 
@@ -43,8 +44,8 @@ public class Project implements Serializable {
 	private String etat ;
 	private Collaborateur inputColl ;
 	private Admin inputAssocie;
-	//private Picture ProjectPic;// class photo																																				//private  Picture masterPic ;
-	//private List<Picture> listPic;// liste des photos
+	//private PictureProjet ProjectPic;// class photo																																				//private  Picture masterPic ;
+	//private List<PictureProjet> listPic;// liste des photos
 	private Client clt;
 	
 	@ManyToOne
@@ -52,6 +53,7 @@ public class Project implements Serializable {
 	public Admin getInputAssocie() {
 		return inputAssocie;
 	}
+	
 	public void setInputAssocie(Admin inputAssocie) {
 		this.inputAssocie = inputAssocie;
 	}
@@ -61,17 +63,21 @@ public class Project implements Serializable {
 	public Client getClients() {
 		return clt;
 	}
+	
 	public void setClients(Client clt) {
 		this.clt = clt;
 	}
+	
 	/*public Client getClt() {
 		return clt;
 	}
+	
 	public void setClt(Client clt) {
 		this.clt = clt;
 	}*/
 	public Project() {} 
 	private String categorie ;
+	
 	@OneToOne
 	@JoinColumn
 	private Chantier chantier ; 
@@ -174,5 +180,27 @@ public class Project implements Serializable {
 				+ ", date_realisation=" + date_realisation + ", description=" + description + ", etat=" + etat
 				+ ", inputColl=" + inputColl + ", inputAssocie=" + inputAssocie + ", clt=" + clt + ", categorie=" + categorie + ", chantier=" + chantier
 				+ "]";
+	}
+	/*@ManyToOne
+	@JoinColumn
+	public PictureProjet getProjectPic() {
+		return ProjectPic;
+	}
+	public void setProjectPic(PictureProjet projectPic) {
+		ProjectPic = projectPic;
+	}
+	/*@Access(AccessType.PROPERTY)
+	@ManyToMany(cascade = CascadeType.ALL , fetch = FetchType.EAGER)
+	public List<PictureProjet> getListPic() {
+		return listPic;
+	}
+	public void setListPic(List<PictureProjet> listPic) {
+		this.listPic = listPic;
+	}*/
+	public Client getClt() {
+		return clt;
+	}
+	public void setClt(Client clt) {
+		this.clt = clt;
 	}
 }

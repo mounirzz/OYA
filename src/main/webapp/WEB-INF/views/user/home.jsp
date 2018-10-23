@@ -96,7 +96,7 @@
                                      <tr pid="${project.id}"></tr>
                                     <td class="">${project.id}</td>
                                     <td>
-                                        <a href="javascript:void(0)">Client 1</a>
+                                        <a href="javascript:void(0)">${project.clt.username}</a>
                                     </td>
                                     <td>test@gmail.com</td>
                                     <td>${project.categorie}</td>

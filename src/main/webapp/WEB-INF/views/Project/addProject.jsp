@@ -153,7 +153,20 @@
 								<label for="wdate2">Numéro Titre Financier :</label>
 								<input type="text" name="num_title_foncier" class="form-control" id="wdate2"> </div>
 						</div>
-                </div>
+
+                		<div class="col-md-6">
+                			<div class="form-group">
+                				<label for="id_client">Liste CLients</label>
+								   <select class="form-control select2 w-p100"  name='clt'>
+											    <option value="" selected>Selectionner</option>
+											    <c:forEach items="${page2.result}" var="client">
+											        <c:if test="${client != selected}">
+											            <option value="${client.id}">${client.username}</option>
+											        </c:if>
+											    </c:forEach>
+											</select>
+							  </div>
+                			</div>
                 	<div class="text-xs-right">
 						<button type="submit" class="btn btn-info btn-wizard">Enregister</button>
 					</div>

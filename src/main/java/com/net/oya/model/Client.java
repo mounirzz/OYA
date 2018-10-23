@@ -24,8 +24,18 @@ public class Client implements Serializable {
 	private String username;//Username
 	private String password;//Mot de passe
 	private String mail;
+	private Project project;
 
-	
+	@OneToMany
+	@JoinColumn(name="id_project")
+	public Project getProject() {
+		return project;
+	}
+
+	public void setProject(Project project) {
+		this.project = project;
+	}
+
 	public Integer getId() {
 		return id;
 	}
