@@ -19,8 +19,9 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        ${project.categorie}
-      </h1>
+        ${project.categorie} </h1><div class="col-lg-6 col-12" style=" width: 30%;  max-width: 30%; margin-left: 523px; margin-top: -39px;"> <div class="box-body pad res-tb-block"> <div class="alert alert-warning alert-dismissable">
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>Votre projet est en cours de réalisation ...</div> </div>
+      </div>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="breadcrumb-item"><a href="#">Project</a></li>
@@ -37,11 +38,9 @@
           <!-- Profile Image -->
           <div class="box bg-inverse bg-dark bg-hexagons-white">
             <div class="box-body box-profile">
-              <img class="profile-user-img rounded-circle img-fluid mx-auto d-block" src="../../../images/5.jpg" alt="User profile picture">
+              <img class="profile-user-img rounded-circle img-fluid mx-auto d-block" src="../../../common/images/Boomerang-Communications-logo-01.png" alt="User profile picture" style=" background-color: rgb(255, 255, 255);border-radius: 0% ! important;">
 
-              <h3 class="profile-username text-center">Liam</h3>
-
-              <p class="text-center">Accoubts Manager Jindal Cop.</p>
+              <h3 class="profile-username text-center">BOOMERANG Communication</h3>
 				
               <div class="row social-states">
 				  <div class="col-6 text-right"><a href="#" class="link text-white"><i class="ion ion-ios-people-outline"></i> 254</a></div>
@@ -51,18 +50,17 @@
               <div class="row">
               	<div class="col-12">
               		<div class="profile-user-info">
-						<p><i class="fa fa-envelope pr-15"></i>Liam@yahoo.com </p>
-						<p><i class="fa fa-phone pr-15"></i>+11 123 456 7890</p>
-						<p><i class="fa fa-map-marker pr-15"></i>123, Lorem Ipsum, Florida, USA</p>
+						<p><i class="fa fa-envelope pr-15"></i>contact@boomerang.com</p>
+						<p><i class="fa fa-phone pr-15"></i>(+212)52299422</p>
+						<p><i class="fa fa-map-marker pr-15"></i>Bd, Abdellatif Ben kadour Angle Bd,. Zektouni 4éme étage - Casablanca</p>
 						<p class="mt-25">Social Profile</p>
 						<div class="user-social-acount">
-							<button class="btn btn-block btn-social btn-facebook"><i class="fa fa-facebook"></i> Facebook</button>
+							<button class="btn btn-block btn-social btn-facebook"><i class="fa fa-linkedin"></i> Linkedin</button>
 							<button class="btn btn-block btn-social btn-twitter"><i class="fa fa-twitter"></i> Twitter</button>
-							<button class="btn btn-block btn-social btn-instagram"><i class="fa fa-instagram"></i> Instagram</button>
 							<button class="btn btn-block btn-social btn-google"><i class="fa fa-google-plus"></i> Google</button>
 						</div>
 						<div class="map-box mt-25 mb-0">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2805244.1745767146!2d-86.32675167439648!3d29.383165774894163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c1766591562abf%3A0xf72e13d35bc74ed0!2sFlorida%2C+USA!5e0!3m2!1sen!2sin!4v1501665415329" height="150" class="w-p100 b-0" allowfullscreen=""></iframe>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.4865143375723!2d-7.639573534591001!3d33.592679099254696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xebb211690721d24c!2sBoomerang+Communication!5e0!3m2!1sfr!2sfr!4v1540385523927" height="150" class="w-p100 b-0" allowfullscreen></iframe>
 						</div>
 					</div>
              	</div>
@@ -77,9 +75,9 @@
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
               
-              <li><a class="" href="#project" data-toggle="tab">Projet</a></li>
+              <li><a class="active show" href="#project" data-toggle="tab">Projet</a></li>
               <li><a href="#activity" data-toggle="tab" class="">Plan</a></li>
-              <li><a href="#timeline" data-toggle="tab" class="active show">Phase</a></li>
+              <li><a href="#timeline" data-toggle="tab" class="">Phase</a></li>
               <li><a href="#planning" data-toggle="tab" class="">Planning</a></li>
             </ul>
                         
@@ -183,25 +181,23 @@
                 <!-- Post -->
                 <div class="post">
                   <div class="user-block">
-                    <img class="img-bordered-sm rounded-circle" src="../../../images/user1-128x128.jpg" alt="user image">
                         <span class="username">
-                          <a href="#">John Doe</a>
+                          <a href="#">Terrain BOOMERANG Communication</a>
                           <a href="#" class="pull-right btn-box-tool"><i class="fa fa-times"></i></a>
                         </span>
-                    <span class="description">5 minutes ago</span>
                   </div>
                   <!-- /.user-block -->
                   <div class="activitytimeline">
+                     <img class="" src="" alt="image">
+
 					  <p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
-					  </p>
+At Boomerang Communications, we provide businesses with the best quality, yet cost efficient telecommunication equipment, data networking, security & surveillance systems, optic fibre and PA systems.
+
+Bommerang Communications provides first rate telecommunication solutions to help keep your business running smoothly. We pride ourselves on expert advice, unbeatable service and the latest products, backed up with helpful support when you need it most.					  </p>
 					  <ul class="list-inline">
 						<li><a href="#" class="link-black text-sm"><i class="fa fa-share margin-r-5"></i> Share</a></li>
 						<li><a href="#" class="link-black text-sm"><i class="fa fa-thumbs-o-up margin-r-5"></i> Like</a>
 						</li>
-						<li class="pull-right">
-						  <a href="#" class="link-black text-sm"><i class="fa fa-comments-o margin-r-5"></i> Comments
-							(5)</a></li>
 					  </ul>
 					  <form class="form-element">
 						  <input class="form-control input-sm" type="text" placeholder="Type a comment">

@@ -83,22 +83,23 @@
             <div class="box">
                 <div class="box-body">
                     <div class="table-responsive">
-                        <div id="tickets_wrapper" class="dataTables_wrapper no-footer"><table id="tickets" class="table mt-0 table-hover no-wrap dataTable no-footer" data-page-size="10" role="grid" aria-describedby="tickets_info">
+                        <div id="tickets_wrapper" class="dataTables_wrapper no-footer">
+                        <table id="tickets" class="table mt-0 table-hover no-wrap dataTable no-footer" data-page-size="10" role="grid" aria-describedby="tickets_info">
                             <thead>
                                 <tr class="bg-light" role="row"><th class="sorting" tabindex="0" aria-controls="tickets" rowspan="1" colspan="1" aria-label="ID #: activate to sort column ascending">ID #</th><th class="sorting" tabindex="0" aria-controls="tickets" rowspan="1" colspan="1" aria-label="Opened By: activate to sort column ascending">Par Clients</th><th class="sorting" tabindex="0" aria-controls="tickets" rowspan="1" colspan="1" aria-label="Cust. Email: activate to sort column ascending">Clients Email</th><th class="sorting" tabindex="0" aria-controls="tickets" rowspan="1" colspan="1" aria-label="Sbuject: activate to sort column ascending">Nom Projects</th><th class="sorting" tabindex="0" aria-controls="tickets" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending">Etats du projets</th><th class="sorting_desc" tabindex="0" aria-controls="tickets" rowspan="1" colspan="1" aria-label="Assign to: activate to sort column ascending" aria-sort="descending">Intitule</th><th class="sorting" tabindex="0" aria-controls="tickets" rowspan="1" colspan="1" aria-label="Date: activate to sort column ascending">Date de début</th><th class="sorting" tabindex="0" aria-controls="tickets" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending">Action</th></tr>
                             </thead>
                             <tbody>
                                 
                                  <c:forEach items="${page.result}" var="project">
-                                  <c:set var="task" value="${leave.task }"/>
-                                  <c:set var="pi" value="${leave.processInstance }"/>
+                                  <c:set var="task" value="${leave.task}"/>
+                                  <c:set var="pi" value="${leave.processInstance}"/>
                                 <tr role="row" class="odd">
                                      <tr pid="${project.id}"></tr>
                                     <td class="">${project.id}</td>
                                     <td>
-                                        <a href="javascript:void(0)">${project.clt.username}</a>
+                                        <a href="javascript:void(0)">${project.clients.username}</a>
                                     </td>
-                                    <td>test@gmail.com</td>
+                                    <td>${project.clients.mail}</td>
                                     <td>${project.categorie}</td>
                                     <td><span class="label label-success">${project.etat}</span> </td>
                                     <td class="sorting_1">${project.intitule}</td>
@@ -108,7 +109,7 @@
                                     </td>
                                 </tr>
                                 </c:forEach> 
-                                </tbody>
+                           </tbody>
                         </table><div class="dataTables_info" id="tickets_info" role="status" aria-live="polite">Showing 1 to 10 of 20 entries</div><div class="dataTables_paginate paging_simple_numbers" id="tickets_paginate"><a class="paginate_button previous disabled" aria-controls="tickets" data-dt-idx="0" tabindex="0" id="tickets_previous">Previous</a><span><a class="paginate_button current" aria-controls="tickets" data-dt-idx="1" tabindex="0">1</a><a class="paginate_button " aria-controls="tickets" data-dt-idx="2" tabindex="0">2</a></span><a class="paginate_button next" aria-controls="tickets" data-dt-idx="3" tabindex="0" id="tickets_next">Next</a></div></div>
                     </div>
                 </div>

@@ -21,7 +21,7 @@
     <section class="content-header">
       <h1>
         Tableau de bord
-        <small>Control panel</small>
+        <small>Liste des projets</small>
       </h1>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Accueil</a></li>
@@ -36,7 +36,7 @@
         <div class="col-12">
           <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Contenu</h3>
+              <h3 class="box-title">Liste des projets</h3>
                <div class="text-left" style=" float: right;">
        			   <a  href="${ctx}/Projects/add#step-1" class="btn btn-yellow btn-lg mx-auto">Ajouter un Projet</a>
       		  </div> 

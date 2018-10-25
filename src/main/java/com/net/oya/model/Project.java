@@ -23,6 +23,7 @@ import javax.persistence.Table;
 import org.hibernate.annotations.DynamicUpdate;
 import org.springframework.format.annotation.DateTimeFormat;
 @Entity
+@DynamicUpdate
 @Table(name="t_project")
 public class Project implements Serializable {
 
@@ -46,7 +47,9 @@ public class Project implements Serializable {
 	private Admin inputAssocie;
 	//private PictureProjet ProjectPic;// class photo																																				//private  Picture masterPic ;
 	//private List<PictureProjet> listPic;// liste des photos
-	private Client clt;
+	@OneToOne
+	@JoinColumn(name="clients")
+	private Client clients;
 	
 	@ManyToOne
 	@JoinColumn
@@ -58,23 +61,14 @@ public class Project implements Serializable {
 		this.inputAssocie = inputAssocie;
 	}
 	
-	@ManyToOne
-	@JoinColumn(name="id_client")
+	
 	public Client getClients() {
-		return clt;
+		return clients;
 	}
 	
-	public void setClients(Client clt) {
-		this.clt = clt;
+	public void setClients(Client clients) {
+		this.clients = clients;
 	}
-	
-	/*public Client getClt() {
-		return clt;
-	}
-	
-	public void setClt(Client clt) {
-		this.clt = clt;
-	}*/
 	public Project() {} 
 	private String categorie ;
 	
@@ -178,7 +172,7 @@ public class Project implements Serializable {
 				+ ", intitule=" + intitule + ", dossierAdmin=" + dossierAdmin + ", plan=" + plan
 				+ ", certificat_propriete=" + certificat_propriete + ", date_debut=" + date_debut
 				+ ", date_realisation=" + date_realisation + ", description=" + description + ", etat=" + etat
-				+ ", inputColl=" + inputColl + ", inputAssocie=" + inputAssocie + ", clt=" + clt + ", categorie=" + categorie + ", chantier=" + chantier
+				+ ", inputColl=" + inputColl + ", inputAssocie=" + inputAssocie + ", clients=" + clients + ", categorie=" + categorie + ", chantier=" + chantier
 				+ "]";
 	}
 	/*@ManyToOne
@@ -197,10 +191,4 @@ public class Project implements Serializable {
 	public void setListPic(List<PictureProjet> listPic) {
 		this.listPic = listPic;
 	}*/
-	public Client getClt() {
-		return clt;
-	}
-	public void setClt(Client clt) {
-		this.clt = clt;
-	}
 }

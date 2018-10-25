@@ -13,7 +13,7 @@
 			</a>
 		</div>
         <div class="image">
-          <img src="/images/user-thumbnail.png" class="rounded-circle" alt="User Image">
+          <img src="/images/user-thumbnail.png" class="rounded-circle" alt="Image">
         </div>
         
         <div class="info">

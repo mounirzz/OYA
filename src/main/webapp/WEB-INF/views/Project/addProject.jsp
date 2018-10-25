@@ -64,12 +64,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Form Wizard
+        Formulaire de projet
       </h1>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Forms</a></li>
-        <li class="breadcrumb-item active">Form Wizard</li>
+        <li class="breadcrumb-item"><a href="#">formulaire</a></li>
+        <li class="breadcrumb-item active">Formulaire de projet</li>
       </ol>
     </section>
 
@@ -153,11 +153,10 @@
 								<label for="wdate2">Numéro Titre Financier :</label>
 								<input type="text" name="num_title_foncier" class="form-control" id="wdate2"> </div>
 						</div>
-
                 		<div class="col-md-6">
                 			<div class="form-group">
                 				<label for="id_client">Liste CLients</label>
-								   <select class="form-control select2 w-p100"  name='clt'>
+								   <select class="form-control select2 w-p100"  name='clients'>
 											    <option value="" selected>Selectionner</option>
 											    <c:forEach items="${page2.result}" var="client">
 											        <c:if test="${client != selected}">
@@ -257,42 +256,42 @@
 					      <div class="row">
 					        <div class="col-12">
 					          <div class="box bg-hexagons-dark">
-					            <div class="box-body">
-					              <!-- the events -->
-								  <div class="col-12">
-									  <div id="external-events" class="row">
-										<div class="col">
-											<div class="external-event bg-success" data-class="bg-success"><i class="fa fa-hand-o-right"></i>Lunch</div>
-										</div>
-										<div class="col">
-											<div class="external-event bg-warning" data-class="bg-warning"><i class="fa fa-hand-o-right"></i>Go home</div>
-										</div>
-										<div class="col">
-											<div class="external-event bg-info" data-class="bg-info"><i class="fa fa-hand-o-right"></i>Do homework</div>
-										</div>
-										<div class="col">
-											<div class="external-event bg-primary" data-class="bg-primary"><i class="fa fa-hand-o-right"></i>Work on UI design</div>
-										</div>
-										<div class="col">
-											<div class="external-event bg-danger" data-class="bg-danger"><i class="fa fa-hand-o-right"></i>Sleep tight</div>
-										</div>
+					                 <div class="box-body">
+						              <!-- the events -->
+									  <div class="col-12">
+										  <div id="external-events" class="row">
+											<div class="col">
+												<div class="external-event bg-success" data-class="bg-success"><i class="fa fa-hand-o-right"></i>Congé</div>
+											</div>
+											<div class="col">
+												<div class="external-event bg-warning" data-class="bg-warning"><i class="fa fa-hand-o-right"></i>Journée férier</div>
+											</div>
+											<div class="col">
+												<div class="external-event bg-info" data-class="bg-info"><i class="fa fa-hand-o-right"></i>Fin de projet</div>
+											</div>
+											<div class="col">
+												<div class="external-event bg-primary" data-class="bg-primary"><i class="fa fa-hand-o-right"></i>réunion avec le client</div>
+											</div>
+											<div class="col">
+												<div class="external-event bg-danger" data-class="bg-danger"><i class="fa fa-hand-o-right"></i>réunion des collaborateurs</div>
+											</div>
+										  </div>
+										  <div class="event-fc-bt row">
+											<!-- checkbox -->
+											<div class="col checkbox margin-top-20">
+												<input id="drop-remove" type="checkbox">
+												<label for="drop-remove">
+													supprimer apres le glissage
+												</label>
+											</div>
+											<div class="col-md-2">
+												<a href="#" data-toggle="modal" data-target="#add-new-events" class="btn btn-lg btn-dark btn-block margin-top-10">
+													<i class="ti-plus"></i> Ajouter un event
+												</a>
+											</div>
+										  </div>			
 									  </div>
-									  <div class="event-fc-bt row">
-										<!-- checkbox -->
-										<div class="col checkbox margin-top-20">
-											<input id="drop-remove" type="checkbox">
-											<label for="drop-remove">
-												Remove after drop
-											</label>
-										</div>
-										<div class="col-md-2">
-											<a href="#" data-toggle="modal" data-target="#add-new-events" class="btn btn-lg btn-dark btn-block margin-top-10">
-												<i class="ti-plus"></i> Add New Event
-											</a>
-										</div>
-									  </div>			
-								  </div>
-					            </div>
+						            </div>
 					            <!-- /.box-body -->
 					          </div>
 					          <!-- /. box -->
@@ -316,13 +315,13 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h4 class="modal-title"><strong>Add Event</strong></h4>
+						<h4 class="modal-title"><strong>Ajouter event</strong></h4>
 					</div>
 					<div class="modal-body"></div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-white waves-effect" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-success save-event waves-effect waves-light">Create event</button>
-						<button type="button" class="btn btn-danger delete-event waves-effect waves-light" data-dismiss="modal">Delete</button>
+						<button type="button" class="btn btn-white waves-effect" data-dismiss="modal">Fermer</button>
+						<button type="button" class="btn btn-success save-event waves-effect waves-light">Creation de l'évenement</button>
+						<button type="button" class="btn btn-danger delete-event waves-effect waves-light" data-dismiss="modal">Supprimer</button>
 					</div>
 				</div>
 			</div>
@@ -333,13 +332,13 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h4 class="modal-title"><strong>Add</strong> a category</h4>
+						<h4 class="modal-title"><strong>Ajouter</strong>une categorie</h4>
 					</div>
 					<div class="modal-body">
 						<form role="form">
 							<div class="row">
 								<div class="col-md-6">
-									<label class="control-label">Category Name</label>
+									<label class="control-label">Nom Categorie</label>
 									<input class="form-control form-white" placeholder="Enter name" type="text" name="category-name" />
 								</div>
 								<div class="col-md-6">
@@ -357,14 +356,13 @@
 						</form>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-danger waves-effect waves-light save-category" data-dismiss="modal">Save</button>
-						<button type="button" class="btn btn-white waves-effect" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-danger waves-effect waves-light save-category" data-dismiss="modal">Enregister</button>
+						<button type="button" class="btn btn-white waves-effect" data-dismiss="modal">Fermer</button>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- END MODAL -->
-      
       <!-- /.row -->
     </section>
        				

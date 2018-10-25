@@ -17,10 +17,15 @@ import org.hibernate.annotations.DynamicUpdate;
 public class Client implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	private String nom,prenom,tel,fax,adresse;
+	private String nom;
+	private String prenom;
+	private String tel;
+	private String fax ;
+	private String adresse;
 	private String username;//Username
 	private String password;//Mot de passe
 	private String mail;
