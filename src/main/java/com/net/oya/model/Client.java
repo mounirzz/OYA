@@ -19,7 +19,7 @@ public class Client implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nom;
 	private String prenom;
@@ -29,10 +29,13 @@ public class Client implements Serializable {
 	private String username;//Username
 	private String password;//Mot de passe
 	private String mail;
-	private Project project;
-
-	@OneToMany
+	@ManyToOne
 	@JoinColumn(name="id_project")
+	private Project project;
+	@ManyToOne
+	@JoinColumn
+	private Picture ClientPic ;
+
 	public Project getProject() {
 		return project;
 	}
@@ -141,5 +144,13 @@ public class Client implements Serializable {
 
 	public void setMail(String mail) {
 		this.mail = mail;
+	}
+
+	public Picture getClientPic() {
+		return ClientPic;
+	}
+
+	public void setClientPic(Picture clientPic) {
+		ClientPic = clientPic;
 	}
 }

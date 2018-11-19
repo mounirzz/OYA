@@ -1570,7 +1570,7 @@ Project:	O.Y.A
 .skin-yellow .wrapper,
 .skin-yellow .main-sidebar,
 .skin-yellow .left-side {
-  background-color: #252525;
+  background-color: rgb(255, 255, 255);
   box-shadow: 1px 0px 20px rgba(0,0,0,0.08);
 }
 .skin-yellow .user-panel > .info,
@@ -1587,12 +1587,12 @@ Project:	O.Y.A
   border-left:3px solid #242a33;
 }
 .skin-yellow .sidebar-menu>li:hover>a, .skin-yellow .sidebar-menu>li.active>a, .skin-yellow .sidebar-menu>li.menu-open>a{
-  color: #ffffff;
-  background: #303030;
+  color: rgb(10, 10, 10);
+  background: rgb(224, 224, 224);
 }
 .skin-yellow .sidebar-menu > li.active > a,
 .skin-yellow .sidebar-menu > li.menu-open > a {
-  color: #ffffff;
+  color: rgb(10, 10, 10);
 }
 .skin-yellow .sidebar-menu > li.active > a {
   border-left-color: #fbae1c;
@@ -1605,7 +1605,7 @@ Project:	O.Y.A
   color: #fbae1c;
 }
 .skin-yellow .sidebar a {
-  color: #a1a1a1;
+  color: rgb(0, 0, 0);
 }
 .skin-yellow .sidebar a:hover {
   text-decoration: none;

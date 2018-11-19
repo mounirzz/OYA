@@ -32,11 +32,11 @@ public class Product implements Serializable {
 	private String km; // km																							//private String km; // km
 	private String status; // status du produit																																				//private String status; // status du produit
 	private String prix; // prix																																									//private String prix
-	private String immatriculation;// Données Techniques																																			//private String immatriculation ;
-	private Date anneecirculation;// première mise en circulation																																	//private Date anneecirculation;// première mise en circulation
+	private String immatriculation;// DonnÃ©es Techniques																																			//private String immatriculation ;
+	private Date anneecirculation;// premiÃ¨re mise en circulation																																	//private Date anneecirculation;// premiÃ¨re mise en circulation
 	private String carburant;// carburant																																						//	private String carburant;// carburant
 	private Long stock;// Stock du product																																							
-	private Admin inputUser;// Créateur
+	private Admin inputUser;// CrÃ©ateur
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

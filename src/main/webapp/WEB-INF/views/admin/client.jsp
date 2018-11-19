@@ -45,7 +45,7 @@
             <!-- /.box-header -->
             <!-- form start -->
             <form:form role="form" action="${ctx}/client/reg"
-               method="post" class="form-horizontal form-element">
+               method="post" class="form-horizontal form-element" enctype="multipart/form-data">
               <div class="box-body">
                 
                   <div class="form-group row">
@@ -113,6 +113,24 @@
                     <input type="password" class="form-control" id="inputPassword4" placeholder="">
                   </div>
                 </div>
+                 <div class="form-group row">
+               <label for="id_client">Liste Des projects</label>
+								   <select class="form-control select2 w-p100"  name='project'>
+											    <option value="" selected>Selectionner</option>
+											    <c:forEach items="${page.result}" var="project">
+											        <c:if test="${user != selected}">
+											            <option value="${project.id}">${project.categorie}</option>
+											        </c:if>
+											    </c:forEach>
+						</select>
+                </div>
+                 <div class="form-group row">
+				                <label class="col-sm-2 control-label" for="logo">Logo de Client</label>
+				                <div class="col-sm-10">
+				                    <input type="file" id="logo" name="logo">
+				                  <p class="help-block text-red">Logo ne doit pas dépassser 100MB</p>
+				                </div>
+				            </div>
               </div>
               <!-- /.box-body -->
               <div class="box-footer">

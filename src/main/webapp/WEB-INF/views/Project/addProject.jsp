@@ -3,7 +3,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <%@ include file="/common/global.jsp" %>
     <title>Gestion des Projets  ${login_user.username}</title>
     <%@ include file="/common/meta.jsp" %>
@@ -110,12 +109,13 @@
 								<input type="text" name="categorie" class="form-control required" > </div>
 						</div>
 						<div class="col-md-6">
-							<div class="form-group">
-				                  <label for="exampleInputFile">Certificat Propriete</label>
-				                  <input type="file" name="certificat_propriete" id="exampleInputFile">
-
+							 <div class="form-group">
+				                <label class="col-sm-2 control-label" for="imgFile">Certificat Propriete</label>
+				                <div class="col-sm-10">
+				                    <input type="file" id="imgFile" name="imgFile">
 				                  <p class="help-block text-red">La certife ne doit pas dépassser 100MB</p>
-                		</div>
+				                </div>
+				            </div>
 							</div>
 							</div>
 					<div class="row">
@@ -153,6 +153,8 @@
 								<label for="wdate2">Numéro Titre Financier :</label>
 								<input type="text" name="num_title_foncier" class="form-control" id="wdate2"> </div>
 						</div>
+						</div>
+						<div class="row">
                 		<div class="col-md-6">
                 			<div class="form-group">
                 				<label for="id_client">Liste CLients</label>
@@ -165,6 +167,20 @@
 											    </c:forEach>
 											</select>
 							  </div>
+                			</div>
+                				<%-- 	<div class="col-md-6">
+                			<div class="form-group">
+                				<label for="id_client">Liste Collaborateur</label>
+								   <select class="form-control select2 w-p100"  name=''>
+											    <option value="" selected>Selectionner</option>
+											    <c:forEach items="${page.result}" var="user">
+											        <c:if test="${user != selected}">
+											            <option value="${user.id}">${user.username}</option>
+											        </c:if>
+											    </c:forEach>
+											</select>
+							  </div>
+                			</div> --%>
                 			</div>
                 	<div class="text-xs-right">
 						<button type="submit" class="btn btn-info btn-wizard">Enregister</button>

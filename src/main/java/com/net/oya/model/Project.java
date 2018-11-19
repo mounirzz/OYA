@@ -36,17 +36,23 @@ public class Project implements Serializable {
 	private String intitule ;
 	private DossierAdmin dossierAdmin ;
 	private Plan plan ;
-	private long  certificat_propriete ;
 	//@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date date_debut ;
 	//@DateTimeFormat(pattern ="yyyy-MM-dd")
 	private Date date_realisation ;
 	private String description ;
 	private String etat ;
-	private Collaborateur inputColl ;
+	@OneToOne
+	@JoinColumn(name="Users")
+	private User Users ;
 	private Admin inputAssocie;
-	//private PictureProjet ProjectPic;// class photo																																				//private  Picture masterPic ;
-	//private List<PictureProjet> listPic;// liste des photos
+	@ManyToOne
+	@JoinColumn
+	private Picture ProjectPic;// class photo
+	//private  Picture masterPic ;
+	@Access(AccessType.PROPERTY)
+	@ManyToMany(cascade = CascadeType.ALL , fetch = FetchType.EAGER)
+	private List<Picture> listPic;// liste des photos
 	@OneToOne
 	@JoinColumn(name="clients")
 	private Client clients;
@@ -113,12 +119,6 @@ public class Project implements Serializable {
 	public void setEtat(String etat) {
 		this.etat = etat;
 	}
-	public long getCertificat_propriete() {
-		return certificat_propriete;
-	}
-	public void setCertificat_propriete(long certificat_propriete) {
-		this.certificat_propriete = certificat_propriete;
-	}
 	public String getDescription() {
 		return description;
 	}
@@ -131,13 +131,7 @@ public class Project implements Serializable {
 	public void setCategorie(String categorie) {
 		this.categorie = categorie;
 	}
-	
-	public Collaborateur getInputColl() {
-		return inputColl;
-	}
-	public void setInputColl(Collaborateur inputColl) {
-		this.inputColl = inputColl;
-	}
+
 	public Chantier getChantier() {
 		return chantier;
 	}
@@ -170,25 +164,30 @@ public class Project implements Serializable {
 	public String toString() {
 		return "Project [id=" + id + ", titleProject=" + titleProject + ", num_title_foncier=" + num_title_foncier
 				+ ", intitule=" + intitule + ", dossierAdmin=" + dossierAdmin + ", plan=" + plan
-				+ ", certificat_propriete=" + certificat_propriete + ", date_debut=" + date_debut
+				+ ", date_debut=" + date_debut
 				+ ", date_realisation=" + date_realisation + ", description=" + description + ", etat=" + etat
-				+ ", inputColl=" + inputColl + ", inputAssocie=" + inputAssocie + ", clients=" + clients + ", categorie=" + categorie + ", chantier=" + chantier
+				+ ", Users=" + Users + ", inputAssocie=" + inputAssocie + ", clients=" + clients + ", categorie=" + categorie + ", chantier=" + chantier
 				+ "]";
 	}
-	/*@ManyToOne
-	@JoinColumn
-	public PictureProjet getProjectPic() {
+	
+	public Picture getProjectPic() {
 		return ProjectPic;
 	}
-	public void setProjectPic(PictureProjet projectPic) {
+	public void setProjectPic(Picture projectPic) {
 		ProjectPic = projectPic;
 	}
-	/*@Access(AccessType.PROPERTY)
-	@ManyToMany(cascade = CascadeType.ALL , fetch = FetchType.EAGER)
-	public List<PictureProjet> getListPic() {
+	public List<Picture> getListPic() {
 		return listPic;
 	}
-	public void setListPic(List<PictureProjet> listPic) {
+	public void setListPic(List<Picture> listPic) {
 		this.listPic = listPic;
-	}*/
+	}
+
+	public User getInputUser() {
+		return Users;
+	}
+
+	public void setInputUser(User Users) {
+		this.Users = Users;
+	}
 }

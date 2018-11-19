@@ -23,6 +23,7 @@ import org.springframework.stereotype.Component;
  */
 
 @Entity
+@DynamicUpdate
 @Table(name = "t_user")
 public  class  User implements Serializable {
 
@@ -137,7 +138,7 @@ public  class  User implements Serializable {
 	}
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Integer getId() {
 		return id;
 	}

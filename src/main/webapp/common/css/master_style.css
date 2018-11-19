@@ -181,10 +181,17 @@ img {
 .fixed .left-side, .fixed .main-header, .fixed .main-sidebar {
     position: fixed;
 }
+.positrow{  width: 100%;
+height: 0px;
+margin-top: 150px;}
 .fixed .main-header {
     top: 0;
     right: 0;
     left: 0;
+}
+.h2inner {
+	color: rgb(255, 255, 255) !important;
+    padding: 24px 9px 29px 22px !important;
 }
 .fixed .content-wrapper, .fixed .right-side {
     padding-top: 50px;
@@ -3326,7 +3333,12 @@ select.form-control:not([size]):not([multiple]) {
     border: 1px solid #585858;
     border-top: 0px;
 }
-
+.flex-5{
+	-webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 21% !important;
+        max-width: 93% !important;
+}
 .customtab2 li a.nav-link {
     border: 0px;
     margin-right: 3px;
@@ -11850,7 +11862,7 @@ table.dataTable thead .sorting:after {
 }
 .login-box, .register-box, .lockscreen-wrapper {
     width: 500px;
-    margin: 0;
+margin: -156px 13px;
     padding: 9% 0 30% ;
     float: right;
     height: 100%;

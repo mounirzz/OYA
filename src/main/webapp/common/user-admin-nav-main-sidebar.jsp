@@ -30,7 +30,7 @@
 		<li class="nav-devider"></li>
         <li class="header nav-small-cap">PERSONAL</li>
         <li class="active">
-          <a href="${ctx}/user/home">
+          <a href="${ctx}/admin/home">
             <i class="icon-home"></i> <span>Tableau de bord</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
@@ -77,7 +77,7 @@
           </a>
         </li>
         <li class="">
-          <a href="${ctx}/user/userAddress">
+          <a href="${ctx}/admin/userAddress">
             <i class="icon-calendar"></i>
             <span>PLANNING</span>
             <span class="pull-right-container">

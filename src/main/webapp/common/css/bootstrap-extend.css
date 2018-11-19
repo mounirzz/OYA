@@ -430,7 +430,7 @@ pre code {
 {
     font-weight: 400;
 
-    color: #808080;
+    color: rgb(4, 4, 4);
     border-bottom-width: 1px;
 }
 .table tbody + tbody

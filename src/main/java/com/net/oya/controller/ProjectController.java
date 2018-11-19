@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -33,6 +34,7 @@ import com.net.oya.service.ChantierService;
 import com.net.oya.service.ClientService;
 import com.net.oya.service.PictureService;
 import com.net.oya.service.ProjectService;
+import com.net.oya.service.UserService;
 import com.net.oya.util.AdminUtil;
 import com.net.oya.util.ClientUtil;
 import com.net.oya.util.CollaUtil;
@@ -53,6 +55,8 @@ public class ProjectController {
 	PictureService pictureService ;
 	@Autowired
 	ClientService ClientService ;
+	@Autowired
+	UserService userService;
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView admin(ModelAndView model,HttpSession session, HttpServletRequest request,User user) {
@@ -83,37 +87,33 @@ public class ProjectController {
 		Page<Client> page2 = new Page<Client>(request);
 		ClientService.findClient(page2);
 		model.addObject("page2", page2);
+		Page<User> page=new Page<User>(request);
+		userService.findUsers(page);
+		model.addObject("page", page);
 		if (ClientUtil.getClientFromSession(session) != null) {
 			model.setViewName("redirect:/");
 		}
 		return model ;
 	}
-	
-	@RequestMapping(value="/add",method =RequestMethod.POST)
-	public String doNew(@Valid @ModelAttribute Project project, BindingResult result , HttpSession session, Integer id) throws Exception{
-		AdminUtil.getAdminFromSession(session);
-		UserUtil.getUserFromSession(session);
-		project.setDate_debut(new Date());
-		projectService.save(project);
-		return "redirect:/DossierAdministratif/dossier#step-2";
-	}
-	@RequestMapping(value="/edit" , method = RequestMethod.POST)
-	public ModelAndView doEdit(ModelAndView model , Project project , HttpSession session) {
-		AdminUtil.getAdminFromSession(session);
-		UserUtil.getUserFromSession(session);
-		project.setInputColl(CollaUtil.getCollFromSession(session));
-		projectService.save(project);
-		model.setViewName("redirect:/Projects/ListProject");
-		return model ;
-	}
+	  @RequestMapping(value = "/add", method = RequestMethod.POST)
+	    public String doNew(@Valid @ModelAttribute Project project, BindingResult result ,HttpSession session, @RequestParam("imgFile") MultipartFile file) {
+	        if (file!=null&&!file.isEmpty()) {
+	            uploadImage(project, session, file);
+	        }
+	        project.setInputAssocie(AdminUtil.getAdminFromSession(session));
+	        project.setDate_debut(new Date());
+	        projectService.save(project);
+	        return "redirect:/DossierAdministratif/dossier#step-2";
+	    }
 	@RequestMapping(value="/edit/{id}", method = RequestMethod.GET)
-	public ModelAndView editProject(ModelAndView model , @PathVariable Integer id, HttpSession session) {
+	public String editProject(Model model , @PathVariable Integer id, HttpSession session) {
 		AdminUtil.getAdminFromSession(session);
 		UserUtil.getUserFromSession(session);
 		Project project = projectService.findById(id);
-		model.addObject("projects", project);
-		model.setViewName("Projects/ListProject");
-		return model ;
+		model.addAttribute("project" , project);
+		Client client = ClientService.findById(id);
+		model.addAttribute("client",client);
+		return"Project/EditProject";
 	}
 	@RequestMapping(value="/adds" ,method= RequestMethod.POST)
 	public String doNew(HttpSession session) {
@@ -122,22 +122,33 @@ public class ProjectController {
 		}
 		return "/Projects";
 	}
-	/* private void uploadImage(Project project, HttpSession session, MultipartFile file) {
+    @RequestMapping(value = "/edit", method = RequestMethod.POST)
+    public ModelAndView doEdit(ModelAndView model,@Valid @ModelAttribute Project project,BindingResult result, HttpSession session, @RequestParam(name = "file",required = false) MultipartFile file) {
+        if (file!=null&&!file.isEmpty()) {
+            uploadImage(project, session, file);
+        }
+        project.setInputAssocie(AdminUtil.getAdminFromSession(session));
+        projectService.save(project);
+        model.setViewName("redirect:/user/home");
+        return model;
+    }
+	private void uploadImage(Project project, HttpSession session, @RequestParam(name = "file",required = false) MultipartFile file) {
 	        String fileName = generateFileName();
 	        String path = generateFilePath(session);
 	        String serverFile = path + "/" + fileName;
 	        Picture picture = uploadAndSaveImg(session, file, fileName, path, serverFile);
 	        project.setProjectPic(picture);
-	        //setMasterPic(picture);
+	        //product.setMasterPic(picture);
 	    }
 
 	    private String generateFilePath(HttpSession session) {
-	        return session.getServletContext().getRealPath("/upload");
+	        return session.getServletContext().getRealPath("/images/Project/");
 	    }
 
 	    private String generateFileName() {
 	        return new Date().getTime() + ".jpg";
 	    }
+
 	    private Picture uploadAndSaveImg(HttpSession session, MultipartFile file, String fileName, String path, String serverFile) {
 	        Picture picture = new Picture();
 	        try {
@@ -153,19 +164,18 @@ public class ProjectController {
 	                    new BufferedOutputStream(new FileOutputStream(new File(serverFile)));
 	            stream.write(bytes);
 	            stream.close();
-	            //Traitement du zoom
 	            Image image = new Image(serverFile);
 	            image.resize(Constants.IMG_WIDTH,Constants.IMG_HEIGHT);
 	            image.save();
 	        } catch (Exception e) {
 	            e.printStackTrace();
 	        }
-	        picture.setMemo("Téléchargement du produit");
-	        picture.setTitle("Titre du produit");
+	        picture.setMemo("Téléchargement l'image");
+	        picture.setTitle("Téléchargement l'image");
 	        picture.setUpdateTime(new Date());
-	        picture.setUrl("/upload/" + fileName);
+	        picture.setUrl("/images/Project/" + fileName);
 	        picture.setUpdateAdmin(AdminUtil.getAdminFromSession(session));
 	        pictureService.save(picture);
 	        return picture;
-	    }*/
-}
+	    }
+	}

@@ -341,14 +341,25 @@ Bommerang Communications provides first rate telecommunication solutions to help
                       <input type="text" class="form-control" id="inputSkills" value="${project.intitule}"  placeholder="">
                     </div>
                   </div>
-                  
-                              <div class="form-group row">
+                  <div class="form-group row">
                     <label for="inputSkills" class="col-sm-2 control-label">Titre foncier</label>
 
                     <div class="col-sm-10">
                       <input type="text" class="form-control" id="inputSkills" value="${project.num_title_foncier}"  placeholder="">
                     </div>
                   </div>
+                      <div class="form-group row">
+                    <label for="inputSkills" class="col-sm-2 control-label">Titre foncier</label>
+
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputSkills" value="${project.num_title_foncier}"  placeholder="">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                 <%--  <div class="col-md-5 text-center">
+              		  <img class="img-responsive img-rounded" src="${ctx}${product.ProjectPic.url}">
+          				  </div> --%>
+          		</div>
                   <!--  <div class="form-group row">
                     <div class="ml-auto col-sm-10">
                       <div class="checkbox">

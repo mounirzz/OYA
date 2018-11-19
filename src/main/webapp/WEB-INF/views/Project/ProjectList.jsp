@@ -59,8 +59,8 @@
             		<c:set var="pi" value="${leave.processInstance }"/>
 					<tr>
 					<tr pid="${project.id}"></tr>
-					  <td><a href="${ctx}/Projects/Project/${project.id}">${project.categorie}</a></td>
-					  <td>${project.certificat_propriete} </td>
+					  <td><a href="${ctx}/Projects/edit/${project.id}">${project.categorie}</a></td>
+					  <td><div class="project-members"><img src="${ctx}${product.ProjectPic.url}" class="away"> </div> </td>
 					  <td><span class="text-muted"><i class="fa fa-clock-o"></i> ${project.date_debut}</span> </td>
 					  <td>${project.description}</td>
 					  <td><span class="label label-danger">${project.etat}</span></td>

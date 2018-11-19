@@ -177,6 +177,13 @@ public class AdminController {
         newsService.addNews(news);
         return "redirect:/admin/news";
     }
-
+    @RequestMapping(value = "/userAddress", method = RequestMethod.GET)
+    public String userAddress(Model model, HttpSession session) {
+        model.addAttribute("title", "Gestion d'adresses");
+        AdminUtil.getAdminFromSession(session);
+      //  List<UserAddress> userAddressList = userAddressService.findByUserId(UserUtil.getUserFromSession(session).getId());
+       // model.addAttribute("userAddressList", userAddressList);
+        return "Project/Calendar";
+    }
 
 }

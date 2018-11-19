@@ -99,7 +99,7 @@
 
             <div>
                 <div id="step-1">
-                    <form:form id="inputForm" role="form" action="${ctx}/Projects/add"
+                    <form:form id="inputForm" role="form" action="${ctx}/Projects/edit"
                    method="post" class="form-horizontal" enctype="multipart/form-data">
 				<h6>Projet</h6>
 				<section class="bg-hexagons-dark">
@@ -111,8 +111,8 @@
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-				                  <label for="exampleInputFile">Certificat Propriete</label>
-				                  <input type="file" name="certificat_propriete" id="exampleInputFile" value="${project.certificat_propriete}">
+				                  <label for="imgFile">Certificat Propriete</label>
+				                  <input type="file" name="imgFile" id="imgFile">
 
 				                  <p class="help-block text-red">La certife ne doit pas dépassser 100MB</p>
                 		</div>
@@ -157,7 +157,7 @@
                 			<div class="form-group">
                 				<label for="id_client">Liste CLients</label>
 								   <select class="form-control select2 w-p100"  name='clients'>
-											    <option value="${project.clients.username}" selected>Selectionner</option>
+											    <option value="${project.clients.id}" selected>${project.clients.username}</option>
 											    <c:forEach items="${page2.result}" var="client">
 											        <c:if test="${client != selected}">
 											            <option value="${client.id}">${client.username}</option>

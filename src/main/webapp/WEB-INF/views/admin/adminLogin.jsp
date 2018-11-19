@@ -12,7 +12,50 @@
 </head>
 
 <body class="hold-transition login-page">
-
+<div class="row positrow"><a href="${ctx}/admin/login">
+        <div class="col-xl-3 col-md-6 col-6 flex-5">
+          <!-- small box -->
+          <div class="small-box bg-info pull-up bg-hexagons-white">
+            <div class="inner">
+              <h2 class="h2inner">Espace Associé</h2>
+            </div>
+            <div class="icon">
+              <i class="fa fa-globe"></i>
+            </div>
+            <a href="#" class="small-box-footer">Se connecter <i class="fa fa-arrow-right"></i></a>
+          </div>
+       </div></a>
+        <!-- ./col -->
+        <a href="${ctx}/user/login">
+        <div class="col-xl-3 col-md-6 col-6 flex-5">
+          <!-- small box -->
+          <div class="small-box bg-success pull-up bg-hexagons-white">
+            <div class="inner">
+              <h2 class="h2inner">Espace Collaborateur</h2>
+            </div>
+            <div class="icon">
+              <i class="fa fa-globe"></i>
+            </div>
+            <a href="#" class="small-box-footer">Se connecter<i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div></a>
+        <!-- ./col -->
+        <a href="${ctx}/client/login">
+        <div class="col-xl-3 col-md-6 col-6 flex-5">
+          <!-- small box -->
+          <div class="small-box bg-primary pull-up bg-hexagons-white">
+            <div class="inner">
+              <h2 class="h2inner">Espace Client</h2>
+            </div>
+            <div class="icon">
+              <i class="fa fa-globe"></i>
+            </div>
+            <a href="#" class="small-box-footer">Se connecter<i class="fa fa-arrow-right"></i></a>
+          </div>
+        </div></a>
+        <!-- ./col -->
+      </div>
+      
 <div class="login-box">
   <div class="login-logo">
     <a href="../../index.html"><b>O.Y.A: </b>Office of Young Architecture</a>

@@ -162,7 +162,7 @@ public class UserController {
     	Page<Project> page = new Page<Project>(request);
     	projectService.findProjects(page);
     	model.addAttribute("page", page);
-    	return "user/home";
+    	return "Project/ProjectList";
     }
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public String logout(HttpSession session,HttpServletResponse response) {
@@ -243,8 +243,10 @@ public class UserController {
     @RequestMapping(value = "/userAddress", method = RequestMethod.GET)
     public String userAddress(Model model, HttpSession session) {
         model.addAttribute("title", "Gestion d'adresses");
-        List<UserAddress> userAddressList = userAddressService.findByUserId(UserUtil.getUserFromSession(session).getId());
-        model.addAttribute("userAddressList", userAddressList);
+        AdminUtil.getAdminFromSession(session);
+        UserUtil.getUserFromSession(session);
+      //  List<UserAddress> userAddressList = userAddressService.findByUserId(UserUtil.getUserFromSession(session).getId());
+       // model.addAttribute("userAddressList", userAddressList);
         return "Project/Calendar";
     }
     @RequestMapping(value="/Calendar", method = RequestMethod.GET)
@@ -263,7 +265,8 @@ public class UserController {
     @RequestMapping(value = "/userAddress/add", method = RequestMethod.POST)
     @ResponseBody
     public String doAddUserAddress(HttpSession session, UserAddress userAddress) {
-        userAddress.setUser(UserUtil.getUserFromSession(session));
+    	AdminUtil.getAdminFromSession(session);
+    	userAddress.setUser(UserUtil.getUserFromSession(session));
         userAddressService.save(userAddress);
         logger.debug("Les informations d'adresse ont été enregistrées avec succès.");
         return "success";

@@ -136,26 +136,56 @@
         var today = new Date($.now());
 
         var defaultEvents =  [{
-                title: 'Released Ample Admin!',                
-                start: '2017-08-08',
-				end: '2017-08-08',
-                className: 'bg-info'
-            }, {
-                title: 'This is today check date',
+                title: 'Project Car Service Tourism Morocco',                
+                start: '2018-08-08',
+				end: '2018-10-29',
+                className: 'bg-primary'
+            },
+            {
+                title: 'Réunion des collaborateurs',
                 start: today,
                 end: today,
                 className: 'bg-danger'
-            }, {
-                title: 'This is your birthday',                
-                start: '2017-09-08',
-				end: '2017-09-08',
+            },{
+                title: 'Projet INFOSAT Lot4 CE95',
+                start: '2018-10-08',
+                end: '2018-12-08',
+                className: 'bg-warning'
+            }, 
+            {
+                title: 'Viste de Client INFOSAT',
+                start: '2018-10-15',
+                end: '2018-10-16',
+                className: 'bg-danger'
+            },{
+                title: 'Project Institut Pasteur du Maroc Lot CE7',                
+                start: '2018-07-08',
+				end: '2018-11-08',
+                className: 'fc-title'
+            },
+            {
+                title: 'Fin du Project Institut Pasteur du Maroc Lot CE7',                
+                start: '2018-11-08',
+				end: '2018-11-08',
+                className: 'bg-success'
+            },
+            {
+                title: 'Projet BOOMERANG Communication Lot CE3',                
+                start: '2018-09-08',
+				end: '2018-12-08',
                 className: 'bg-info'
             },
               {
-                title: 'Hanns birthday',                
-                start: '2017-10-08',
-				end: '2017-10-08',
+                title: 'Project Institut Pasteur du Maroc Lot CE8',                
+                start: '2018-11-02',
+				end: '2019-01-02',
                 className: 'bg-danger'
+            },
+            {
+                title: 'Fin du projet Car Service Tourism Morocco',                
+                start: '2018-10-28',
+				end: '2018-10-28',
+                className: 'bg-success'
             },{
                 title: 'Like it?',
                 start: new Date($.now() + 784800000),
